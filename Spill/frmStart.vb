@@ -114,7 +114,7 @@ Public Class frmStart
 
         'Kalkuler score
 
-        Label12.Text = ((100 * 25) / 2)
+        Label12.Text = ((50 * 25) / 2)
 
 
         'les brukernavn fra fil
