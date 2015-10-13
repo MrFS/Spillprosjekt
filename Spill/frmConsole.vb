@@ -52,7 +52,7 @@ Public Class frmConsole
         With ListBox1
             .Items.Add(My.Computer.Info.AvailableVirtualMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
             .Items.Add(My.Computer.Clock.TickCount)
-            .Items.Add("Gametick: " & prfm_tick.NextValue() * 10)
+            .Items.Add("Gametick: ")
         End With
 
         ListBox1.BackColor = Color.White

@@ -27,8 +27,6 @@ Partial Class frmConsole
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.tmr_console = New System.Windows.Forms.Timer(Me.components)
         Me.tmr_tick = New System.Windows.Forms.Timer(Me.components)
-        Me.prfm_tick = New System.Diagnostics.PerformanceCounter()
-        CType(Me.prfm_tick, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -57,12 +55,6 @@ Partial Class frmConsole
         '
         Me.tmr_tick.Interval = 128
         '
-        'prfm_tick
-        '
-        Me.prfm_tick.CategoryName = "Prosessor"
-        Me.prfm_tick.CounterName = "% Prosessortid"
-        Me.prfm_tick.InstanceName = "_Total"
-        '
         'frmConsole
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -72,7 +64,6 @@ Partial Class frmConsole
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "frmConsole"
         Me.Text = "frmConsole"
-        CType(Me.prfm_tick, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -82,5 +73,4 @@ Partial Class frmConsole
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents tmr_console As Timer
     Friend WithEvents tmr_tick As Timer
-    Friend WithEvents prfm_tick As PerformanceCounter
 End Class
