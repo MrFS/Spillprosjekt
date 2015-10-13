@@ -89,7 +89,7 @@ Public Class frmMain
     End Sub
 
     Private Sub timer_left_Tick(sender As Object, e As EventArgs) Handles timer_left.Tick
-        PictureBox2.Left = PictureBox2.Left - 9000000000
+        PictureBox2.Left = PictureBox2.Left - 30
     End Sub
 
     Private Sub right_img_change_Tick(sender As Object, e As EventArgs) Handles right_img_change.Tick
