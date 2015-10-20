@@ -175,7 +175,7 @@ Public Class frmStart
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-
+        frmMain.Show()
         Me.Hide()
     End Sub
 
@@ -186,10 +186,6 @@ Public Class frmStart
     End Sub
 
     Private Sub frmStart_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        'Select Case e.KeyCode
-        '    Case Keys.C
-        '        frmConsole.Show()
-        'End Select
-        'CONSOLE!dsdkfmaosdlgdsaflks
+
     End Sub
 End Class
