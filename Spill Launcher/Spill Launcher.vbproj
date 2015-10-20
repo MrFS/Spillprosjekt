@@ -130,11 +130,10 @@
     <Compile Include="frmLoading.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmStart.Designer.vb">
@@ -269,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mah hart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lucas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
