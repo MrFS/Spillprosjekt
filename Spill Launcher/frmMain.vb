@@ -3,7 +3,7 @@ Public Class frmMain
     Dim facing As String = "right"
     Dim srcBounds As Rectangle = New Rectangle(0, 0, 40, 48)
     Dim frameCount As Integer = 0
-    Const delay As Integer = 3
+    Const delay As Integer = 5
     Dim speed As Integer = 0
     Const maxSpeed As Integer = 12
 
@@ -85,6 +85,7 @@ Public Class frmMain
                     pxKis.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                     pxKis.Left += speed
                 Case "up"
+                    'Hoppe litt
             End Select
         End If
         frameCount += 1
