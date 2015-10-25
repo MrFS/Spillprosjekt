@@ -14,6 +14,10 @@ Public Class frmConsole
                     ListBox1.Items.Add("FPS Counter is enabled")
                     My.Settings.show_fps = True
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+                ElseIf TextBox1.Text = "draw_fps 0" Then
+                    ListBox1.Items.Add("FPS Counter is disabled")
+                    My.Settings.show_fps = False
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 ElseIf TextBox1.Text = "cena_mode 1" Then
                     ListBox1.Items.Add("'Tropic Thunder' is one of my favorite movies of all time!")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
@@ -24,7 +28,26 @@ Public Class frmConsole
                     tmr_console.Enabled = False
                 ElseIf TextBox1.Text = "reset" Then
                     Application.Restart()
-
+                ElseIf TextBox1.Text = ("penis") Then
+                    ListBox1.Items.Add("command not long enough")
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+                ElseIf TextBox1.Text = ("clear") Then
+                    With ListBox1.Items
+                        .Clear()
+                        .Add("Console" & Application.ProductVersion & Application.StartupPath)
+                        .Add(My.Computer.Info.OSFullName & (" ") & My.Computer.Info.OSPlatform & (" ") & My.Computer.Info.OSVersion)
+                        .Add(My.Computer.Info.TotalPhysicalMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
+                        .Add(My.Computer.Info.TotalVirtualMemory & (" ") & My.Computer.Info.AvailableVirtualMemory)
+                        .Add(My.Settings.ant_død & My.Settings.ant_fiender & My.Settings.ant_mynt)
+                        .Add("Username: " & My.Settings.username)
+                        .Add(vbNewLine)
+                        .Add(My.Application.Info.AssemblyName & My.Application.Info.CompanyName)
+                        .Add(My.Application.Info.Copyright & My.Application.Info.Description)
+                        .Add(vbNewLine)
+                        .Add("Cleared console, tick set to pause")
+                    End With
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+                    tmr_console.Enabled = False
                 End If
         End Select
     End Sub

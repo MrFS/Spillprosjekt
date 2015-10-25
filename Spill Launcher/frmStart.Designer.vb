@@ -45,6 +45,8 @@ Partial Class frmStart
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -59,8 +61,6 @@ Partial Class frmStart
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -326,6 +326,24 @@ Partial Class frmStart
         Me.TabPage4.Text = "Statistikk"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(243, 135)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(91, 32)
+        Me.Label12.TabIndex = 7
+        Me.Label12.Text = "Label12"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 135)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(77, 32)
+        Me.Label11.TabIndex = 6
+        Me.Label11.Text = "Score:"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -436,9 +454,9 @@ Partial Class frmStart
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(695, 45)
+        Me.Label1.Size = New System.Drawing.Size(689, 45)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.0.4"
+        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.1.6"
         '
         'Button1
         '
@@ -463,24 +481,6 @@ Partial Class frmStart
         Me.Button2.Size = New System.Drawing.Size(75, 53)
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 135)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(77, 32)
-        Me.Label11.TabIndex = 6
-        Me.Label11.Text = "Score:"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(243, 135)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(91, 32)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Label12"
         '
         'frmStart
         '

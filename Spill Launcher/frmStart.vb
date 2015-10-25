@@ -143,7 +143,6 @@ Public Class frmStart
         MsgBox("Advarsel, dette vil slette alt i 'gamedata' mappen med unntak av 'character' mappen, samt avslutte programmet. Er du sikker på at du vil forsette?", MsgBoxStyle.YesNoCancel And MsgBoxStyle.Critical, "Advarsel!")
         If MsgBoxResult.Yes Then
             'Delete GameDatafolder
-
             Dim s As String
             For Each s In System.IO.Directory.GetFiles("gamedata")
                 System.IO.File.Delete(s)
@@ -183,9 +182,5 @@ Public Class frmStart
         If My.Settings.dev_console = True Then
             CheckBox3.Checked = True
         End If
-    End Sub
-
-    Private Sub frmStart_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
     End Sub
 End Class

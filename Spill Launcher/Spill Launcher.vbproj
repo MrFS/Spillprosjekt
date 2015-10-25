@@ -81,7 +81,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>
@@ -184,7 +184,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -275,6 +274,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platform.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pxKis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pxKis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
