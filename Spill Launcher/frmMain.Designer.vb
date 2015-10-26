@@ -24,21 +24,92 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gameplay = New System.Windows.Forms.Timer(Me.components)
+        Me.pnlPause = New System.Windows.Forms.Panel()
+        Me.btnExitMMnu = New System.Windows.Forms.Button()
+        Me.btnSettings = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnResume = New System.Windows.Forms.Button()
+        Me.pxSnus = New System.Windows.Forms.PictureBox()
         Me.pxCoffee = New System.Windows.Forms.PictureBox()
         Me.pxKis = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pnlPause = New System.Windows.Forms.Panel()
-        Me.btnResume = New System.Windows.Forms.Button()
+        Me.pxGround = New System.Windows.Forms.PictureBox()
+        Me.pnlPause.SuspendLayout()
+        CType(Me.pxSnus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlPause.SuspendLayout()
+        CType(Me.pxGround, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gameplay
         '
         Me.gameplay.Enabled = True
         Me.gameplay.Interval = 10
+        '
+        'pnlPause
+        '
+        Me.pnlPause.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.pnlPause.Controls.Add(Me.btnExitMMnu)
+        Me.pnlPause.Controls.Add(Me.btnSettings)
+        Me.pnlPause.Controls.Add(Me.Button1)
+        Me.pnlPause.Controls.Add(Me.btnResume)
+        Me.pnlPause.Location = New System.Drawing.Point(344, 153)
+        Me.pnlPause.Name = "pnlPause"
+        Me.pnlPause.Size = New System.Drawing.Size(242, 182)
+        Me.pnlPause.TabIndex = 3
+        Me.pnlPause.Visible = False
+        '
+        'btnExitMMnu
+        '
+        Me.btnExitMMnu.FlatAppearance.BorderSize = 0
+        Me.btnExitMMnu.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnExitMMnu.Location = New System.Drawing.Point(3, 138)
+        Me.btnExitMMnu.Name = "btnExitMMnu"
+        Me.btnExitMMnu.Size = New System.Drawing.Size(236, 39)
+        Me.btnExitMMnu.TabIndex = 3
+        Me.btnExitMMnu.Text = "Exit to main menu"
+        Me.btnExitMMnu.UseVisualStyleBackColor = True
+        '
+        'btnSettings
+        '
+        Me.btnSettings.FlatAppearance.BorderSize = 0
+        Me.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSettings.Location = New System.Drawing.Point(3, 93)
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.Size = New System.Drawing.Size(236, 39)
+        Me.btnSettings.TabIndex = 2
+        Me.btnSettings.Text = "Settings"
+        Me.btnSettings.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(3, 48)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(236, 39)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = " "
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnResume
+        '
+        Me.btnResume.FlatAppearance.BorderSize = 0
+        Me.btnResume.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnResume.Location = New System.Drawing.Point(3, 3)
+        Me.btnResume.Name = "btnResume"
+        Me.btnResume.Size = New System.Drawing.Size(236, 39)
+        Me.btnResume.TabIndex = 0
+        Me.btnResume.Text = "Resume game"
+        Me.btnResume.UseVisualStyleBackColor = True
+        '
+        'pxSnus
+        '
+        Me.pxSnus.BackColor = System.Drawing.Color.DarkRed
+        Me.pxSnus.Location = New System.Drawing.Point(376, 410)
+        Me.pxSnus.Name = "pxSnus"
+        Me.pxSnus.Size = New System.Drawing.Size(100, 50)
+        Me.pxSnus.TabIndex = 4
+        Me.pxSnus.TabStop = False
         '
         'pxCoffee
         '
@@ -62,45 +133,28 @@ Partial Class frmMain
         Me.pxKis.TabStop = False
         Me.pxKis.Visible = False
         '
-        'PictureBox1
+        'pxGround
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, 691)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1068, 32)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'pnlPause
-        '
-        Me.pnlPause.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.pnlPause.Controls.Add(Me.btnResume)
-        Me.pnlPause.Location = New System.Drawing.Point(344, 153)
-        Me.pnlPause.Name = "pnlPause"
-        Me.pnlPause.Size = New System.Drawing.Size(242, 234)
-        Me.pnlPause.TabIndex = 3
-        Me.pnlPause.Visible = False
-        '
-        'btnResume
-        '
-        Me.btnResume.Location = New System.Drawing.Point(48, 24)
-        Me.btnResume.Name = "btnResume"
-        Me.btnResume.Size = New System.Drawing.Size(75, 23)
-        Me.btnResume.TabIndex = 0
-        Me.btnResume.Text = "Resume"
-        Me.btnResume.UseVisualStyleBackColor = True
+        Me.pxGround.BackColor = System.Drawing.Color.Transparent
+        Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxGround.Location = New System.Drawing.Point(-1, 704)
+        Me.pxGround.Name = "pxGround"
+        Me.pxGround.Size = New System.Drawing.Size(1068, 35)
+        Me.pxGround.TabIndex = 1
+        Me.pxGround.TabStop = False
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg_lvl1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1067, 738)
+        Me.Controls.Add(Me.pxSnus)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxCoffee)
         Me.Controls.Add(Me.pxKis)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pxGround)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
@@ -108,17 +162,22 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "2D Platformer Team Trøtt"
+        Me.pnlPause.ResumeLayout(False)
+        CType(Me.pxSnus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlPause.ResumeLayout(False)
+        CType(Me.pxGround, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents pxKis As System.Windows.Forms.PictureBox
     Friend WithEvents gameplay As System.Windows.Forms.Timer
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pxGround As PictureBox
     Friend WithEvents pxCoffee As PictureBox
     Friend WithEvents pnlPause As Panel
     Friend WithEvents btnResume As Button
+    Friend WithEvents btnExitMMnu As Button
+    Friend WithEvents btnSettings As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents pxSnus As PictureBox
 End Class

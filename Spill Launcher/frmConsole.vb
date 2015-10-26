@@ -11,26 +11,35 @@ Public Class frmConsole
                     ListBox1.Items.Add(TextBox1.Text)
                     Application.Exit()
                 ElseIf TextBox1.Text = "draw_fps 1" Then
+
                     ListBox1.Items.Add("FPS Counter is enabled")
                     My.Settings.show_fps = True
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = "draw_fps 0" Then
                     ListBox1.Items.Add("FPS Counter is disabled")
                     My.Settings.show_fps = False
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = "cena_mode 1" Then
                     ListBox1.Items.Add("'Tropic Thunder' is one of my favorite movies of all time!")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = "vac" Then
                     ListBox1.Items.Add("/kick trond")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = ("pause") Then
                     tmr_console.Enabled = False
+
                 ElseIf TextBox1.Text = "reset" Then
+                    My.Settings.Reset()
                     Application.Restart()
+
                 ElseIf TextBox1.Text = ("penis") Then
                     ListBox1.Items.Add("command not long enough")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = ("clear") Then
                     With ListBox1.Items
                         .Clear()
@@ -48,7 +57,12 @@ Public Class frmConsole
                     End With
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                     tmr_console.Enabled = False
+
+                ElseIf TextBox1.Text = ("tropicalhouse") Then
+                    'playtropicalhouse
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 End If
+                TextBox1.Clear()
         End Select
     End Sub
 

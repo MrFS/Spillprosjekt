@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Spill Launcher", "Spill Launcher\Spill Launcher.vbproj", "{494313F4-3CDA-419B-AC37-9DC2687B0A47}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Main Spill", "SpillMain\Main Spill.vbproj", "{D8F4EC53-5CA8-4730-A9FA-FB5AB5238AD2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{494313F4-3CDA-419B-AC37-9DC2687B0A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{494313F4-3CDA-419B-AC37-9DC2687B0A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{494313F4-3CDA-419B-AC37-9DC2687B0A47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8F4EC53-5CA8-4730-A9FA-FB5AB5238AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8F4EC53-5CA8-4730-A9FA-FB5AB5238AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8F4EC53-5CA8-4730-A9FA-FB5AB5238AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8F4EC53-5CA8-4730-A9FA-FB5AB5238AD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

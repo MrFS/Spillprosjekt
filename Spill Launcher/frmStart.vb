@@ -127,6 +127,13 @@ Public Class frmStart
 
     End Sub
 
+    Private Sub console()
+        frmConsole.Show()
+    End Sub
+
+
+
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Application.Exit()
     End Sub
@@ -181,6 +188,12 @@ Public Class frmStart
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
         If My.Settings.dev_console = True Then
             CheckBox3.Checked = True
+        End If
+    End Sub
+
+    Private Sub frmStart_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+        If (e.KeyCode = Keys.C) Then
+            console()
         End If
     End Sub
 End Class
