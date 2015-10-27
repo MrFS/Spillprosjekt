@@ -61,6 +61,10 @@ Public Class frmConsole
                 ElseIf TextBox1.Text = ("tropicalhouse") Then
                     'playtropicalhouse
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+                ElseIf TextBox1.Text = ("reload") Then
+                    frmMain.Close()
+                    frmMain.Show()
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 End If
                 TextBox1.Clear()
         End Select

@@ -115,10 +115,11 @@ Partial Class frmMain
         'pxCoffee
         '
         Me.pxCoffee.BackColor = System.Drawing.Color.Transparent
-        Me.pxCoffee.Image = Global.Spill.My.Resources.Resources.coffee
-        Me.pxCoffee.Location = New System.Drawing.Point(885, 494)
+        Me.pxCoffee.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee.Location = New System.Drawing.Point(551, 597)
         Me.pxCoffee.Name = "pxCoffee"
-        Me.pxCoffee.Size = New System.Drawing.Size(159, 200)
+        Me.pxCoffee.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee.TabIndex = 2
         Me.pxCoffee.TabStop = False
         '
@@ -126,7 +127,7 @@ Partial Class frmMain
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.lucas
-        Me.pxKis.Location = New System.Drawing.Point(13, 636)
+        Me.pxKis.Location = New System.Drawing.Point(13, 645)
         Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(53, 59)

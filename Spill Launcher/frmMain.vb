@@ -14,10 +14,6 @@ Public Class frmMain
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
         KisMove()
 
-        'If collPlatform(pxKis, pxSnus) Then
-        '    pxKis.Location = New Point(200, 200)
-        'End If
-
         Me.Refresh()
     End Sub
 
