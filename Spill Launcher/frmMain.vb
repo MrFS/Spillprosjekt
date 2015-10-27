@@ -9,10 +9,18 @@ Public Class frmMain
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim Platform As Rectangle
+    Dim Platform() As PictureBox = {pxPlatBounds2, pxPlatBounds3, pxPlatBounds1}
+    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3}
+    Const SHOULDER As Integer = 15
+    Dim debug As Boolean = False
+
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
         KisMove()
+
+        plat()
+
+        chkBounds()
 
         Me.Refresh()
     End Sub
@@ -26,20 +34,23 @@ Public Class frmMain
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 facing = "left"
                 direction = "left"
-            ElseIf (e.KeyCode = Keys.W) Then
+            ElseIf (e.KeyCode = Keys.W Or e.KeyCode = Keys.Space) Then
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
+                'tGrav.Enabled = False
             End If
         Else
             If (e.KeyCode = Keys.D) Then 'Right
                 If (speed < maxSpeed) Then speed += 1
                 facing = "right"
                 nextDirection = "right"
+                'tGrav.Enabled = True
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 If (speed > -maxSpeed) Then speed -= 1
                 facing = "left"
                 nextDirection = "left"
+                'tGrav.Enabled = True
             End If
         End If
 
@@ -56,6 +67,7 @@ Public Class frmMain
     End Sub
     Private Sub Console()
         frmConsole.Show()
+        frmConsole.BringToFront()
     End Sub
 
     Private Sub frmMain_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
@@ -63,19 +75,26 @@ Public Class frmMain
             direction = "stand"
             facing = "right"
             frameCount = 0
+            tGrav.Enabled = True
         ElseIf (e.KeyCode = Keys.A And direction = "left") Then 'Left
             direction = "stand"
             facing = "left"
             frameCount = 0
+            tGrav.Enabled = True
         End If
 
+        'If (e.KeyCode = Keys.W) Then
+        '    tGrav.Enabled = True
+        'End If
         If (direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
                 nextDirection = "stand"
                 facing = "right"
+                'tGrav.Enabled = True
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 nextDirection = "stand"
                 facing = "left"
+                'tGrav.Enabled = True
             End If
         End If
     End Sub
@@ -91,16 +110,10 @@ Public Class frmMain
         Else
             g.DrawImage(pxKis.Image, pxKis.Bounds, srcBounds, GraphicsUnit.Pixel)
         End If
-
-        Platform = Rectangle.FromLTRB(150, 515, 210, 100) 'Instantiate our platform
-
-        g.FillRectangle(Brushes.Maroon, Platform)
-        g.DrawRectangle(Pens.Chocolate, Platform)
-        'I'm not into interior decorating, so the only thing I can say about these colors is that 
-        'they'd better be a light brown persuasion.  This draws the platform.
     End Sub
 
     Private Sub KisMove()
+
         If (frameCount Mod delay = 0) Then
             Select Case (direction)
                 Case "stand"
@@ -132,6 +145,7 @@ Public Class frmMain
                     pxKis.Image = My.Resources.pxKis
                     pxKis.Left += speed
                 Case "up"
+
                     If (jumpcount = 0) Then
                         startY = pxKis.Location.Y
                     End If
@@ -169,24 +183,15 @@ Public Class frmMain
                         direction = nextDirection
                     End If
                     jumpcount += 1
-            End Select
-        End If
 
+            End Select
+
+        End If
 
 
         frameCount += 1
 
-
-        If collision(pxKis, pxCoffee) Then
-            pxKis.Location = New Point(0, 0)
-        End If
-
-
     End Sub
-
-
-
-
 
 
     Private Sub Equalize(ByVal i As Integer)
@@ -203,10 +208,18 @@ Public Class frmMain
         frmStart.Show()
     End Sub
 
-    Private Sub gravity()
+    Private Sub plat()
+        Dim plat As PictureBox() = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5}
+        For x = 0 To 4
+            If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
+                pxKis.Location = New Point(plat(x).Location.X, plat(x).Location.Y - pxKis.Height)
+
+                direction = nextDirection
+
+            End If
+        Next x
     End Sub
-
 
     Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
         Dim Collided As Boolean = False
@@ -233,5 +246,26 @@ Public Class frmMain
 
         Me.Close()
         frmStart.Show()
+    End Sub
+
+    Private Sub tmr_check_Tick(sender As Object, e As EventArgs) Handles tGrav.Tick
+        pxKis.Top += 2
+        Dim gravity As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5}
+
+        For x = 0 To 5
+            If pxKis.Bounds.IntersectsWith(gravity(x).Bounds) Then
+                pxKis.Top -= 2
+            End If
+        Next x
+
+    End Sub
+
+    Private Sub chkBounds()
+
+        If pxKis.Bounds.IntersectsWith(lBound.Bounds) Then
+            pxKis.Left += lBound.Width + 1
+        ElseIf pxKis.Bounds.IntersectsWith(rBound.bounds) Then
+            pxKis.Left -= rBound.Width + 1
+        End If
     End Sub
 End Class

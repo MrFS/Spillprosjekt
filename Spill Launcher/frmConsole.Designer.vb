@@ -27,6 +27,9 @@ Partial Class frmConsole
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.tmr_console = New System.Windows.Forms.Timer(Me.components)
         Me.tmr_tick = New System.Windows.Forms.Timer(Me.components)
+        Me.drunk = New System.Windows.Forms.PictureBox()
+        Me.tmrDrunk = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.drunk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -55,15 +58,31 @@ Partial Class frmConsole
         '
         Me.tmr_tick.Interval = 128
         '
+        'drunk
+        '
+        Me.drunk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.drunk.Location = New System.Drawing.Point(74, 22)
+        Me.drunk.Name = "drunk"
+        Me.drunk.Size = New System.Drawing.Size(839, 397)
+        Me.drunk.TabIndex = 2
+        Me.drunk.TabStop = False
+        Me.drunk.Visible = False
+        '
+        'tmrDrunk
+        '
+        Me.tmrDrunk.Interval = 5000
+        '
         'frmConsole
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 476)
+        Me.Controls.Add(Me.drunk)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "frmConsole"
         Me.Text = "frmConsole"
+        CType(Me.drunk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -73,4 +92,6 @@ Partial Class frmConsole
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents tmr_console As Timer
     Friend WithEvents tmr_tick As Timer
+    Friend WithEvents drunk As PictureBox
+    Friend WithEvents tmrDrunk As Timer
 End Class

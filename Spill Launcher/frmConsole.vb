@@ -58,8 +58,15 @@ Public Class frmConsole
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                     tmr_console.Enabled = False
 
-                ElseIf TextBox1.Text = ("tropicalhouse") Then
-                    'playtropicalhouse
+                ElseIf TextBox1.Text = ("iloveyou") Then
+                    iloveyou()
+
+                ElseIf TextBox1.Text = ("fulle trøtte jævla") Then
+                    tmrDrunk.Enabled = True
+                    drunk.BackgroundImage = My.Resources.drunk
+                    drunk.BackgroundImageLayout = ImageLayout.Stretch
+                    drunk.Visible = True
+                    drunk.Dock = DockStyle.Fill
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 ElseIf TextBox1.Text = ("reload") Then
                     frmMain.Close()
@@ -99,6 +106,16 @@ Public Class frmConsole
         ListBox1.BackColor = Color.White
 
         ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+    End Sub
+
+    Private Sub tmrDrunk_Tick(sender As Object, e As EventArgs) Handles tmrDrunk.Tick
+        If drunk.Visible = True Then
+            drunk.Visible = False
+        End If
+    End Sub
+
+    Private Sub iloveyou()
+        My.Computer.Audio.Play(My.Resources.iloveyou_console, AudioPlayMode.Background)
     End Sub
 End Class
 

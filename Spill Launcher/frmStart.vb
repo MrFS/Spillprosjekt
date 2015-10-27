@@ -33,8 +33,6 @@ Public Class frmStart
 
         CheckBox2.Enabled = False
 
-        My.Computer.Audio.Play(My.Resources.main_2dplatform, AudioPlayMode.BackgroundLoop) 'musikken <3
-
         'Se om alt er OK før brukeren starter selve spillet.
         'plass for å lagre info om spillbruker og data fra selve spill
         If (Not System.IO.Directory.Exists("gamedata")) Then
