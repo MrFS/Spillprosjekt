@@ -126,7 +126,7 @@ Partial Class frmMain
         'pxKis
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
-        Me.pxKis.Image = Global.Spill.My.Resources.Resources.lucas
+        Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
         Me.pxKis.Location = New System.Drawing.Point(13, 645)
         Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
