@@ -105,9 +105,10 @@ Partial Class frmMain
         'pxSnus
         '
         Me.pxSnus.BackColor = System.Drawing.Color.DarkRed
-        Me.pxSnus.Location = New System.Drawing.Point(376, 410)
+        Me.pxSnus.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxSnus.Location = New System.Drawing.Point(511, 635)
         Me.pxSnus.Name = "pxSnus"
-        Me.pxSnus.Size = New System.Drawing.Size(100, 50)
+        Me.pxSnus.Size = New System.Drawing.Size(100, 32)
         Me.pxSnus.TabIndex = 4
         Me.pxSnus.TabStop = False
         '
@@ -125,7 +126,7 @@ Partial Class frmMain
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.lucas
-        Me.pxKis.Location = New System.Drawing.Point(13, 635)
+        Me.pxKis.Location = New System.Drawing.Point(13, 636)
         Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(53, 59)

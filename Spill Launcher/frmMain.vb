@@ -9,9 +9,14 @@ Public Class frmMain
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
+    Dim Platform As Rectangle
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
         KisMove()
+
+        'If collPlatform(pxKis, pxSnus) Then
+        '    pxKis.Location = New Point(200, 200)
+        'End If
 
         Me.Refresh()
     End Sub
@@ -90,6 +95,13 @@ Public Class frmMain
         Else
             g.DrawImage(pxKis.Image, pxKis.Bounds, srcBounds, GraphicsUnit.Pixel)
         End If
+
+        Platform = Rectangle.FromLTRB(150, 515, 210, 100) 'Instantiate our platform
+
+        g.FillRectangle(Brushes.Maroon, Platform)
+        g.DrawRectangle(Pens.Chocolate, Platform)
+        'I'm not into interior decorating, so the only thing I can say about these colors is that 
+        'they'd better be a light brown persuasion.  This draws the platform.
     End Sub
 
     Private Sub KisMove()
@@ -163,12 +175,24 @@ Public Class frmMain
                     jumpcount += 1
             End Select
         End If
+
+
+
         frameCount += 1
+
 
         If collision(pxKis, pxCoffee) Then
             pxKis.Location = New Point(0, 0)
         End If
+
+
     End Sub
+
+
+
+
+
+
     Private Sub Equalize(ByVal i As Integer)
         For k As Integer = 0 To i Step 1
             If (speed < 0) Then
@@ -183,8 +207,14 @@ Public Class frmMain
         frmStart.Show()
     End Sub
 
+    Private Sub gravity()
+
+    End Sub
+
+
     Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
         Dim Collided As Boolean = False
+
 
         If Object1.top + Object1.height >= Object2.top And
            Object2.top + Object2.height >= Object1.top And

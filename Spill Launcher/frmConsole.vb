@@ -86,10 +86,10 @@ Public Class frmConsole
 
     Private Sub tmr_console_Tick(sender As Object, e As EventArgs) Handles tmr_console.Tick
 
-        With ListBox1
-            .Items.Add(My.Computer.Info.AvailableVirtualMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
-            .Items.Add(My.Computer.Clock.TickCount)
-            .Items.Add("Gametick: ")
+        With ListBox1.Items
+            .Add(My.Computer.Info.AvailableVirtualMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
+            .Add(My.Computer.Clock.TickCount)
+            .Add(Environment.TickCount & ("") & Environment.ProcessorCount)
         End With
 
         ListBox1.BackColor = Color.White

@@ -25,6 +25,7 @@ Partial Class frmStart
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -56,11 +57,11 @@ Partial Class frmStart
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -90,6 +91,7 @@ Partial Class frmStart
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
@@ -110,6 +112,17 @@ Partial Class frmStart
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Index"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.WebBrowser1.Location = New System.Drawing.Point(437, 3)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScrollBarsEnabled = False
+        Me.WebBrowser1.Size = New System.Drawing.Size(534, 345)
+        Me.WebBrowser1.TabIndex = 4
+        Me.WebBrowser1.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/", System.UriKind.Absolute)
         '
         'Button7
         '
@@ -428,15 +441,26 @@ Partial Class frmStart
         Me.Button3.Text = "Om"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.key_controls
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(290, 104)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(689, 45)
+        Me.Label1.Size = New System.Drawing.Size(694, 45)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.1.6"
+        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.2.3"
         '
         'Button1
         '
@@ -462,25 +486,15 @@ Partial Class frmStart
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'WebBrowser1
+        'TabPage5
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WebBrowser1.Location = New System.Drawing.Point(437, 3)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScrollBarsEnabled = False
-        Me.WebBrowser1.Size = New System.Drawing.Size(534, 345)
-        Me.WebBrowser1.TabIndex = 4
-        Me.WebBrowser1.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/", System.UriKind.Absolute)
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Spill.My.Resources.Resources.key_controls
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(290, 104)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(974, 351)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Profile"
+        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'frmStart
         '
@@ -557,4 +571,5 @@ Partial Class frmStart
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents TabPage5 As TabPage
 End Class
