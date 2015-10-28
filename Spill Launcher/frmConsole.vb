@@ -40,6 +40,10 @@ Public Class frmConsole
                     ListBox1.Items.Add("command not long enough")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
 
+                ElseIf TextBox1.Text = ("vagina") Then
+                    ListBox1.Items.Add("sorry, taht command is to deep")
+                    ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = ("clear") Then
                     With ListBox1.Items
                         .Clear()

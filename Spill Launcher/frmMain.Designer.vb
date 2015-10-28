@@ -25,12 +25,11 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Me.gameplay = New System.Windows.Forms.Timer(Me.components)
         Me.pnlPause = New System.Windows.Forms.Panel()
-        Me.btnExitMMnu = New System.Windows.Forms.Button()
-        Me.btnSettings = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnResume = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.pxPlat1 = New System.Windows.Forms.PictureBox()
-        Me.pxCoffee = New System.Windows.Forms.PictureBox()
+        Me.pxCoffee1 = New System.Windows.Forms.PictureBox()
         Me.pxKis = New System.Windows.Forms.PictureBox()
         Me.pxGround = New System.Windows.Forms.PictureBox()
         Me.pxPlat2 = New System.Windows.Forms.PictureBox()
@@ -43,9 +42,20 @@ Partial Class frmMain
         Me.lBound = New System.Windows.Forms.PictureBox()
         Me.pxPlatBounds4 = New System.Windows.Forms.PictureBox()
         Me.pxPlatBounds5 = New System.Windows.Forms.PictureBox()
+        Me.pxPlat4 = New System.Windows.Forms.PictureBox()
+        Me.pxPLat5 = New System.Windows.Forms.PictureBox()
+        Me.pxPlat6 = New System.Windows.Forms.PictureBox()
+        Me.pxPlat7 = New System.Windows.Forms.PictureBox()
+        Me.pxPlatBounds6 = New System.Windows.Forms.PictureBox()
+        Me.pxPlatBounds7 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffee5 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffee4 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffee3 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffee2 = New System.Windows.Forms.PictureBox()
+        Me.pxVictory = New System.Windows.Forms.PictureBox()
         Me.pnlPause.SuspendLayout()
         CType(Me.pxPlat1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxCoffee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,69 +67,67 @@ Partial Class frmMain
         CType(Me.lBound, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPLat5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlatBounds7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffee5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffee4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffee3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffee2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gameplay
         '
         Me.gameplay.Enabled = True
-        Me.gameplay.Interval = 10
+        Me.gameplay.Interval = 1
         '
         'pnlPause
         '
-        Me.pnlPause.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.pnlPause.Controls.Add(Me.btnExitMMnu)
-        Me.pnlPause.Controls.Add(Me.btnSettings)
-        Me.pnlPause.Controls.Add(Me.Button1)
-        Me.pnlPause.Controls.Add(Me.btnResume)
-        Me.pnlPause.Location = New System.Drawing.Point(344, 153)
+        Me.pnlPause.BackColor = System.Drawing.Color.Transparent
+        Me.pnlPause.BackgroundImage = Global.Spill.My.Resources.Resources.pausebg
+        Me.pnlPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlPause.Controls.Add(Me.Label3)
+        Me.pnlPause.Controls.Add(Me.Label2)
+        Me.pnlPause.Controls.Add(Me.Label1)
+        Me.pnlPause.Location = New System.Drawing.Point(372, 218)
         Me.pnlPause.Name = "pnlPause"
         Me.pnlPause.Size = New System.Drawing.Size(339, 270)
         Me.pnlPause.TabIndex = 3
         Me.pnlPause.Visible = False
         '
-        'btnExitMMnu
+        'Label3
         '
-        Me.btnExitMMnu.FlatAppearance.BorderSize = 0
-        Me.btnExitMMnu.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnExitMMnu.Location = New System.Drawing.Point(3, 138)
-        Me.btnExitMMnu.Name = "btnExitMMnu"
-        Me.btnExitMMnu.Size = New System.Drawing.Size(236, 39)
-        Me.btnExitMMnu.TabIndex = 3
-        Me.btnExitMMnu.Text = "Exit to main menu"
-        Me.btnExitMMnu.UseVisualStyleBackColor = True
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(65, 197)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(218, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Exit To Menu"
         '
-        'btnSettings
+        'Label2
         '
-        Me.btnSettings.FlatAppearance.BorderSize = 0
-        Me.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSettings.Location = New System.Drawing.Point(3, 93)
-        Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.Size = New System.Drawing.Size(236, 39)
-        Me.btnSettings.TabIndex = 2
-        Me.btnSettings.Text = "Settings"
-        Me.btnSettings.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(92, 133)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(150, 31)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Sett&ings"
         '
-        'Button1
+        'Label1
         '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(3, 48)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(236, 39)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = " "
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnResume
-        '
-        Me.btnResume.FlatAppearance.BorderSize = 0
-        Me.btnResume.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnResume.Location = New System.Drawing.Point(3, 3)
-        Me.btnResume.Name = "btnResume"
-        Me.btnResume.Size = New System.Drawing.Size(236, 39)
-        Me.btnResume.TabIndex = 0
-        Me.btnResume.Text = "Resume game"
-        Me.btnResume.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(65, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(201, 31)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Resume Game"
         '
         'pxPlat1
         '
@@ -131,16 +139,16 @@ Partial Class frmMain
         Me.pxPlat1.TabIndex = 4
         Me.pxPlat1.TabStop = False
         '
-        'pxCoffee
+        'pxCoffee1
         '
-        Me.pxCoffee.BackColor = System.Drawing.Color.Transparent
-        Me.pxCoffee.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
-        Me.pxCoffee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee.Location = New System.Drawing.Point(289, 551)
-        Me.pxCoffee.Name = "pxCoffee"
-        Me.pxCoffee.Size = New System.Drawing.Size(32, 32)
-        Me.pxCoffee.TabIndex = 2
-        Me.pxCoffee.TabStop = False
+        Me.pxCoffee1.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffee1.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee1.Location = New System.Drawing.Point(289, 551)
+        Me.pxCoffee1.Name = "pxCoffee1"
+        Me.pxCoffee1.Size = New System.Drawing.Size(32, 32)
+        Me.pxCoffee1.TabIndex = 2
+        Me.pxCoffee1.TabStop = False
         '
         'pxKis
         '
@@ -233,27 +241,149 @@ Partial Class frmMain
         '
         'pxPlatBounds4
         '
-        Me.pxPlatBounds4.Location = New System.Drawing.Point(955, 447)
+        Me.pxPlatBounds4.Location = New System.Drawing.Point(989, 447)
         Me.pxPlatBounds4.Name = "pxPlatBounds4"
-        Me.pxPlatBounds4.Size = New System.Drawing.Size(100, 10)
+        Me.pxPlatBounds4.Size = New System.Drawing.Size(69, 10)
         Me.pxPlatBounds4.TabIndex = 14
         Me.pxPlatBounds4.TabStop = False
         '
         'pxPlatBounds5
         '
-        Me.pxPlatBounds5.Location = New System.Drawing.Point(689, 336)
+        Me.pxPlatBounds5.Location = New System.Drawing.Point(707, 345)
         Me.pxPlatBounds5.Name = "pxPlatBounds5"
-        Me.pxPlatBounds5.Size = New System.Drawing.Size(100, 10)
+        Me.pxPlatBounds5.Size = New System.Drawing.Size(68, 5)
         Me.pxPlatBounds5.TabIndex = 15
         Me.pxPlatBounds5.TabStop = False
+        '
+        'pxPlat4
+        '
+        Me.pxPlat4.BackColor = System.Drawing.Color.DarkRed
+        Me.pxPlat4.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat4.Location = New System.Drawing.Point(967, 451)
+        Me.pxPlat4.Name = "pxPlat4"
+        Me.pxPlat4.Size = New System.Drawing.Size(100, 18)
+        Me.pxPlat4.TabIndex = 16
+        Me.pxPlat4.TabStop = False
+        '
+        'pxPLat5
+        '
+        Me.pxPLat5.BackColor = System.Drawing.Color.DarkRed
+        Me.pxPLat5.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPLat5.Location = New System.Drawing.Point(689, 348)
+        Me.pxPLat5.Name = "pxPLat5"
+        Me.pxPLat5.Size = New System.Drawing.Size(100, 18)
+        Me.pxPLat5.TabIndex = 17
+        Me.pxPLat5.TabStop = False
+        '
+        'pxPlat6
+        '
+        Me.pxPlat6.BackColor = System.Drawing.Color.DarkRed
+        Me.pxPlat6.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat6.Location = New System.Drawing.Point(385, 348)
+        Me.pxPlat6.Name = "pxPlat6"
+        Me.pxPlat6.Size = New System.Drawing.Size(100, 18)
+        Me.pxPlat6.TabIndex = 18
+        Me.pxPlat6.TabStop = False
+        '
+        'pxPlat7
+        '
+        Me.pxPlat7.BackColor = System.Drawing.Color.DarkRed
+        Me.pxPlat7.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat7.Location = New System.Drawing.Point(117, 221)
+        Me.pxPlat7.Name = "pxPlat7"
+        Me.pxPlat7.Size = New System.Drawing.Size(100, 18)
+        Me.pxPlat7.TabIndex = 19
+        Me.pxPlat7.TabStop = False
+        '
+        'pxPlatBounds6
+        '
+        Me.pxPlatBounds6.Location = New System.Drawing.Point(404, 345)
+        Me.pxPlatBounds6.Name = "pxPlatBounds6"
+        Me.pxPlatBounds6.Size = New System.Drawing.Size(60, 5)
+        Me.pxPlatBounds6.TabIndex = 20
+        Me.pxPlatBounds6.TabStop = False
+        '
+        'pxPlatBounds7
+        '
+        Me.pxPlatBounds7.Location = New System.Drawing.Point(140, 218)
+        Me.pxPlatBounds7.Name = "pxPlatBounds7"
+        Me.pxPlatBounds7.Size = New System.Drawing.Size(50, 5)
+        Me.pxPlatBounds7.TabIndex = 21
+        Me.pxPlatBounds7.TabStop = False
+        '
+        'pxCoffee5
+        '
+        Me.pxCoffee5.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffee5.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee5.Location = New System.Drawing.Point(420, 310)
+        Me.pxCoffee5.Name = "pxCoffee5"
+        Me.pxCoffee5.Size = New System.Drawing.Size(32, 32)
+        Me.pxCoffee5.TabIndex = 22
+        Me.pxCoffee5.TabStop = False
+        '
+        'pxCoffee4
+        '
+        Me.pxCoffee4.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffee4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee4.Location = New System.Drawing.Point(717, 307)
+        Me.pxCoffee4.Name = "pxCoffee4"
+        Me.pxCoffee4.Size = New System.Drawing.Size(32, 32)
+        Me.pxCoffee4.TabIndex = 23
+        Me.pxCoffee4.TabStop = False
+        '
+        'pxCoffee3
+        '
+        Me.pxCoffee3.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffee3.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee3.Location = New System.Drawing.Point(788, 513)
+        Me.pxCoffee3.Name = "pxCoffee3"
+        Me.pxCoffee3.Size = New System.Drawing.Size(32, 32)
+        Me.pxCoffee3.TabIndex = 24
+        Me.pxCoffee3.TabStop = False
+        '
+        'pxCoffee2
+        '
+        Me.pxCoffee2.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffee2.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffee2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffee2.Location = New System.Drawing.Point(517, 551)
+        Me.pxCoffee2.Name = "pxCoffee2"
+        Me.pxCoffee2.Size = New System.Drawing.Size(32, 32)
+        Me.pxCoffee2.TabIndex = 25
+        Me.pxCoffee2.TabStop = False
+        '
+        'pxVictory
+        '
+        Me.pxVictory.BackColor = System.Drawing.Color.Transparent
+        Me.pxVictory.BackgroundImage = Global.Spill.My.Resources.Resources._07
+        Me.pxVictory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pxVictory.Location = New System.Drawing.Point(136, 162)
+        Me.pxVictory.Name = "pxVictory"
+        Me.pxVictory.Size = New System.Drawing.Size(59, 53)
+        Me.pxVictory.TabIndex = 26
+        Me.pxVictory.TabStop = False
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg_lvl1
+        Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1067, 738)
+        Me.Controls.Add(Me.pxVictory)
+        Me.Controls.Add(Me.pxCoffee2)
+        Me.Controls.Add(Me.pxCoffee3)
+        Me.Controls.Add(Me.pxCoffee4)
+        Me.Controls.Add(Me.pxCoffee5)
+        Me.Controls.Add(Me.pxPlatBounds7)
+        Me.Controls.Add(Me.pxPlatBounds6)
+        Me.Controls.Add(Me.pxPlat7)
+        Me.Controls.Add(Me.pxPlat6)
+        Me.Controls.Add(Me.pxPLat5)
+        Me.Controls.Add(Me.pxPlat4)
         Me.Controls.Add(Me.pxPlatBounds5)
         Me.Controls.Add(Me.pxPlatBounds4)
         Me.Controls.Add(Me.lBound)
@@ -265,7 +395,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.pxPlat2)
         Me.Controls.Add(Me.pxPlat1)
         Me.Controls.Add(Me.pnlPause)
-        Me.Controls.Add(Me.pxCoffee)
+        Me.Controls.Add(Me.pxCoffee1)
         Me.Controls.Add(Me.pxKis)
         Me.Controls.Add(Me.pxGround)
         Me.DoubleBuffered = True
@@ -276,8 +406,9 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "2D Platformer Team Trøtt"
         Me.pnlPause.ResumeLayout(False)
+        Me.pnlPause.PerformLayout()
         CType(Me.pxPlat1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxCoffee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -289,18 +420,25 @@ Partial Class frmMain
         CType(Me.lBound, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPLat5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlatBounds7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffee5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffee4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffee3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffee2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents pxKis As System.Windows.Forms.PictureBox
     Friend WithEvents gameplay As System.Windows.Forms.Timer
     Friend WithEvents pxGround As PictureBox
-    Friend WithEvents pxCoffee As PictureBox
+    Friend WithEvents pxCoffee1 As PictureBox
     Friend WithEvents pnlPause As Panel
-    Friend WithEvents btnResume As Button
-    Friend WithEvents btnExitMMnu As Button
-    Friend WithEvents btnSettings As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents pxPlat1 As PictureBox
     Friend WithEvents pxPlat2 As PictureBox
     Friend WithEvents pxPlat3 As PictureBox
@@ -312,4 +450,18 @@ Partial Class frmMain
     Friend WithEvents lBound As PictureBox
     Friend WithEvents pxPlatBounds4 As PictureBox
     Friend WithEvents pxPlatBounds5 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents pxPlat4 As PictureBox
+    Friend WithEvents pxPLat5 As PictureBox
+    Friend WithEvents pxPlat6 As PictureBox
+    Friend WithEvents pxPlat7 As PictureBox
+    Friend WithEvents pxPlatBounds6 As PictureBox
+    Friend WithEvents pxPlatBounds7 As PictureBox
+    Friend WithEvents pxCoffee5 As PictureBox
+    Friend WithEvents pxCoffee4 As PictureBox
+    Friend WithEvents pxCoffee3 As PictureBox
+    Friend WithEvents pxCoffee2 As PictureBox
+    Friend WithEvents pxVictory As PictureBox
 End Class

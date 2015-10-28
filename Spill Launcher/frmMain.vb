@@ -4,21 +4,23 @@ Public Class frmMain
     Dim facing As String = "right"
     Dim srcBounds As Rectangle = New Rectangle(0, 0, 40, 48)
     Dim frameCount As Integer = 0
-    Const delay As Integer = 4
+    Const delay As Integer = 2
     Dim speed As Integer = 0
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim Platform() As PictureBox = {pxPlatBounds2, pxPlatBounds3, pxPlatBounds1}
-    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3}
-    Const SHOULDER As Integer = 15
-    Dim debug As Boolean = False
+    Dim Platform() As PictureBox = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPLat5, pxPlat6, pxPlat7}
 
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
         KisMove()
 
         plat()
+
+        If Not (direction = "up") Then
+            gravitasjon()
+        End If
 
         chkBounds()
 
@@ -209,8 +211,8 @@ Public Class frmMain
     End Sub
 
     Private Sub plat()
-        Dim plat As PictureBox() = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5}
-        For x = 0 To 4
+        Dim plat As PictureBox() = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+        For x = 0 To 6
             If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
                 pxKis.Location = New Point(plat(x).Location.X, plat(x).Location.Y - pxKis.Height)
@@ -234,42 +236,95 @@ Public Class frmMain
         Return Collided
     End Function
 
-    Private Sub btnResume_Click(sender As Object, e As EventArgs) Handles btnResume.Click
-        pnlPause.Visible = False
-        gameplay.Enabled = True
-    End Sub
+    'Private Sub tmr_check_Tick(sender As Object, e As EventArgs) Handles tGrav.Tick
+    '    Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
 
-    Private Sub btnExitMMnu_click(sender As Object, e As EventArgs) Handles btnExitMMnu.Click
-        '////////////////////////////////////////
-        '/////Kode for lagring av plass//////////
-        '////////////////////////////////////////
+    '    'yVelocity = yVelocity + gravity
 
-        Me.Close()
-        frmStart.Show()
-    End Sub
+    '    'pxKis.Location = New Point(pxKis.Location.X, pxKis.Location.Y - yVelocity)
 
-    Private Sub tmr_check_Tick(sender As Object, e As EventArgs) Handles tGrav.Tick
-        pxKis.Top += 4
-        Dim gravity As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5}
+    '    'For x = 0 To 7
+    '    '    If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
 
-        For x = 0 To 5
-            If Not (direction = "up" And nextDirection = direction) Then
-                If pxKis.Bounds.IntersectsWith(gravity(x).Bounds) Then
 
-                    pxKis.Top -= 4
+    '    '        yVelocity = -1 * yVelocity
+
+    '    '        End If
+    '    'Next x
+
+    '    pxKis.Top += 4
+
+    '    For x = 0 To 7
+    '        If Not (direction = "up" And direction = nextDirection) Then
+    '            If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
+
+    '                pxKis.Top -= 4
+
+    '            End If
+    '        End If
+    '    Next x
+
+    'End Sub
+
+    Private Sub gravitasjon()
+        Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+
+
+        pxKis.Top += 5
+
+        For x = 0 To 7
+            If Not (direction = "up" And direction = nextDirection) Then
+                If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
+
+                    pxKis.Top -= 5
 
                 End If
             End If
         Next x
-
     End Sub
 
     Private Sub chkBounds()
 
         If pxKis.Bounds.IntersectsWith(lBound.Bounds) Then
             pxKis.Left += lBound.Width + 1
-        ElseIf pxKis.Bounds.IntersectsWith(rBound.bounds) Then
+        ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
             pxKis.Left -= rBound.Width + 1
         End If
     End Sub
+
+    Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
+        Label1.ForeColor = Color.HotPink
+    End Sub
+
+    Private Sub Label2_MouseHover(sender As Object, e As EventArgs) Handles Label2.MouseHover
+        Label2.ForeColor = Color.HotPink
+    End Sub
+
+    Private Sub Label3_MouseHover(sender As Object, e As EventArgs) Handles Label3.MouseHover
+        Label3.ForeColor = Color.HotPink
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        gameplay.Enabled = True
+        pnlPause.Visible = False
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Me.Close()
+        frmStart.Show()
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
+        Label1.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
+        Label2.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
+        Label3.ForeColor = Color.Black
+    End Sub
+
 End Class
+
