@@ -373,6 +373,7 @@ Partial Class frmMain
         Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1067, 738)
+        Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
         Me.Controls.Add(Me.pxCoffee2)
         Me.Controls.Add(Me.pxCoffee3)
@@ -394,7 +395,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.pxPlat3)
         Me.Controls.Add(Me.pxPlat2)
         Me.Controls.Add(Me.pxPlat1)
-        Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxCoffee1)
         Me.Controls.Add(Me.pxKis)
         Me.Controls.Add(Me.pxGround)
