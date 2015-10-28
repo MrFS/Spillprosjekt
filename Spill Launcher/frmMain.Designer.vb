@@ -73,7 +73,7 @@ Partial Class frmMain
         Me.pnlPause.Controls.Add(Me.btnResume)
         Me.pnlPause.Location = New System.Drawing.Point(344, 153)
         Me.pnlPause.Name = "pnlPause"
-        Me.pnlPause.Size = New System.Drawing.Size(242, 182)
+        Me.pnlPause.Size = New System.Drawing.Size(339, 270)
         Me.pnlPause.TabIndex = 3
         Me.pnlPause.Visible = False
         '
@@ -211,7 +211,7 @@ Partial Class frmMain
         'tGrav
         '
         Me.tGrav.Enabled = True
-        Me.tGrav.Interval = 5
+        Me.tGrav.Interval = 10
         '
         'rBound
         '

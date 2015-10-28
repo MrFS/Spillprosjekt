@@ -100,7 +100,7 @@ Public Class frmConsole
         With ListBox1.Items
             .Add(My.Computer.Info.AvailableVirtualMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
             .Add(My.Computer.Clock.TickCount)
-            .Add(Environment.TickCount & ("") & Environment.ProcessorCount)
+            .Add(Environment.TickCount & (" ") & Environment.ProcessorCount)
         End With
 
         ListBox1.BackColor = Color.White

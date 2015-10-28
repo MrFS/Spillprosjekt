@@ -249,12 +249,16 @@ Public Class frmMain
     End Sub
 
     Private Sub tmr_check_Tick(sender As Object, e As EventArgs) Handles tGrav.Tick
-        pxKis.Top += 2
+        pxKis.Top += 4
         Dim gravity As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5}
 
         For x = 0 To 5
-            If pxKis.Bounds.IntersectsWith(gravity(x).Bounds) Then
-                pxKis.Top -= 2
+            If Not (direction = "up" And nextDirection = direction) Then
+                If pxKis.Bounds.IntersectsWith(gravity(x).Bounds) Then
+
+                    pxKis.Top -= 4
+
+                End If
             End If
         Next x
 
