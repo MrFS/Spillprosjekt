@@ -286,9 +286,9 @@ Public Class frmMain
     Private Sub chkBounds()
 
         If pxKis.Bounds.IntersectsWith(lBound.Bounds) Then
-            pxKis.Left += lBound.Width + 1
+            pxKis.Left += lBound.Width + 5
         ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
-            pxKis.Left -= rBound.Width + 1
+            pxKis.Left -= rBound.Width + 5
         End If
     End Sub
 
