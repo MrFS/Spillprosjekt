@@ -25,13 +25,7 @@
         Me.Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) 
-
-    End Sub
-
-    Private Sub frmAbout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AxWindowsMediaPlayer1.Dock = DockStyle.Fill
-        AxWindowsMediaPlayer1.URL = "My.Resources.main_2dplatform"
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
