@@ -15,7 +15,6 @@ Public Class frmMain
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
         KisMove()
-
         plat()
 
         If Not (direction = "up") Then
@@ -270,13 +269,13 @@ Public Class frmMain
         Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
 
 
-        pxKis.Top += 5
+        pxKis.Top += 6
 
         For x = 0 To 7
             If Not (direction = "up" And direction = nextDirection) Then
                 If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
 
-                    pxKis.Top -= 5
+                    pxKis.Top -= 6
 
                 End If
             End If
@@ -325,6 +324,5 @@ Public Class frmMain
     Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
         Label3.ForeColor = Color.Black
     End Sub
-
 End Class
 
