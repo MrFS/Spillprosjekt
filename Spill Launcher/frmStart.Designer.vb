@@ -58,10 +58,10 @@ Partial Class frmStart
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -452,15 +452,25 @@ Partial Class frmStart
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'TabPage5
+        '
+        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(974, 351)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Profile"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(694, 45)
+        Me.Label1.Size = New System.Drawing.Size(695, 45)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.2.3"
+        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.3.4"
         '
         'Button1
         '
@@ -485,16 +495,6 @@ Partial Class frmStart
         Me.Button2.Size = New System.Drawing.Size(75, 53)
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TabPage5
-        '
-        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(974, 351)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Profile"
-        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'frmStart
         '
