@@ -179,7 +179,7 @@ Public Class frmStart
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        frmMain.Show()
+        frmLvl1.Show()
         Me.Hide()
     End Sub
 

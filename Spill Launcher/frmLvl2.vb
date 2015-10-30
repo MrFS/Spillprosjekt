@@ -1,4 +1,4 @@
-Public Class frmMain
+﻿Public Class frmLvl2
     Dim direction As String = "stand"
     Dim nextDirection As String = "stand"
     Dim facing As String = "right"
@@ -13,11 +13,11 @@ Public Class frmMain
     Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPLat5, pxPlat6, pxPlat7}
 
 
-    Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
+    Private Sub gameplaylvl2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplaylvl2.Tick
         KisMove()
         plat()
 
-        If Not (direction = "up") Then
+        If Not (direction = "up" Or nextDirection = "up") Then
             gravitasjon()
         End If
 
@@ -26,7 +26,7 @@ Public Class frmMain
         Me.Refresh()
     End Sub
 
-    Private Sub frmMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+    Private Sub frmLvl2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
 
         If (Not direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
@@ -63,7 +63,7 @@ Public Class frmMain
         End If
     End Sub
     Private Sub pause()
-        gameplay.Enabled = False
+        gameplaylvl2.Enabled = False
         pnlPause.Visible = True
     End Sub
     Private Sub Console()
@@ -71,17 +71,15 @@ Public Class frmMain
         frmConsole.BringToFront()
     End Sub
 
-    Private Sub frmMain_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+    Private Sub frmLvl2_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyUp
         If (e.KeyCode = Keys.D And direction = "right") Then 'Right
             direction = "stand"
             facing = "right"
             frameCount = 0
-            tGrav.Enabled = True
         ElseIf (e.KeyCode = Keys.A And direction = "left") Then 'Left
             direction = "stand"
             facing = "left"
             frameCount = 0
-            tGrav.Enabled = True
         End If
 
         'If (e.KeyCode = Keys.W) Then
@@ -100,7 +98,7 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub frmMain_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Me.Paint
+    Private Sub frmLvl2_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles MyBase.Paint
         Dim g As Graphics
         g = e.Graphics()
 
@@ -205,7 +203,7 @@ Public Class frmMain
         Next
     End Sub
 
-    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub frmLvl2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         frmStart.Show()
     End Sub
 
@@ -235,36 +233,6 @@ Public Class frmMain
         Return Collided
     End Function
 
-    'Private Sub tmr_check_Tick(sender As Object, e As EventArgs) Handles tGrav.Tick
-    '    Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
-
-    '    'yVelocity = yVelocity + gravity
-
-    '    'pxKis.Location = New Point(pxKis.Location.X, pxKis.Location.Y - yVelocity)
-
-    '    'For x = 0 To 7
-    '    '    If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
-
-
-    '    '        yVelocity = -1 * yVelocity
-
-    '    '        End If
-    '    'Next x
-
-    '    pxKis.Top += 4
-
-    '    For x = 0 To 7
-    '        If Not (direction = "up" And direction = nextDirection) Then
-    '            If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
-
-    '                pxKis.Top -= 4
-
-    '            End If
-    '        End If
-    '    Next x
-
-    'End Sub
-
     Private Sub gravitasjon()
         Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
 
@@ -291,38 +259,8 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
-        Label1.ForeColor = Color.HotPink
-    End Sub
+    Private Sub frmLvl2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    Private Sub Label2_MouseHover(sender As Object, e As EventArgs) Handles Label2.MouseHover
-        Label2.ForeColor = Color.HotPink
-    End Sub
-
-    Private Sub Label3_MouseHover(sender As Object, e As EventArgs) Handles Label3.MouseHover
-        Label3.ForeColor = Color.HotPink
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        gameplay.Enabled = True
-        pnlPause.Visible = False
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        Me.Close()
-        frmStart.Show()
-    End Sub
-
-    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
-        Label1.ForeColor = Color.Black
-    End Sub
-
-    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
-        Label2.ForeColor = Color.Black
-    End Sub
-
-    Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
-        Label3.ForeColor = Color.Black
     End Sub
 End Class
 

@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _07() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("07", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property bg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bg", resourceCulture)
@@ -142,6 +132,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property lvl2_bg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lvl2_bg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property mah_hart() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("mah_hart", resourceCulture)
@@ -204,6 +204,16 @@ Namespace My.Resources
         Friend ReadOnly Property times() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("times", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property vitory_snus() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("vitory_snus", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

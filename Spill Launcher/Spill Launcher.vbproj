@@ -113,10 +113,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <Compile Include="frmLvl2.Designer.vb">
+      <DependentUpon>frmLvl2.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.vb">
+    <Compile Include="frmLvl2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLvl1.Designer.vb">
+      <DependentUpon>frmLvl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLvl1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAbout.Designer.vb">
@@ -143,6 +149,7 @@
     <Compile Include="frmStart.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kismove.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -160,8 +167,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <EmbeddedResource Include="frmLvl1.resx">
+      <DependentUpon>frmLvl1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
@@ -172,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLvl2.resx">
+      <DependentUpon>frmLvl2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.vb</DependentUpon>
@@ -304,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl2_bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

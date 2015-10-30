@@ -73,8 +73,8 @@ Public Class frmConsole
                     drunk.Dock = DockStyle.Fill
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 ElseIf TextBox1.Text = ("reload") Then
-                    frmMain.Close()
-                    frmMain.Show()
+                    frmLvl1.Close()
+                    frmLvl1.Show()
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 End If
                 TextBox1.Clear()
