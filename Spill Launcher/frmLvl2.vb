@@ -10,7 +10,7 @@
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
     Dim Platform() As PictureBox = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
-    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPLat5, pxPlat6, pxPlat7}
+    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3}
 
 
     Private Sub gameplaylvl2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplaylvl2.Tick
@@ -220,19 +220,6 @@
         Next x
     End Sub
 
-    Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
-        Dim Collided As Boolean = False
-
-
-        If Object1.top + Object1.height >= Object2.top And
-           Object2.top + Object2.height >= Object1.top And
-           Object1.left + Object1.width >= Object2.left And
-           Object2.left + Object2.width >= Object1.left Then
-            Collided = True
-        End If
-        Return Collided
-    End Function
-
     Private Sub gravitasjon()
         Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
 
@@ -257,10 +244,6 @@
         ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
             pxKis.Left -= rBound.Width + 5
         End If
-    End Sub
-
-    Private Sub frmLvl2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
 

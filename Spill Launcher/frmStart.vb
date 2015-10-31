@@ -194,4 +194,8 @@ Public Class frmStart
             console()
         End If
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        frmConsole.Show()
+    End Sub
 End Class

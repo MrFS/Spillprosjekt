@@ -9,12 +9,16 @@ Public Class frmLvl1
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim Platform() As PictureBox = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+
+    'Dim kis As kismove = New kismove()
+
     Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPLat5, pxPlat6, pxPlat7}
 
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
+        'kis.Move(pxKis)
         KisMove()
+
         plat()
 
         If Not (direction = "up" Or nextDirection = "up") Then
@@ -27,6 +31,14 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+
+        'Dim left As Integer = Keys.A
+        'Dim right As Integer = Keys.D
+        'Dim up As Integer = Keys.W
+
+        'kis.KeyDown(sender, e, left, right, up)
+
+
 
         If (Not direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
@@ -72,6 +84,15 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmMain_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+
+        'Dim left As Integer = Keys.A
+        'Dim right As Integer = Keys.D
+        'Dim up As Integer = Keys.W
+
+        'kis.KeyUp(sender, e, left, right, up)
+
+
+
         If (e.KeyCode = Keys.D And direction = "right") Then 'Right
             direction = "stand"
             facing = "right"
@@ -82,9 +103,6 @@ Public Class frmLvl1
             frameCount = 0
         End If
 
-        'If (e.KeyCode = Keys.W) Then
-        '    tGrav.Enabled = True
-        'End If
         If (direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
                 nextDirection = "stand"
@@ -102,7 +120,10 @@ Public Class frmLvl1
         Dim g As Graphics
         g = e.Graphics()
 
-        'Draws the main character's sprite
+        'kis.Paint(g, pxKis)
+
+        'Tegne kisn i frmLvl1 (Y)
+
         If (facing = "left") Then
             Dim srcBoundsLeft As Rectangle = New Rectangle(srcBounds.X + 39, srcBounds.Y, -40, 48)
             g.DrawImage(pxKis.Image, pxKis.Bounds, srcBoundsLeft, GraphicsUnit.Pixel)
@@ -214,24 +235,26 @@ Public Class frmLvl1
 
                 pxKis.Location = New Point(plat(x).Location.X, plat(x).Location.Y - pxKis.Height)
 
+
+
                 direction = nextDirection
 
             End If
         Next x
     End Sub
 
-    Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
-        Dim Collided As Boolean = False
+    'Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
+    '    Dim Collided As Boolean = False
 
 
-        If Object1.top + Object1.height >= Object2.top And
-           Object2.top + Object2.height >= Object1.top And
-           Object1.left + Object1.width >= Object2.left And
-           Object2.left + Object2.width >= Object1.left Then
-            Collided = True
-        End If
-        Return Collided
-    End Function
+    '    If Object1.top + Object1.height >= Object2.top And
+    '       Object2.top + Object2.height >= Object1.top And
+    '       Object1.left + Object1.width >= Object2.left And
+    '       Object2.left + Object2.width >= Object1.left Then
+    '        Collided = True
+    '    End If
+    '    Return Collided
+    'End Function
 
     Private Sub gravitasjon()
         Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
@@ -240,13 +263,15 @@ Public Class frmLvl1
         pxKis.Top += 6
 
         For x = 0 To 7
-            If Not (direction = "up" And direction = nextDirection) Then
-                If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
 
-                    pxKis.Top -= 6
+            If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
 
-                End If
+                pxKis.Top -= 6
+
+                'direction = nextDirection
+
             End If
+
         Next x
     End Sub
 
@@ -292,7 +317,5 @@ Public Class frmLvl1
     Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
         Label3.ForeColor = Color.Black
     End Sub
-
-
 End Class
 

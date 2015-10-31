@@ -1,5 +1,6 @@
 ﻿Imports System.Diagnostics
 Imports System.Management
+Imports System.Threading
 
 Public Class frmConsole
 
@@ -64,6 +65,18 @@ Public Class frmConsole
 
                 ElseIf TextBox1.Text = ("iloveyou") Then
                     iloveyou()
+
+                ElseIf TextBox1.Text = ("lvl2") Then
+                    Dim result As Integer = MessageBox.Show("Level 2 er ikke optimalisert! Massiv hakking vil forekomme! Fortsette?", "ADVARSEL", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+                    If result = DialogResult.No Then
+                        Me.Focus()
+                    ElseIf result = DialogResult.Yes Then
+                        frmLvl1.Close()
+                        frmLvl2.Show()
+                    End If
+
+
 
                 ElseIf TextBox1.Text = ("fulle trøtte jævla") Then
                     tmrDrunk.Enabled = True
