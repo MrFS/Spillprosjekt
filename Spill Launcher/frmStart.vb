@@ -120,7 +120,7 @@ Public Class frmStart
 
         TextBox1.Text = My.Settings.username
         Label8.Text = My.Settings.ant_fiender
-        Label9.Text = My.Settings.ant_mynt
+        Label9.Text = My.Settings.ant_kaffe
         Label10.Text = My.Settings.ant_død
 
     End Sub

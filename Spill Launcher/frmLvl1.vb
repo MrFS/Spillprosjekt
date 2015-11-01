@@ -27,6 +27,8 @@ Public Class frmLvl1
 
         chkBounds()
 
+        chkScore()
+
         Me.Refresh()
     End Sub
 
@@ -243,19 +245,6 @@ Public Class frmLvl1
         Next x
     End Sub
 
-    'Private Function collision(ByVal Object1 As Object, ByVal Object2 As Object) As Boolean
-    '    Dim Collided As Boolean = False
-
-
-    '    If Object1.top + Object1.height >= Object2.top And
-    '       Object2.top + Object2.height >= Object1.top And
-    '       Object1.left + Object1.width >= Object2.left And
-    '       Object2.left + Object2.width >= Object1.left Then
-    '        Collided = True
-    '    End If
-    '    Return Collided
-    'End Function
-
     Private Sub gravitasjon()
         Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
 
@@ -282,6 +271,22 @@ Public Class frmLvl1
         ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
             pxKis.Left -= rBound.Width + 5
         End If
+    End Sub
+
+    Private Sub chkScore()
+
+        Dim coffe As PictureBox() = {pxCoffee1, pxCoffee2, pxCoffee3, pxCoffee4, pxCoffee5}
+
+        For x = 0 To 4
+            If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
+                coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
+                My.Settings.ant_kaffe += 1 ' +1 pr kaffe i setting ant_kaffe (frmStart Statistikk)
+                My.Settings.Save() 'Save that shit
+            End If
+        Next
+
+        'Gjør om, den +1 pr tick tydeligvis....
+
     End Sub
 
     Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover

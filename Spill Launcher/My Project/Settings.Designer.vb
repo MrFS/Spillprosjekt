@@ -93,12 +93,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property ant_mynt() As Integer
+        Public Property ant_kaffe() As Integer
             Get
-                Return CType(Me("ant_mynt"),Integer)
+                Return CType(Me("ant_kaffe"),Integer)
             End Get
             Set
-                Me("ant_mynt") = value
+                Me("ant_kaffe") = value
             End Set
         End Property
         

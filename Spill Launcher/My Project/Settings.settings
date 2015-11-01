@@ -11,7 +11,7 @@
     <Setting Name="multicore" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ant_mynt" Type="System.Int32" Scope="User">
+    <Setting Name="ant_kaffe" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="ant_fiender" Type="System.Int32" Scope="User">
