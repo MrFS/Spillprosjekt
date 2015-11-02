@@ -185,6 +185,7 @@ Public Class frmStart
     Private Sub frmStart_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If (e.KeyCode = Keys.C) Then
             frmConsole.Show()
+            MsgBox("Console")
         End If
     End Sub
 
