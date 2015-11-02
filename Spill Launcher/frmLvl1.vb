@@ -53,19 +53,19 @@ Public Class frmLvl1
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
-                'tGrav.Enabled = False
+
             End If
         Else
             If (e.KeyCode = Keys.D) Then 'Right
                 If (speed < maxSpeed) Then speed += 1
                 facing = "right"
                 nextDirection = "right"
-                'tGrav.Enabled = True
+
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 If (speed > -maxSpeed) Then speed -= 1
                 facing = "left"
                 nextDirection = "left"
-                'tGrav.Enabled = True
+
             End If
         End If
 
@@ -235,9 +235,10 @@ Public Class frmLvl1
         For x = 0 To 6
             If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
-                pxKis.Location = New Point(plat(x).Location.X, plat(x).Location.Y - pxKis.Height)
-
-
+                'pxKis.Location = New Point(pxKis.Location.X,
+                'pxKis.Location.Y)
+                pxKis.Location = New Point(plat(x).Location.X,
+                                           plat(x).Location.Y - pxKis.Height)
 
                 direction = nextDirection
 
@@ -279,14 +280,11 @@ Public Class frmLvl1
 
         For x = 0 To 4
             If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
+
                 coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
 
-                My.Settings.Save() 'Save that shit
             End If
-            My.Settings.ant_kaffe += 1 ' +1 pr kaffe i setting ant_kaffe (frmStart Statistikk)
         Next x
-
-        'Gjør om, den +1 pr tick tydeligvis....
 
     End Sub
 
