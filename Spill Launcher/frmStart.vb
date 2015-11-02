@@ -125,13 +125,6 @@ Public Class frmStart
 
     End Sub
 
-    Private Sub console()
-        frmConsole.Show()
-    End Sub
-
-
-
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Application.Exit()
     End Sub
@@ -191,7 +184,7 @@ Public Class frmStart
 
     Private Sub frmStart_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If (e.KeyCode = Keys.C) Then
-            console()
+            frmConsole.Show()
         End If
     End Sub
 
