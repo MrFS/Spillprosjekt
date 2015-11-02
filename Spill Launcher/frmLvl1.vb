@@ -9,6 +9,7 @@ Public Class frmLvl1
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
+    Dim pxPlatDirection As String = "Høyre"
 
     'Dim kis As kismove = New kismove()
 
@@ -320,6 +321,26 @@ Public Class frmLvl1
 
     Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
         Label3.ForeColor = Color.Black
+    End Sub
+
+    Private Sub tmrPlatMove_Tick(sender As Object, e As EventArgs) Handles tmrPlatMove.Tick
+
+        Select Case pxPlatDirection
+            Case "Høyre"
+                pxPlat2.Left += 2
+                pxPlatBounds2.Left += 2
+                pxCoffee2.Left += 2
+            Case "Venstre"
+                pxPlat2.Left -= 2
+                pxPlatBounds2.Left -= 2
+                pxCoffee2.Left -= 2
+
+        End Select
+        If pxPlat2.Location.X = 485 Then
+            pxPlatDirection = "Høyre"
+        ElseIf pxPlat2.Location.X = 760
+            pxPlatDirection = "Venstre"
+        End If
     End Sub
 End Class
 

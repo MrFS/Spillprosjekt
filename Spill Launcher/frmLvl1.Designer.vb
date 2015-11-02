@@ -52,6 +52,7 @@ Partial Class frmLvl1
         Me.pxCoffee3 = New System.Windows.Forms.PictureBox()
         Me.pxCoffee2 = New System.Windows.Forms.PictureBox()
         Me.pxVictory = New System.Windows.Forms.PictureBox()
+        Me.tmrPlatMove = New System.Windows.Forms.Timer(Me.components)
         Me.pnlPause.SuspendLayout()
         CType(Me.pxPlat1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,7 +157,7 @@ Partial Class frmLvl1
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
-        Me.pxKis.Location = New System.Drawing.Point(63, 552)
+        Me.pxKis.Location = New System.Drawing.Point(54, 575)
         Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(53, 59)
@@ -171,7 +172,7 @@ Partial Class frmLvl1
         Me.pxGround.Location = New System.Drawing.Point(0, 640)
         Me.pxGround.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxGround.Name = "pxGround"
-        Me.pxGround.Size = New System.Drawing.Size(1262, 34)
+        Me.pxGround.Size = New System.Drawing.Size(178, 34)
         Me.pxGround.TabIndex = 1
         Me.pxGround.TabStop = False
         '
@@ -199,10 +200,10 @@ Partial Class frmLvl1
         '
         'pxPlatBounds1
         '
-        Me.pxPlatBounds1.Location = New System.Drawing.Point(276, 540)
+        Me.pxPlatBounds1.Location = New System.Drawing.Point(282, 590)
         Me.pxPlatBounds1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds1.Name = "pxPlatBounds1"
-        Me.pxPlatBounds1.Size = New System.Drawing.Size(21, 43)
+        Me.pxPlatBounds1.Size = New System.Drawing.Size(43, 10)
         Me.pxPlatBounds1.TabIndex = 9
         Me.pxPlatBounds1.TabStop = False
         '
@@ -384,6 +385,10 @@ Partial Class frmLvl1
         Me.pxVictory.TabIndex = 26
         Me.pxVictory.TabStop = False
         '
+        'tmrPlatMove
+        '
+        Me.tmrPlatMove.Enabled = True
+        '
         'frmLvl1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -481,4 +486,5 @@ Partial Class frmLvl1
     Friend WithEvents pxCoffee3 As PictureBox
     Friend WithEvents pxCoffee2 As PictureBox
     Friend WithEvents pxVictory As PictureBox
+    Friend WithEvents tmrPlatMove As Timer
 End Class
