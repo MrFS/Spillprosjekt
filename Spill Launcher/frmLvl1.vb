@@ -280,10 +280,11 @@ Public Class frmLvl1
         For x = 0 To 4
             If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
                 coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
-                My.Settings.ant_kaffe += 1 ' +1 pr kaffe i setting ant_kaffe (frmStart Statistikk)
+
                 My.Settings.Save() 'Save that shit
             End If
-        Next
+            My.Settings.ant_kaffe += 1 ' +1 pr kaffe i setting ant_kaffe (frmStart Statistikk)
+        Next x
 
         'Gjør om, den +1 pr tick tydeligvis....
 

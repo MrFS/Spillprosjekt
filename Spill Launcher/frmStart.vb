@@ -112,16 +112,14 @@ Public Class frmStart
 
         'Kalkuler score
 
-        Label12.Text = ((50 * 25) / 2)
+
 
 
         'les brukernavn fra fil
         'kode for cfg fil
 
         TextBox1.Text = My.Settings.username
-        Label8.Text = My.Settings.ant_fiender
-        Label9.Text = My.Settings.ant_kaffe
-        Label10.Text = My.Settings.ant_død
+
 
     End Sub
 

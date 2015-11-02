@@ -156,8 +156,8 @@ Partial Class frmLvl1
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
-        Me.pxKis.Location = New System.Drawing.Point(35, 624)
-        Me.pxKis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pxKis.Location = New System.Drawing.Point(63, 552)
+        Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(53, 59)
         Me.pxKis.TabIndex = 0
@@ -168,10 +168,10 @@ Partial Class frmLvl1
         '
         Me.pxGround.BackColor = System.Drawing.Color.Transparent
         Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxGround.Location = New System.Drawing.Point(-1, 704)
+        Me.pxGround.Location = New System.Drawing.Point(0, 640)
         Me.pxGround.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxGround.Name = "pxGround"
-        Me.pxGround.Size = New System.Drawing.Size(1068, 34)
+        Me.pxGround.Size = New System.Drawing.Size(1262, 34)
         Me.pxGround.TabIndex = 1
         Me.pxGround.TabStop = False
         '
@@ -227,10 +227,10 @@ Partial Class frmLvl1
         'rBound
         '
         Me.rBound.BackColor = System.Drawing.Color.Transparent
-        Me.rBound.Location = New System.Drawing.Point(1061, 0)
+        Me.rBound.Location = New System.Drawing.Point(1257, 0)
         Me.rBound.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rBound.Name = "rBound"
-        Me.rBound.Size = New System.Drawing.Size(5, 692)
+        Me.rBound.Size = New System.Drawing.Size(5, 620)
         Me.rBound.TabIndex = 12
         Me.rBound.TabStop = False
         '
@@ -240,7 +240,7 @@ Partial Class frmLvl1
         Me.lBound.Location = New System.Drawing.Point(0, 0)
         Me.lBound.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.lBound.Name = "lBound"
-        Me.lBound.Size = New System.Drawing.Size(5, 692)
+        Me.lBound.Size = New System.Drawing.Size(5, 620)
         Me.lBound.TabIndex = 13
         Me.lBound.TabStop = False
         '
@@ -390,7 +390,7 @@ Partial Class frmLvl1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1067, 738)
+        Me.ClientSize = New System.Drawing.Size(1262, 673)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
         Me.Controls.Add(Me.pxCoffee2)
@@ -419,7 +419,7 @@ Partial Class frmLvl1
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmLvl1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "2D Platformer Team Trøtt"
