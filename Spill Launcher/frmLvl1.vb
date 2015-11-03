@@ -31,6 +31,8 @@ Public Class frmLvl1
 
         chkScore()
 
+        outofBounds()
+
         Me.Refresh()
     End Sub
 
@@ -290,6 +292,10 @@ Public Class frmLvl1
 
     End Sub
 
+    Private Sub outofBounds()
+        If pxKis.Bounds.IntersectsWith(bBound.Bounds) Then MsgBox("U ded mofo")
+    End Sub
+
     Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
         Label1.ForeColor = Color.HotPink
     End Sub
@@ -365,5 +371,6 @@ Public Class frmLvl1
         '    pxPlatDirection = "Venstre"
         'End If
     End Sub
+
 End Class
 
