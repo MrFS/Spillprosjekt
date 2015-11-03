@@ -10,7 +10,6 @@ Public Class frmLvl1
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
     Dim pxPlatDirectionX As String = "Høyre"
-    Dim pxPlatDirectionY As String = "Ned"
 
     'Dim kis As kismove = New kismove()
 
@@ -334,42 +333,33 @@ Public Class frmLvl1
 
         Select Case pxPlatDirectionX
             Case "Høyre"
+                'Fløtt på Platform 2
                 pxPlat2.Left += 2
                 pxPlatBounds2.Left += 2
                 pxCoffee2.Left += 2
 
+                'Fløtt på Platform 3
+                pxPlat3.Left -= 2
+                pxPlatBounds3.Left -= 2
+                pxCoffee3.Left -= 2
+
+                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Venstre"
                 If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Venstre"
             Case "Venstre"
+                'Fløtt på Platform 2
                 pxPlat2.Left -= 2
                 pxPlatBounds2.Left -= 2
                 pxCoffee2.Left -= 2
 
+                'Fløtt på Platform 3
+                pxPlat3.Left -= 2
+                pxPlatBounds3.Left -= 2
+                pxCoffee3.Left -= 2
+
                 If pxPlat2.Location.X <= 380 Then pxPlatDirectionX = "Høyre"
+                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Høyre"
 
         End Select
-
-        Select Case pxPlatDirectionY
-            Case "Ned"
-                pxPlat4.Top -= 2
-                pxPlatBounds4.Top -= 2
-
-
-                If pxPlat2.Location.Y >= 500 Then pxPlatDirectionY = "Opp"
-            Case "Opp"
-                pxPlat4.Top += 2
-                pxPlatBounds4.Top += 2
-
-
-                If pxPlat2.Location.Y >= 150 Then pxPlatDirectionY = "Ned"
-
-        End Select
-
-        'If pxPlat2.Location.X = 485 Then
-        '    pxPlatDirection = "Høyre"
-        'End If
-        'If pxPlat2.Location.X = 760 Then
-        '    pxPlatDirection = "Venstre"
-        'End If
     End Sub
 
 End Class

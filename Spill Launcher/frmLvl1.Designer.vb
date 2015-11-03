@@ -195,7 +195,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat3.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat3.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPlat3.Location = New System.Drawing.Point(570, 448)
+        Me.pxPlat3.Location = New System.Drawing.Point(659, 318)
         Me.pxPlat3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat3.Name = "pxPlat3"
         Me.pxPlat3.Size = New System.Drawing.Size(75, 15)
@@ -222,7 +222,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds3
         '
-        Me.pxPlatBounds3.Location = New System.Drawing.Point(581, 448)
+        Me.pxPlatBounds3.Location = New System.Drawing.Point(670, 318)
         Me.pxPlatBounds3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds3.Name = "pxPlatBounds3"
         Me.pxPlatBounds3.Size = New System.Drawing.Size(56, 4)
@@ -251,7 +251,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds4
         '
-        Me.pxPlatBounds4.Location = New System.Drawing.Point(742, 363)
+        Me.pxPlatBounds4.Location = New System.Drawing.Point(889, 373)
         Me.pxPlatBounds4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds4.Name = "pxPlatBounds4"
         Me.pxPlatBounds4.Size = New System.Drawing.Size(52, 8)
@@ -260,7 +260,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds5
         '
-        Me.pxPlatBounds5.Location = New System.Drawing.Point(530, 280)
+        Me.pxPlatBounds5.Location = New System.Drawing.Point(179, 226)
         Me.pxPlatBounds5.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds5.Name = "pxPlatBounds5"
         Me.pxPlatBounds5.Size = New System.Drawing.Size(51, 4)
@@ -271,7 +271,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat4.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat4.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPlat4.Location = New System.Drawing.Point(725, 366)
+        Me.pxPlat4.Location = New System.Drawing.Point(872, 376)
         Me.pxPlat4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat4.Name = "pxPlat4"
         Me.pxPlat4.Size = New System.Drawing.Size(75, 15)
@@ -282,7 +282,7 @@ Partial Class frmLvl1
         '
         Me.pxPLat5.BackColor = System.Drawing.Color.DarkRed
         Me.pxPLat5.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPLat5.Location = New System.Drawing.Point(517, 283)
+        Me.pxPLat5.Location = New System.Drawing.Point(166, 229)
         Me.pxPLat5.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPLat5.Name = "pxPLat5"
         Me.pxPLat5.Size = New System.Drawing.Size(75, 15)
@@ -293,7 +293,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat6.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat6.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPlat6.Location = New System.Drawing.Point(289, 283)
+        Me.pxPlat6.Location = New System.Drawing.Point(306, 148)
         Me.pxPlat6.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat6.Name = "pxPlat6"
         Me.pxPlat6.Size = New System.Drawing.Size(75, 15)
@@ -304,7 +304,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat7.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat7.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPlat7.Location = New System.Drawing.Point(88, 180)
+        Me.pxPlat7.Location = New System.Drawing.Point(844, 78)
         Me.pxPlat7.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat7.Name = "pxPlat7"
         Me.pxPlat7.Size = New System.Drawing.Size(75, 15)
@@ -313,7 +313,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds6
         '
-        Me.pxPlatBounds6.Location = New System.Drawing.Point(303, 280)
+        Me.pxPlatBounds6.Location = New System.Drawing.Point(320, 145)
         Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds6.Name = "pxPlatBounds6"
         Me.pxPlatBounds6.Size = New System.Drawing.Size(45, 4)
@@ -322,7 +322,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds7
         '
-        Me.pxPlatBounds7.Location = New System.Drawing.Point(105, 177)
+        Me.pxPlatBounds7.Location = New System.Drawing.Point(861, 75)
         Me.pxPlatBounds7.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds7.Name = "pxPlatBounds7"
         Me.pxPlatBounds7.Size = New System.Drawing.Size(38, 4)
@@ -334,7 +334,7 @@ Partial Class frmLvl1
         Me.pxCoffee5.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee5.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee5.Location = New System.Drawing.Point(315, 252)
+        Me.pxCoffee5.Location = New System.Drawing.Point(332, 117)
         Me.pxCoffee5.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffee5.Name = "pxCoffee5"
         Me.pxCoffee5.Size = New System.Drawing.Size(24, 26)
@@ -346,7 +346,7 @@ Partial Class frmLvl1
         Me.pxCoffee4.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee4.Location = New System.Drawing.Point(538, 249)
+        Me.pxCoffee4.Location = New System.Drawing.Point(187, 195)
         Me.pxCoffee4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffee4.Name = "pxCoffee4"
         Me.pxCoffee4.Size = New System.Drawing.Size(24, 26)
@@ -358,7 +358,7 @@ Partial Class frmLvl1
         Me.pxCoffee3.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee3.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee3.Location = New System.Drawing.Point(591, 417)
+        Me.pxCoffee3.Location = New System.Drawing.Point(680, 287)
         Me.pxCoffee3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffee3.Name = "pxCoffee3"
         Me.pxCoffee3.Size = New System.Drawing.Size(24, 26)
@@ -382,7 +382,7 @@ Partial Class frmLvl1
         Me.pxVictory.BackColor = System.Drawing.Color.Transparent
         Me.pxVictory.BackgroundImage = Global.Spill.My.Resources.Resources.vitory_snus
         Me.pxVictory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pxVictory.Location = New System.Drawing.Point(102, 132)
+        Me.pxVictory.Location = New System.Drawing.Point(858, 30)
         Me.pxVictory.Margin = New System.Windows.Forms.Padding(2)
         Me.pxVictory.Name = "pxVictory"
         Me.pxVictory.Size = New System.Drawing.Size(44, 43)
