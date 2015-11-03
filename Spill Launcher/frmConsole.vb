@@ -4,7 +4,11 @@ Imports System.Threading
 
 Public Class frmConsole
 
+    Dim latestEntry As String
+    Dim RecordText As String
+
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+
         Select Case e.KeyCode
             Case Keys.Enter
                 TextBox1.CharacterCasing = CharacterCasing.Lower
@@ -90,7 +94,20 @@ Public Class frmConsole
                     frmLvl1.Show()
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
                 End If
+
+                latestEntry = TextBox1.Text
+                'TextBox1.Text = latestEntry
+
                 TextBox1.Clear()
+
+            Case Keys.Up
+
+                'RecordText = RecordText & Chr(e.KeyCode)
+
+                'MessageBox.Show(RecordText & latestEntry)
+
+                TextBox1.Text = latestEntry
+
         End Select
     End Sub
 
