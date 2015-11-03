@@ -6,7 +6,7 @@ Public Class frmConsole
 
     Dim latestEntry As String
     Dim RecordText As String
-
+    Dim c As Process = Process.GetCurrentProcess()
     Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
 
         Select Case e.KeyCode
@@ -61,6 +61,9 @@ Public Class frmConsole
                         .Add(vbNewLine)
                         .Add(My.Application.Info.AssemblyName & My.Application.Info.CompanyName)
                         .Add(My.Application.Info.Copyright & My.Application.Info.Description)
+                        .Add("Mem Usage (Working Set) :   " & c.WorkingSet / 1024 & " K")
+                        .Add("VM Size (Private Bytes) " & c.PagedMemorySize / 1024 & " K")
+                        .Add("GC TotalMemory " & GC.GetTotalMemory(True) & " bytes" & "Current Memory Usage")
                         .Add(vbNewLine)
                         .Add("Cleared console, tick set to pause")
                     End With
@@ -69,6 +72,9 @@ Public Class frmConsole
 
                 ElseIf TextBox1.Text = ("iloveyou") Then
                     iloveyou()
+
+                ElseIf textbox1.Text = ("resDebug")
+                    tmr_console.Enabled = True
 
                 ElseIf TextBox1.Text = ("lvl2") Then
                     Dim result As Integer = MessageBox.Show("Level 2 er ikke optimalisert! Massiv hakking vil forekomme! Fortsette?", "ADVARSEL", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
@@ -124,6 +130,9 @@ Public Class frmConsole
             .Add(My.Application.Info.AssemblyName & My.Application.Info.CompanyName)
             .Add(My.Application.Info.Copyright & My.Application.Info.Description)
             .Add(vbNewLine)
+            .Add("Mem Usage (Working Set) :   " & c.WorkingSet / 1024 & " K")
+            .Add("VM Size (Private Bytes) " & c.PagedMemorySize / 1024 & " K")
+            .Add("GC TotalMemory " & GC.GetTotalMemory(True) & " bytes" & "Current Memory Usage")
         End With
         tmr_console.Enabled = True
 
@@ -134,7 +143,16 @@ Public Class frmConsole
         With ListBox1.Items
             .Add(My.Computer.Info.AvailableVirtualMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
             .Add(My.Computer.Clock.TickCount)
-            .Add(Environment.TickCount & (" ") & Environment.ProcessorCount)
+            .Add(Environment.TickCount & (" ") & Environment.ProcessorCount & ("") & Environment.CommandLine)
+            .Add(Environment.CurrentDirectory)
+            .Add(Environment.CurrentManagedThreadId)
+            .Add(Environment.StackTrace)
+            .Add(Environment.WorkingSet)
+            .Add("Looping? " & Application.MessageLoop)
+            .Add(vbNewLine)
+            .Add("Mem Usage (Working Set) :   " & c.WorkingSet / 1024 & " K")
+            .Add("VM Size (Private Bytes) " & c.PagedMemorySize / 1024 & " K")
+            .Add("GC TotalMemory " & GC.GetTotalMemory(True) & " bytes" & "Current Memory Usage")
         End With
 
         ListBox1.BackColor = Color.White
