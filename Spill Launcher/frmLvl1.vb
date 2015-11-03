@@ -9,7 +9,8 @@ Public Class frmLvl1
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim pxPlatDirection As String = "Høyre"
+    Dim pxPlatDirectionX As String = "Høyre"
+    Dim pxPlatDirectionY As String = "Ned"
 
     'Dim kis As kismove = New kismove()
 
@@ -325,22 +326,44 @@ Public Class frmLvl1
 
     Private Sub tmrPlatMove_Tick(sender As Object, e As EventArgs) Handles tmrPlatMove.Tick
 
-        Select Case pxPlatDirection
+        Select Case pxPlatDirectionX
             Case "Høyre"
                 pxPlat2.Left += 2
                 pxPlatBounds2.Left += 2
                 pxCoffee2.Left += 2
+
+                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Venstre"
             Case "Venstre"
                 pxPlat2.Left -= 2
                 pxPlatBounds2.Left -= 2
                 pxCoffee2.Left -= 2
 
+                If pxPlat2.Location.X <= 380 Then pxPlatDirectionX = "Høyre"
+
         End Select
-        If pxPlat2.Location.X = 485 Then
-            pxPlatDirection = "Høyre"
-        ElseIf pxPlat2.Location.X = 760
-            pxPlatDirection = "Venstre"
-        End If
+
+        Select Case pxPlatDirectionY
+            Case "Ned"
+                pxPlat4.Top -= 2
+                pxPlatBounds4.Top -= 2
+
+
+                If pxPlat2.Location.Y >= 500 Then pxPlatDirectionY = "Opp"
+            Case "Opp"
+                pxPlat4.Top += 2
+                pxPlatBounds4.Top += 2
+
+
+                If pxPlat2.Location.Y >= 150 Then pxPlatDirectionY = "Ned"
+
+        End Select
+
+        'If pxPlat2.Location.X = 485 Then
+        '    pxPlatDirection = "Høyre"
+        'End If
+        'If pxPlat2.Location.X = 760 Then
+        '    pxPlatDirection = "Venstre"
+        'End If
     End Sub
 End Class
 

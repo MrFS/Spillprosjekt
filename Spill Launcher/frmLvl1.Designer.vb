@@ -388,6 +388,7 @@ Partial Class frmLvl1
         'tmrPlatMove
         '
         Me.tmrPlatMove.Enabled = True
+        Me.tmrPlatMove.Interval = 10
         '
         'frmLvl1
         '
