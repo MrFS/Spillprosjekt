@@ -9,7 +9,8 @@ Public Class frmLvl1
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim pxPlatDirectionX As String = "Høyre"
+    Dim pxPlat2DirectionX As String = "Høyre"
+    Dim pxPlat3DirectionX As String = "Høyre"
 
     'Dim kis As kismove = New kismove()
 
@@ -331,33 +332,35 @@ Public Class frmLvl1
 
     Private Sub tmrPlatMove_Tick(sender As Object, e As EventArgs) Handles tmrPlatMove.Tick
 
-        Select Case pxPlatDirectionX
+        Select Case pxPlat2DirectionX
             Case "Høyre"
-                'Fløtt på Platform 2
                 pxPlat2.Left += 2
                 pxPlatBounds2.Left += 2
                 pxCoffee2.Left += 2
 
-                'Fløtt på Platform 3
-                pxPlat3.Left -= 2
-                pxPlatBounds3.Left -= 2
-                pxCoffee3.Left -= 2
-
-                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Venstre"
-                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Venstre"
+                If pxPlat2.Location.X >= 760 Then pxPlat2DirectionX = "Venstre"
             Case "Venstre"
-                'Fløtt på Platform 2
                 pxPlat2.Left -= 2
                 pxPlatBounds2.Left -= 2
                 pxCoffee2.Left -= 2
 
-                'Fløtt på Platform 3
+                If pxPlat2.Location.X <= 380 Then pxPlat2DirectionX = "Høyre"
+
+        End Select
+
+        Select Case pxPlat3DirectionX
+            Case "Høyre"
+                pxPlat3.Left += 2
+                pxPlatBounds3.Left += 2
+                pxCoffee3.Left += 2
+
+                If pxPlat3.Location.X >= 760 Then pxPlat3DirectionX = "Venstre"
+            Case "Venstre"
                 pxPlat3.Left -= 2
                 pxPlatBounds3.Left -= 2
                 pxCoffee3.Left -= 2
 
-                If pxPlat2.Location.X <= 380 Then pxPlatDirectionX = "Høyre"
-                If pxPlat2.Location.X >= 760 Then pxPlatDirectionX = "Høyre"
+                If pxPlat3.Location.X <= 380 Then pxPlat3DirectionX = "Høyre"
 
         End Select
     End Sub
