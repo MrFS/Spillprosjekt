@@ -11,6 +11,7 @@ Public Class frmLvl1
     Dim startY As Integer = 0
     Dim pxPlat2DirectionX As String = "Høyre"
     Dim pxPlat3DirectionX As String = "Høyre"
+    Dim pxPlat6DirectionX As String = "Høyre"
 
     'Dim kis As kismove = New kismove()
 
@@ -363,7 +364,31 @@ Public Class frmLvl1
                 If pxPlat3.Location.X <= 380 Then pxPlat3DirectionX = "Høyre"
 
         End Select
+
+        Select Case pxPlat6DirectionX
+            Case "Høyre"
+                pxPlat6.Left += 2
+                pxPlatBounds6.Left += 2
+                pxCoffee5.Left += 2
+
+                If pxPlat6.Location.X >= 760 Then pxPlat6DirectionX = "Venstre"
+            Case "Venstre"
+                pxPlat6.Left -= 2
+                pxPlatBounds6.Left -= 2
+                pxCoffee5.Left -= 2
+
+                If pxPlat6.Location.X <= 380 Then pxPlat6DirectionX = "Høyre"
+
+        End Select
     End Sub
 
+    Private Sub frmLvl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        pxPlatBounds1.Parent = pxPlat1
+        pxPlatBounds2.Parent = pxPlat2
+        pxPlatBounds3.Parent = pxPlat3
+        pxPlatBounds4.Parent = pxPlat4
+        pxPlatBounds5.Parent = pxPLat5
+        pxPlatBounds6.Parent = pxPlat6
+    End Sub
 End Class
 

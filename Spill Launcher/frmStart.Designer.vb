@@ -416,7 +416,7 @@ Partial Class frmStart
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(566, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.4.3"
+        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.4.8"
         '
         'Button1
         '

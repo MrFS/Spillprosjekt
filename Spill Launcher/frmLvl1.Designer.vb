@@ -204,15 +204,17 @@ Partial Class frmLvl1
         '
         'pxPlatBounds1
         '
-        Me.pxPlatBounds1.Location = New System.Drawing.Point(212, 479)
+        Me.pxPlatBounds1.BackColor = System.Drawing.Color.Transparent
+        Me.pxPlatBounds1.Location = New System.Drawing.Point(197, 479)
         Me.pxPlatBounds1.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds1.Name = "pxPlatBounds1"
-        Me.pxPlatBounds1.Size = New System.Drawing.Size(32, 8)
+        Me.pxPlatBounds1.Size = New System.Drawing.Size(56, 4)
         Me.pxPlatBounds1.TabIndex = 9
         Me.pxPlatBounds1.TabStop = False
         '
         'pxPlatBounds2
         '
+        Me.pxPlatBounds2.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds2.Location = New System.Drawing.Point(375, 479)
         Me.pxPlatBounds2.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds2.Name = "pxPlatBounds2"
@@ -222,6 +224,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds3
         '
+        Me.pxPlatBounds3.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds3.Location = New System.Drawing.Point(670, 318)
         Me.pxPlatBounds3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds3.Name = "pxPlatBounds3"
@@ -251,6 +254,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds4
         '
+        Me.pxPlatBounds4.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds4.Location = New System.Drawing.Point(889, 373)
         Me.pxPlatBounds4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds4.Name = "pxPlatBounds4"
@@ -260,6 +264,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds5
         '
+        Me.pxPlatBounds5.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds5.Location = New System.Drawing.Point(179, 226)
         Me.pxPlatBounds5.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds5.Name = "pxPlatBounds5"
@@ -313,6 +318,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds6
         '
+        Me.pxPlatBounds6.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds6.Location = New System.Drawing.Point(320, 145)
         Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds6.Name = "pxPlatBounds6"
@@ -322,6 +328,7 @@ Partial Class frmLvl1
         '
         'pxPlatBounds7
         '
+        Me.pxPlatBounds7.BackColor = System.Drawing.Color.Transparent
         Me.pxPlatBounds7.Location = New System.Drawing.Point(861, 75)
         Me.pxPlatBounds7.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlatBounds7.Name = "pxPlatBounds7"
