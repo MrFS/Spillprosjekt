@@ -15,7 +15,7 @@ Public Class frmLvl1
 
     'Dim kis As kismove = New kismove()
 
-    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPLat5, pxPlat6, pxPlat7}
+    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
@@ -387,8 +387,15 @@ Public Class frmLvl1
         pxPlatBounds2.Parent = pxPlat2
         pxPlatBounds3.Parent = pxPlat3
         pxPlatBounds4.Parent = pxPlat4
-        pxPlatBounds5.Parent = pxPLat5
+        pxPlatBounds5.Parent = pxPlat5
         pxPlatBounds6.Parent = pxPlat6
+        pxPlat1.Parent = Me
+        pxPlat2.Parent = Me
+        pxPlat3.Parent = Me
+        pxPlat4.Parent = Me
+        pxPlat5.Parent = Me
+        pxPlat6.Parent = Me
+
     End Sub
 End Class
 

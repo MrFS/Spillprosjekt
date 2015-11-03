@@ -42,7 +42,7 @@ Partial Class frmLvl1
         Me.pxPlatBounds4 = New System.Windows.Forms.PictureBox()
         Me.pxPlatBounds5 = New System.Windows.Forms.PictureBox()
         Me.pxPlat4 = New System.Windows.Forms.PictureBox()
-        Me.pxPLat5 = New System.Windows.Forms.PictureBox()
+        Me.pxPlat5 = New System.Windows.Forms.PictureBox()
         Me.pxPlat6 = New System.Windows.Forms.PictureBox()
         Me.pxPlat7 = New System.Windows.Forms.PictureBox()
         Me.pxPlatBounds6 = New System.Windows.Forms.PictureBox()
@@ -69,7 +69,7 @@ Partial Class frmLvl1
         CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPLat5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxPlat5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,11 +138,11 @@ Partial Class frmLvl1
         'pxPlat1
         '
         Me.pxPlat1.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat1.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat1.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat1.Location = New System.Drawing.Point(187, 479)
         Me.pxPlat1.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat1.Name = "pxPlat1"
-        Me.pxPlat1.Size = New System.Drawing.Size(75, 14)
+        Me.pxPlat1.Size = New System.Drawing.Size(75, 15)
         Me.pxPlat1.TabIndex = 4
         Me.pxPlat1.TabStop = False
         '
@@ -164,7 +164,7 @@ Partial Class frmLvl1
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
         Me.pxKis.Location = New System.Drawing.Point(40, 467)
         Me.pxKis.Name = "pxKis"
-        Me.pxKis.Size = New System.Drawing.Size(40, 48)
+        Me.pxKis.Size = New System.Drawing.Size(48, 48)
         Me.pxKis.TabIndex = 0
         Me.pxKis.TabStop = False
         Me.pxKis.Visible = False
@@ -172,7 +172,7 @@ Partial Class frmLvl1
         'pxGround
         '
         Me.pxGround.BackColor = System.Drawing.Color.Transparent
-        Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.platbg
+        Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxGround.Location = New System.Drawing.Point(0, 519)
         Me.pxGround.Margin = New System.Windows.Forms.Padding(2)
         Me.pxGround.Name = "pxGround"
@@ -183,18 +183,18 @@ Partial Class frmLvl1
         'pxPlat2
         '
         Me.pxPlat2.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat2.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat2.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat2.Location = New System.Drawing.Point(364, 479)
         Me.pxPlat2.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat2.Name = "pxPlat2"
-        Me.pxPlat2.Size = New System.Drawing.Size(75, 18)
+        Me.pxPlat2.Size = New System.Drawing.Size(75, 15)
         Me.pxPlat2.TabIndex = 5
         Me.pxPlat2.TabStop = False
         '
         'pxPlat3
         '
         Me.pxPlat3.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat3.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat3.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat3.Location = New System.Drawing.Point(659, 318)
         Me.pxPlat3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat3.Name = "pxPlat3"
@@ -275,7 +275,7 @@ Partial Class frmLvl1
         'pxPlat4
         '
         Me.pxPlat4.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat4.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat4.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat4.Location = New System.Drawing.Point(872, 376)
         Me.pxPlat4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat4.Name = "pxPlat4"
@@ -283,21 +283,21 @@ Partial Class frmLvl1
         Me.pxPlat4.TabIndex = 16
         Me.pxPlat4.TabStop = False
         '
-        'pxPLat5
+        'pxPlat5
         '
-        Me.pxPLat5.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPLat5.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPLat5.Location = New System.Drawing.Point(166, 229)
-        Me.pxPLat5.Margin = New System.Windows.Forms.Padding(2)
-        Me.pxPLat5.Name = "pxPLat5"
-        Me.pxPLat5.Size = New System.Drawing.Size(75, 15)
-        Me.pxPLat5.TabIndex = 17
-        Me.pxPLat5.TabStop = False
+        Me.pxPlat5.BackColor = System.Drawing.Color.DarkRed
+        Me.pxPlat5.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
+        Me.pxPlat5.Location = New System.Drawing.Point(166, 229)
+        Me.pxPlat5.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlat5.Name = "pxPlat5"
+        Me.pxPlat5.Size = New System.Drawing.Size(75, 15)
+        Me.pxPlat5.TabIndex = 17
+        Me.pxPlat5.TabStop = False
         '
         'pxPlat6
         '
         Me.pxPlat6.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat6.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat6.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat6.Location = New System.Drawing.Point(306, 148)
         Me.pxPlat6.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat6.Name = "pxPlat6"
@@ -308,7 +308,7 @@ Partial Class frmLvl1
         'pxPlat7
         '
         Me.pxPlat7.BackColor = System.Drawing.Color.DarkRed
-        Me.pxPlat7.BackgroundImage = Global.Spill.My.Resources.Resources.platform
+        Me.pxPlat7.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
         Me.pxPlat7.Location = New System.Drawing.Point(844, 78)
         Me.pxPlat7.Margin = New System.Windows.Forms.Padding(2)
         Me.pxPlat7.Name = "pxPlat7"
@@ -415,7 +415,7 @@ Partial Class frmLvl1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Spill.My.Resources.Resources.bg
+        Me.BackgroundImage = Global.Spill.My.Resources.Resources.bgFIXED
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(946, 547)
         Me.Controls.Add(Me.bBound)
@@ -429,7 +429,7 @@ Partial Class frmLvl1
         Me.Controls.Add(Me.pxPlatBounds6)
         Me.Controls.Add(Me.pxPlat7)
         Me.Controls.Add(Me.pxPlat6)
-        Me.Controls.Add(Me.pxPLat5)
+        Me.Controls.Add(Me.pxPlat5)
         Me.Controls.Add(Me.pxPlat4)
         Me.Controls.Add(Me.pxPlatBounds5)
         Me.Controls.Add(Me.pxPlatBounds4)
@@ -466,7 +466,7 @@ Partial Class frmLvl1
         CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPLat5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxPlat5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -499,7 +499,7 @@ Partial Class frmLvl1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents pxPlat4 As PictureBox
-    Friend WithEvents pxPLat5 As PictureBox
+    Friend WithEvents pxPlat5 As PictureBox
     Friend WithEvents pxPlat6 As PictureBox
     Friend WithEvents pxPlat7 As PictureBox
     Friend WithEvents pxPlatBounds6 As PictureBox
