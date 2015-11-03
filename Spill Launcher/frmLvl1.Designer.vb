@@ -54,6 +54,15 @@ Partial Class frmLvl1
         Me.pxVictory = New System.Windows.Forms.PictureBox()
         Me.tmrPlatMove = New System.Windows.Forms.Timer(Me.components)
         Me.bBound = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.pxCoffeCollect1 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffeCollect2 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffeCollect5 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffeCollect4 = New System.Windows.Forms.PictureBox()
+        Me.pxCoffeCollect3 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlPause.SuspendLayout()
         CType(Me.pxPlat1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +89,11 @@ Partial Class frmLvl1
         CType(Me.pxCoffee2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bBound, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffeCollect1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffeCollect2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffeCollect5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffeCollect4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pxCoffeCollect3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gameplay
@@ -399,7 +413,7 @@ Partial Class frmLvl1
         'tmrPlatMove
         '
         Me.tmrPlatMove.Enabled = True
-        Me.tmrPlatMove.Interval = 10
+        Me.tmrPlatMove.Interval = 50
         '
         'bBound
         '
@@ -411,6 +425,110 @@ Partial Class frmLvl1
         Me.bBound.TabIndex = 27
         Me.bBound.TabStop = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Courier New", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(9, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(140, 23)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Collected:"
+        '
+        'pxCoffeCollect1
+        '
+        Me.pxCoffeCollect1.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffeCollect1.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffeCollect1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffeCollect1.Location = New System.Drawing.Point(144, 3)
+        Me.pxCoffeCollect1.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffeCollect1.Name = "pxCoffeCollect1"
+        Me.pxCoffeCollect1.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffeCollect1.TabIndex = 29
+        Me.pxCoffeCollect1.TabStop = False
+        '
+        'pxCoffeCollect2
+        '
+        Me.pxCoffeCollect2.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffeCollect2.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffeCollect2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffeCollect2.Location = New System.Drawing.Point(172, 3)
+        Me.pxCoffeCollect2.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffeCollect2.Name = "pxCoffeCollect2"
+        Me.pxCoffeCollect2.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffeCollect2.TabIndex = 30
+        Me.pxCoffeCollect2.TabStop = False
+        '
+        'pxCoffeCollect5
+        '
+        Me.pxCoffeCollect5.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffeCollect5.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffeCollect5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffeCollect5.Location = New System.Drawing.Point(259, 3)
+        Me.pxCoffeCollect5.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffeCollect5.Name = "pxCoffeCollect5"
+        Me.pxCoffeCollect5.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffeCollect5.TabIndex = 31
+        Me.pxCoffeCollect5.TabStop = False
+        '
+        'pxCoffeCollect4
+        '
+        Me.pxCoffeCollect4.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffeCollect4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffeCollect4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffeCollect4.Location = New System.Drawing.Point(229, 3)
+        Me.pxCoffeCollect4.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffeCollect4.Name = "pxCoffeCollect4"
+        Me.pxCoffeCollect4.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffeCollect4.TabIndex = 32
+        Me.pxCoffeCollect4.TabStop = False
+        '
+        'pxCoffeCollect3
+        '
+        Me.pxCoffeCollect3.BackColor = System.Drawing.Color.Transparent
+        Me.pxCoffeCollect3.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
+        Me.pxCoffeCollect3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pxCoffeCollect3.Location = New System.Drawing.Point(200, 3)
+        Me.pxCoffeCollect3.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffeCollect3.Name = "pxCoffeCollect3"
+        Me.pxCoffeCollect3.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffeCollect3.TabIndex = 33
+        Me.pxCoffeCollect3.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Courier New", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(9, 32)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(88, 23)
+        Me.Label5.TabIndex = 34
+        Me.Label5.Text = "Score:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Courier New", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(103, 32)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(36, 23)
+        Me.Label6.TabIndex = 35
+        Me.Label6.Text = "&&_"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Courier New", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(316, 262)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(140, 23)
+        Me.Label7.TabIndex = 36
+        Me.Label7.Text = "CoffeCount"
+        '
         'frmLvl1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -418,6 +536,15 @@ Partial Class frmLvl1
         Me.BackgroundImage = Global.Spill.My.Resources.Resources.bgFIXED
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(946, 547)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.pxCoffeCollect3)
+        Me.Controls.Add(Me.pxCoffeCollect4)
+        Me.Controls.Add(Me.pxCoffeCollect5)
+        Me.Controls.Add(Me.pxCoffeCollect2)
+        Me.Controls.Add(Me.pxCoffeCollect1)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.bBound)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
@@ -477,7 +604,13 @@ Partial Class frmLvl1
         CType(Me.pxCoffee2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bBound, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffeCollect1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffeCollect2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffeCollect5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffeCollect4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pxCoffeCollect3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pxKis As System.Windows.Forms.PictureBox
@@ -511,4 +644,13 @@ Partial Class frmLvl1
     Friend WithEvents pxVictory As PictureBox
     Friend WithEvents tmrPlatMove As Timer
     Friend WithEvents bBound As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents pxCoffeCollect1 As PictureBox
+    Friend WithEvents pxCoffeCollect2 As PictureBox
+    Friend WithEvents pxCoffeCollect5 As PictureBox
+    Friend WithEvents pxCoffeCollect4 As PictureBox
+    Friend WithEvents pxCoffeCollect3 As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

@@ -13,6 +13,10 @@ Public Class frmLvl1
     Dim pxPlat3DirectionX As String = "Høyre"
     Dim pxPlat6DirectionX As String = "Høyre"
 
+    Dim Score As Integer = 0
+
+    Dim coffeCount As Integer = 1
+
     'Dim kis As kismove = New kismove()
 
     Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
@@ -35,6 +39,8 @@ Public Class frmLvl1
         outofBounds()
 
         Me.Refresh()
+
+
     End Sub
 
     Private Sub frmMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
@@ -58,6 +64,7 @@ Public Class frmLvl1
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
+                'Score -= 100
 
             End If
         Else
@@ -66,10 +73,14 @@ Public Class frmLvl1
                 facing = "right"
                 nextDirection = "right"
 
+                'Label6.Text -= 1
+
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 If (speed > -maxSpeed) Then speed -= 1
                 facing = "left"
                 nextDirection = "left"
+
+                'Label6.Text -= 1
 
             End If
         End If
@@ -83,6 +94,7 @@ Public Class frmLvl1
     End Sub
     Private Sub pause()
         gameplay.Enabled = False
+        tmrPlatMove.Enabled = False
         pnlPause.Visible = True
     End Sub
     Private Sub Console()
@@ -220,7 +232,6 @@ Public Class frmLvl1
 
     End Sub
 
-
     Private Sub Equalize(ByVal i As Integer)
         For k As Integer = 0 To i Step 1
             If (speed < 0) Then
@@ -280,17 +291,48 @@ Public Class frmLvl1
     End Sub
 
     Private Sub chkScore()
-
         Dim coffe As PictureBox() = {pxCoffee1, pxCoffee2, pxCoffee3, pxCoffee4, pxCoffee5}
+        Dim coffeCollect As PictureBox() = {pxCoffeCollect1, pxCoffeCollect2, pxCoffeCollect3, pxCoffeCollect4, pxCoffeCollect5}
+
+
 
         For x = 0 To 4
             If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
 
                 coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
+                'coffeCount = coffeCount + 1
+                coffeCollect(x).Visible = True
+                coffe(x).Location = New Point(0, 0)
+                Score += 5000
+
+                coffeCount += 1
+
 
             End If
         Next x
 
+        If coffeCount = 6 Then
+            gameplay.Enabled = False
+            tmrPlatMove.Enabled = False
+
+            Dim victory As Integer = MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            If victory = DialogResult.Yes Then
+                pxVictory.Visible = True
+                gameplay.Enabled = True
+                tmrPlatMove.Enabled = True
+                coffeCount += 1
+            End If
+
+        End If
+
+        Label7.Text = coffeCount
+
+        Label6.Text = Score
+
+        If Score > 0 Then
+            Score -= 1
+        End If
     End Sub
 
     Private Sub outofBounds()
@@ -311,6 +353,7 @@ Public Class frmLvl1
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
         gameplay.Enabled = True
+        tmrPlatMove.Enabled = True
         pnlPause.Visible = False
     End Sub
 
@@ -389,13 +432,15 @@ Public Class frmLvl1
         pxPlatBounds4.Parent = pxPlat4
         pxPlatBounds5.Parent = pxPlat5
         pxPlatBounds6.Parent = pxPlat6
-        pxPlat1.Parent = Me
-        pxPlat2.Parent = Me
-        pxPlat3.Parent = Me
-        pxPlat4.Parent = Me
-        pxPlat5.Parent = Me
-        pxPlat6.Parent = Me
+
+        pxCoffeCollect1.Visible = False
+        pxCoffeCollect2.Visible = False
+        pxCoffeCollect3.Visible = False
+        pxCoffeCollect4.Visible = False
+        pxCoffeCollect5.Visible = False
+        pxVictory.Visible = False
 
     End Sub
+
 End Class
 
