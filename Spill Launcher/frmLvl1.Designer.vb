@@ -172,11 +172,11 @@ Partial Class frmLvl1
         'pxGround
         '
         Me.pxGround.BackColor = System.Drawing.Color.Transparent
-        Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxGround.Location = New System.Drawing.Point(0, 520)
+        Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.platbg
+        Me.pxGround.Location = New System.Drawing.Point(0, 519)
         Me.pxGround.Margin = New System.Windows.Forms.Padding(2)
         Me.pxGround.Name = "pxGround"
-        Me.pxGround.Size = New System.Drawing.Size(134, 28)
+        Me.pxGround.Size = New System.Drawing.Size(134, 32)
         Me.pxGround.TabIndex = 1
         Me.pxGround.TabStop = False
         '
