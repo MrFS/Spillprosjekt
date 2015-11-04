@@ -326,17 +326,26 @@ Public Class frmLvl1
 
         If coffeCount = 6 Then
 
+            coffeCount += 1
+            tmrPlatMove.Enabled = False
+            pxVictory.Visible = True
+            direction = "stand"
+
+            MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus¨.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        End If
+
+        If pxKis.Bounds.IntersectsWith(pxVictory.Bounds) Then
             gameplay.Enabled = False
-
-            Dim victory As Integer = MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            If victory = DialogResult.Yes Then
-                pxVictory.Visible = True
-                gameplay.Enabled = True
-                tmrPlatMove.Enabled = True
-                coffeCount = 9001
+            Dim victory As Integer = MessageBox.Show("You beat level 1, go to level 2?" & vbNewLine & "Console command for level 2: 1337", "You beat the game!", MessageBoxButtons.YesNo)
+            If victory = DialogResult.No Then
+                Me.Close()
+                frmStart.Show()
+                frmAbout.Show()
+            ElseIf victory = DialogResult.Yes Then
+                Me.Close()
+                frmLvl2.Show()
             End If
-
         End If
 
         Label7.Text = coffeCount

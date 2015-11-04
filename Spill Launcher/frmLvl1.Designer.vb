@@ -109,7 +109,7 @@ Partial Class frmLvl1
         Me.pnlPause.Controls.Add(Me.Label3)
         Me.pnlPause.Controls.Add(Me.Label2)
         Me.pnlPause.Controls.Add(Me.Label1)
-        Me.pnlPause.Location = New System.Drawing.Point(689, 14)
+        Me.pnlPause.Location = New System.Drawing.Point(470, 154)
         Me.pnlPause.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPause.Name = "pnlPause"
         Me.pnlPause.Size = New System.Drawing.Size(339, 270)
@@ -401,7 +401,7 @@ Partial Class frmLvl1
         Me.pxVictory.BackColor = System.Drawing.Color.Transparent
         Me.pxVictory.BackgroundImage = Global.Spill.My.Resources.Resources.vitory_snus
         Me.pxVictory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pxVictory.Location = New System.Drawing.Point(1144, 37)
+        Me.pxVictory.Location = New System.Drawing.Point(1145, 35)
         Me.pxVictory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxVictory.Name = "pxVictory"
         Me.pxVictory.Size = New System.Drawing.Size(59, 53)
