@@ -46,7 +46,7 @@ Public Class frmConsole
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
 
                 ElseIf TextBox1.Text = ("vagina") Then
-                    ListBox1.Items.Add("sorry, taht command is to deep")
+                    ListBox1.Items.Add("sorry, that command is to deep")
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
 
                 ElseIf TextBox1.Text = ("clear") Then
@@ -168,6 +168,10 @@ Public Class frmConsole
 
     Private Sub iloveyou()
         My.Computer.Audio.Play(My.Resources.iloveyou_console, AudioPlayMode.Background)
+    End Sub
+
+    Private Sub tmr_tick_Tick(sender As Object, e As EventArgs)
+        ListBox1.Items.Clear()
     End Sub
 End Class
 

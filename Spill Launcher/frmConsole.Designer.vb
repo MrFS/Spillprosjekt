@@ -26,7 +26,6 @@ Partial Class frmConsole
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.tmr_console = New System.Windows.Forms.Timer(Me.components)
-        Me.tmr_tick = New System.Windows.Forms.Timer(Me.components)
         Me.drunk = New System.Windows.Forms.PictureBox()
         Me.tmrDrunk = New System.Windows.Forms.Timer(Me.components)
         CType(Me.drunk, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,10 +52,6 @@ Partial Class frmConsole
         'tmr_console
         '
         Me.tmr_console.Interval = 500
-        '
-        'tmr_tick
-        '
-        Me.tmr_tick.Interval = 128
         '
         'drunk
         '
@@ -91,7 +86,6 @@ Partial Class frmConsole
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents tmr_console As Timer
-    Friend WithEvents tmr_tick As Timer
     Friend WithEvents drunk As PictureBox
     Friend WithEvents tmrDrunk As Timer
 End Class

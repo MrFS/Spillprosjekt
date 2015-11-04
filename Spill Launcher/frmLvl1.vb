@@ -139,6 +139,19 @@ Public Class frmLvl1
         Dim g As Graphics
         g = e.Graphics()
 
+
+        'lag rektangel, dekke hele frmLvl1
+        '
+        Dim rec As Rectangle = New Rectangle(0, 0, Me.Width, Me.Height)
+        '
+        'Lag gradient brush
+        '
+        Dim myBrush As Brush = New Drawing.Drawing2D.LinearGradientBrush(rec, Color.AliceBlue,
+  Color.Aqua, Drawing.Drawing2D.LinearGradientMode.Vertical)
+        '
+        'tegn BG brush
+        e.Graphics.FillRectangle(myBrush, rec)
+
         'kis.Paint(g, pxKis)
 
         'Tegne kisn i frmLvl1 (Y)
@@ -312,8 +325,8 @@ Public Class frmLvl1
         Next x
 
         If coffeCount = 6 Then
+
             gameplay.Enabled = False
-            tmrPlatMove.Enabled = False
 
             Dim victory As Integer = MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -321,7 +334,7 @@ Public Class frmLvl1
                 pxVictory.Visible = True
                 gameplay.Enabled = True
                 tmrPlatMove.Enabled = True
-                coffeCount += 1
+                coffeCount = 9001
             End If
 
         End If
@@ -439,6 +452,8 @@ Public Class frmLvl1
         pxCoffeCollect4.Visible = False
         pxCoffeCollect5.Visible = False
         pxVictory.Visible = False
+
+
 
     End Sub
 
