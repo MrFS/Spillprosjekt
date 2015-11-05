@@ -416,13 +416,16 @@ Public Class frmLvl1
                 pxPlat2.Left += 2
                 pxCoffee2.Left += 2
 
+                'pxCloud1.Left -= 2
+
                 If pxPlat2.Location.X >= 760 Then pxPlat2DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat2.Left -= 2
                 pxCoffee2.Left -= 2
 
-                If pxPlat2.Location.X <= 380 Then pxPlat2DirectionX = "Høyre"
+                'pxCloud1.Left += 2
 
+                If pxPlat2.Location.X <= 380 Then pxPlat2DirectionX = "Høyre"
         End Select
 
         Select Case pxPlat3DirectionX
@@ -430,10 +433,14 @@ Public Class frmLvl1
                 pxPlat3.Left += 2
                 pxCoffee3.Left += 2
 
+                'pxCloud2.Left -= 2
+
                 If pxPlat3.Location.X >= 760 Then pxPlat3DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat3.Left -= 2
                 pxCoffee3.Left -= 2
+
+                'pxCloud2.Left += 2
 
                 If pxPlat3.Location.X <= 380 Then pxPlat3DirectionX = "Høyre"
 
@@ -444,10 +451,14 @@ Public Class frmLvl1
                 pxPlat6.Left += 2
                 pxCoffee5.Left += 2
 
+                'pxCloud3.Left -= 2
+
                 If pxPlat6.Location.X >= 760 Then pxPlat6DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat6.Left -= 2
                 pxCoffee5.Left -= 2
+
+                'pxCloud3.Left += 2
 
                 If pxPlat6.Location.X <= 380 Then pxPlat6DirectionX = "Høyre"
 
