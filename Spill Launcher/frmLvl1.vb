@@ -398,6 +398,9 @@ Public Class frmLvl1
 
     Private Sub tmrPlatMove_Tick(sender As Object, e As EventArgs) Handles tmrPlatMove.Tick
 
+        If gameplay.Enabled = False Then
+            gameplay.Enabled = True
+        End If
         Select Case pxPlat2DirectionX
             Case "Høyre"
                 pxPlat2.Left += 2

@@ -73,8 +73,44 @@ Public Class frmConsole
                 ElseIf TextBox1.Text = ("iloveyou") Then
                     iloveyou()
 
-                ElseIf textbox1.Text = ("resDebug")
+                ElseIf textbox1.Text = ("resdebug")
                     tmr_console.Enabled = True
+
+                ElseIf textbox1.Text = ("1337")
+                    frmLvl1.Close()
+                    frmLvl2.Show()
+
+                ElseIf textbox1.Text = ("help")
+                    tmr_console.Enabled = False
+
+
+                    With ListBox1.Items
+
+                        .Clear()
+                        .Add("Console" & Application.ProductVersion & Application.StartupPath)
+                        .Add(My.Computer.Info.OSFullName & (" ") & My.Computer.Info.OSPlatform & (" ") & My.Computer.Info.OSVersion)
+                        .Add(My.Computer.Info.TotalPhysicalMemory & (" ") & My.Computer.Info.AvailablePhysicalMemory)
+                        .Add(My.Computer.Info.TotalVirtualMemory & (" ") & My.Computer.Info.AvailableVirtualMemory)
+                        .Add(My.Settings.ant_død & My.Settings.ant_fiender & My.Settings.ant_kaffe)
+                        .Add("Username: " & My.Settings.username)
+                        .Add(vbNewLine)
+                        .Add(My.Application.Info.AssemblyName & My.Application.Info.CompanyName)
+                        .Add(My.Application.Info.Copyright & My.Application.Info.Description)
+                        .Add("Mem Usage (Working Set) :   " & c.WorkingSet / 1024 & " K")
+                        .Add("VM Size (Private Bytes) " & c.PagedMemorySize / 1024 & " K")
+                        .Add("GC TotalMemory " & GC.GetTotalMemory(True) & " bytes" & "Current Memory Usage")
+                        .Add(vbNewLine)
+
+                        .Add("Available commands:")
+                        .Add("  help - Display this shit")
+                        .Add("  clear - Clear console shit and set the shit on pause")
+                        .Add("  pause - Make console stop showing more shit")
+                        .Add("  resDebug - Resume shitty debugging in console")
+                        .Add("  reload - Reloads lvl1 and its shit")
+                        .Add("  exit - Quit this shit")
+                        .Add("  reset - Reset shitty settings and reloads this shit of an app")
+                        .Add("  vac - /kick trond <- Shit!")
+                    End With
 
                 ElseIf TextBox1.Text = ("lvl2") Then
                     Dim result As Integer = MessageBox.Show("Level 2 er ikke optimalisert! Massiv hakking vil forekomme! Fortsette?", "ADVARSEL", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
@@ -95,6 +131,7 @@ Public Class frmConsole
                     drunk.Visible = True
                     drunk.Dock = DockStyle.Fill
                     ListBox1.SelectedIndex = ListBox1.Items.Count - 1
+
                 ElseIf TextBox1.Text = ("reload") Then
                     frmLvl1.Close()
                     frmLvl1.Show()
@@ -102,15 +139,10 @@ Public Class frmConsole
                 End If
 
                 latestEntry = TextBox1.Text
-                'TextBox1.Text = latestEntry
 
                 TextBox1.Clear()
 
             Case Keys.Up
-
-                'RecordText = RecordText & Chr(e.KeyCode)
-
-                'MessageBox.Show(RecordText & latestEntry)
 
                 TextBox1.Text = latestEntry
 
