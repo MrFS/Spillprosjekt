@@ -260,13 +260,23 @@ Public Class frmLvl1
     End Sub
 
     Private Sub plat()
-        Dim plat As PictureBox() = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+
+        'eric kode
+        'Dim plat As PictureBox() = {pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
+        'For x = 0 To plat.Length - 1
+        '    If pxKis.Bounds.IntersectsWith(plat(x).Bounds) And pxKis.Top - pxKis.Height >= plat(x).Top Then
+        '        pxKis.Top = plat(x).Top - pxKis.Height
+        '    End If
+        'Next
+
+
+        Dim plat As PictureBox() = {pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
         For x = 0 To 6
             If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
                 'pxKis.Location = New Point(pxKis.Location.X,
                 'pxKis.Location.Y)
-                pxKis.Location = New Point(plat(x).Location.X,
+                pxKis.Location = New Point(pxKis.Location.X,
                                            plat(x).Location.Y - pxKis.Height)
 
                 direction = nextDirection
@@ -276,7 +286,7 @@ Public Class frmLvl1
     End Sub
 
     Private Sub gravitasjon()
-        Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+        Dim gravity2 As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
 
         pxKis.Top += 6
@@ -404,13 +414,11 @@ Public Class frmLvl1
         Select Case pxPlat2DirectionX
             Case "Høyre"
                 pxPlat2.Left += 2
-                pxPlatBounds2.Left += 2
                 pxCoffee2.Left += 2
 
                 If pxPlat2.Location.X >= 760 Then pxPlat2DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat2.Left -= 2
-                pxPlatBounds2.Left -= 2
                 pxCoffee2.Left -= 2
 
                 If pxPlat2.Location.X <= 380 Then pxPlat2DirectionX = "Høyre"
@@ -420,13 +428,12 @@ Public Class frmLvl1
         Select Case pxPlat3DirectionX
             Case "Høyre"
                 pxPlat3.Left += 2
-                pxPlatBounds3.Left += 2
+                pxPlat3.Left += 2
                 pxCoffee3.Left += 2
 
                 If pxPlat3.Location.X >= 760 Then pxPlat3DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat3.Left -= 2
-                pxPlatBounds3.Left -= 2
                 pxCoffee3.Left -= 2
 
                 If pxPlat3.Location.X <= 380 Then pxPlat3DirectionX = "Høyre"
@@ -436,13 +443,11 @@ Public Class frmLvl1
         Select Case pxPlat6DirectionX
             Case "Høyre"
                 pxPlat6.Left += 2
-                pxPlatBounds6.Left += 2
                 pxCoffee5.Left += 2
 
                 If pxPlat6.Location.X >= 760 Then pxPlat6DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat6.Left -= 2
-                pxPlatBounds6.Left -= 2
                 pxCoffee5.Left -= 2
 
                 If pxPlat6.Location.X <= 380 Then pxPlat6DirectionX = "Høyre"
@@ -451,12 +456,7 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmLvl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pxPlatBounds1.Parent = pxPlat1
-        pxPlatBounds2.Parent = pxPlat2
-        pxPlatBounds3.Parent = pxPlat3
-        pxPlatBounds4.Parent = pxPlat4
-        pxPlatBounds5.Parent = pxPlat5
-        pxPlatBounds6.Parent = pxPlat6
+
 
         pxCoffeCollect1.Visible = False
         pxCoffeCollect2.Visible = False

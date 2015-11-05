@@ -245,5 +245,9 @@
             pxKis.Left -= rBound.Width + 5
         End If
     End Sub
+
+    Private Sub frmLvl2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 

@@ -84,7 +84,7 @@ Partial Class frmLvl2
         Me.pnlPause.Controls.Add(Me.Label3)
         Me.pnlPause.Controls.Add(Me.Label2)
         Me.pnlPause.Controls.Add(Me.Label1)
-        Me.pnlPause.Location = New System.Drawing.Point(119, 306)
+        Me.pnlPause.Location = New System.Drawing.Point(1039, 392)
         Me.pnlPause.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPause.Name = "pnlPause"
         Me.pnlPause.Size = New System.Drawing.Size(339, 270)
@@ -197,7 +197,7 @@ Partial Class frmLvl2
         Me.pxPlatBounds6.Location = New System.Drawing.Point(377, 292)
         Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds6.Name = "pxPlatBounds6"
-        Me.pxPlatBounds6.Size = New System.Drawing.Size(144, 32)
+        Me.pxPlatBounds6.Size = New System.Drawing.Size(164, 32)
         Me.pxPlatBounds6.TabIndex = 45
         Me.pxPlatBounds6.TabStop = False
         '
@@ -275,7 +275,7 @@ Partial Class frmLvl2
         '
         Me.pxPlat2.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat2.BackgroundImage = Global.Spill.My.Resources.Resources.platform
-        Me.pxPlat2.Location = New System.Drawing.Point(487, 590)
+        Me.pxPlat2.Location = New System.Drawing.Point(482, 590)
         Me.pxPlat2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat2.Name = "pxPlat2"
         Me.pxPlat2.Size = New System.Drawing.Size(100, 22)
@@ -341,7 +341,7 @@ Partial Class frmLvl2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Spill.My.Resources.Resources.lvl2_bg
+        Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1067, 738)
         Me.Controls.Add(Me.pnlPause)

@@ -34,19 +34,12 @@ Partial Class frmLvl1
         Me.pxGround = New System.Windows.Forms.PictureBox()
         Me.pxPlat2 = New System.Windows.Forms.PictureBox()
         Me.pxPlat3 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds1 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds2 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds3 = New System.Windows.Forms.PictureBox()
         Me.rBound = New System.Windows.Forms.PictureBox()
         Me.lBound = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds4 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds5 = New System.Windows.Forms.PictureBox()
         Me.pxPlat4 = New System.Windows.Forms.PictureBox()
         Me.pxPlat5 = New System.Windows.Forms.PictureBox()
         Me.pxPlat6 = New System.Windows.Forms.PictureBox()
         Me.pxPlat7 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds6 = New System.Windows.Forms.PictureBox()
-        Me.pxPlatBounds7 = New System.Windows.Forms.PictureBox()
         Me.pxCoffee5 = New System.Windows.Forms.PictureBox()
         Me.pxCoffee4 = New System.Windows.Forms.PictureBox()
         Me.pxCoffee3 = New System.Windows.Forms.PictureBox()
@@ -70,19 +63,12 @@ Partial Class frmLvl1
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rBound, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lBound, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxPlatBounds7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +95,7 @@ Partial Class frmLvl1
         Me.pnlPause.Controls.Add(Me.Label3)
         Me.pnlPause.Controls.Add(Me.Label2)
         Me.pnlPause.Controls.Add(Me.Label1)
-        Me.pnlPause.Location = New System.Drawing.Point(470, 154)
+        Me.pnlPause.Location = New System.Drawing.Point(945, 161)
         Me.pnlPause.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPause.Name = "pnlPause"
         Me.pnlPause.Size = New System.Drawing.Size(339, 270)
@@ -174,7 +160,7 @@ Partial Class frmLvl1
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
         Me.pxKis.Location = New System.Drawing.Point(53, 575)
-        Me.pxKis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(64, 59)
         Me.pxKis.TabIndex = 0
@@ -214,36 +200,6 @@ Partial Class frmLvl1
         Me.pxPlat3.TabIndex = 6
         Me.pxPlat3.TabStop = False
         '
-        'pxPlatBounds1
-        '
-        Me.pxPlatBounds1.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds1.Location = New System.Drawing.Point(263, 590)
-        Me.pxPlatBounds1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds1.Name = "pxPlatBounds1"
-        Me.pxPlatBounds1.Size = New System.Drawing.Size(75, 5)
-        Me.pxPlatBounds1.TabIndex = 9
-        Me.pxPlatBounds1.TabStop = False
-        '
-        'pxPlatBounds2
-        '
-        Me.pxPlatBounds2.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds2.Location = New System.Drawing.Point(500, 590)
-        Me.pxPlatBounds2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds2.Name = "pxPlatBounds2"
-        Me.pxPlatBounds2.Size = New System.Drawing.Size(75, 5)
-        Me.pxPlatBounds2.TabIndex = 10
-        Me.pxPlatBounds2.TabStop = False
-        '
-        'pxPlatBounds3
-        '
-        Me.pxPlatBounds3.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds3.Location = New System.Drawing.Point(893, 391)
-        Me.pxPlatBounds3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds3.Name = "pxPlatBounds3"
-        Me.pxPlatBounds3.Size = New System.Drawing.Size(75, 5)
-        Me.pxPlatBounds3.TabIndex = 11
-        Me.pxPlatBounds3.TabStop = False
-        '
         'rBound
         '
         Me.rBound.BackColor = System.Drawing.Color.Transparent
@@ -263,26 +219,6 @@ Partial Class frmLvl1
         Me.lBound.Size = New System.Drawing.Size(5, 620)
         Me.lBound.TabIndex = 13
         Me.lBound.TabStop = False
-        '
-        'pxPlatBounds4
-        '
-        Me.pxPlatBounds4.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds4.Location = New System.Drawing.Point(1185, 459)
-        Me.pxPlatBounds4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds4.Name = "pxPlatBounds4"
-        Me.pxPlatBounds4.Size = New System.Drawing.Size(69, 10)
-        Me.pxPlatBounds4.TabIndex = 14
-        Me.pxPlatBounds4.TabStop = False
-        '
-        'pxPlatBounds5
-        '
-        Me.pxPlatBounds5.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds5.Location = New System.Drawing.Point(239, 278)
-        Me.pxPlatBounds5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds5.Name = "pxPlatBounds5"
-        Me.pxPlatBounds5.Size = New System.Drawing.Size(68, 5)
-        Me.pxPlatBounds5.TabIndex = 15
-        Me.pxPlatBounds5.TabStop = False
         '
         'pxPlat4
         '
@@ -327,26 +263,6 @@ Partial Class frmLvl1
         Me.pxPlat7.Size = New System.Drawing.Size(100, 18)
         Me.pxPlat7.TabIndex = 19
         Me.pxPlat7.TabStop = False
-        '
-        'pxPlatBounds6
-        '
-        Me.pxPlatBounds6.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds6.Location = New System.Drawing.Point(427, 178)
-        Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds6.Name = "pxPlatBounds6"
-        Me.pxPlatBounds6.Size = New System.Drawing.Size(60, 5)
-        Me.pxPlatBounds6.TabIndex = 20
-        Me.pxPlatBounds6.TabStop = False
-        '
-        'pxPlatBounds7
-        '
-        Me.pxPlatBounds7.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds7.Location = New System.Drawing.Point(1148, 92)
-        Me.pxPlatBounds7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pxPlatBounds7.Name = "pxPlatBounds7"
-        Me.pxPlatBounds7.Size = New System.Drawing.Size(51, 5)
-        Me.pxPlatBounds7.TabIndex = 21
-        Me.pxPlatBounds7.TabStop = False
         '
         'pxCoffee5
         '
@@ -553,19 +469,12 @@ Partial Class frmLvl1
         Me.Controls.Add(Me.pxCoffee3)
         Me.Controls.Add(Me.pxCoffee4)
         Me.Controls.Add(Me.pxCoffee5)
-        Me.Controls.Add(Me.pxPlatBounds7)
-        Me.Controls.Add(Me.pxPlatBounds6)
         Me.Controls.Add(Me.pxPlat7)
         Me.Controls.Add(Me.pxPlat6)
         Me.Controls.Add(Me.pxPlat5)
         Me.Controls.Add(Me.pxPlat4)
-        Me.Controls.Add(Me.pxPlatBounds5)
-        Me.Controls.Add(Me.pxPlatBounds4)
         Me.Controls.Add(Me.lBound)
         Me.Controls.Add(Me.rBound)
-        Me.Controls.Add(Me.pxPlatBounds3)
-        Me.Controls.Add(Me.pxPlatBounds2)
-        Me.Controls.Add(Me.pxPlatBounds1)
         Me.Controls.Add(Me.pxPlat3)
         Me.Controls.Add(Me.pxPlat2)
         Me.Controls.Add(Me.pxPlat1)
@@ -575,7 +484,7 @@ Partial Class frmLvl1
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmLvl1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "2D Platformer Team Trøtt"
@@ -587,19 +496,12 @@ Partial Class frmLvl1
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rBound, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lBound, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxPlat7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxPlatBounds7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffee5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffee4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffee3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -623,13 +525,8 @@ Partial Class frmLvl1
     Friend WithEvents pxPlat1 As PictureBox
     Friend WithEvents pxPlat2 As PictureBox
     Friend WithEvents pxPlat3 As PictureBox
-    Friend WithEvents pxPlatBounds1 As PictureBox
-    Friend WithEvents pxPlatBounds2 As PictureBox
-    Friend WithEvents pxPlatBounds3 As PictureBox
     Friend WithEvents rBound As PictureBox
     Friend WithEvents lBound As PictureBox
-    Friend WithEvents pxPlatBounds4 As PictureBox
-    Friend WithEvents pxPlatBounds5 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -637,8 +534,6 @@ Partial Class frmLvl1
     Friend WithEvents pxPlat5 As PictureBox
     Friend WithEvents pxPlat6 As PictureBox
     Friend WithEvents pxPlat7 As PictureBox
-    Friend WithEvents pxPlatBounds6 As PictureBox
-    Friend WithEvents pxPlatBounds7 As PictureBox
     Friend WithEvents pxCoffee5 As PictureBox
     Friend WithEvents pxCoffee4 As PictureBox
     Friend WithEvents pxCoffee3 As PictureBox
