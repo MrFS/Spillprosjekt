@@ -57,8 +57,6 @@ Partial Class frmLvl1
         Me.pxCoffee1 = New System.Windows.Forms.PictureBox()
         Me.pxKis = New System.Windows.Forms.PictureBox()
         Me.pxGround = New System.Windows.Forms.PictureBox()
-        Me.pxCloud2 = New System.Windows.Forms.PictureBox()
-        Me.pxCloud3 = New System.Windows.Forms.PictureBox()
         CType(Me.pxCloud1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffeCollect3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffeCollect4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,8 +82,6 @@ Partial Class frmLvl1
         CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxCloud2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pxCloud3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gameplay
@@ -150,11 +146,11 @@ Partial Class frmLvl1
         '
         Me.pxCloud1.BackColor = System.Drawing.Color.Transparent
         Me.pxCloud1.BackgroundImage = Global.Spill.My.Resources.Resources.cloud3
-        Me.pxCloud1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCloud1.Location = New System.Drawing.Point(1056, 15)
+        Me.pxCloud1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pxCloud1.Location = New System.Drawing.Point(0, 0)
         Me.pxCloud1.Margin = New System.Windows.Forms.Padding(4)
         Me.pxCloud1.Name = "pxCloud1"
-        Me.pxCloud1.Size = New System.Drawing.Size(195, 42)
+        Me.pxCloud1.Size = New System.Drawing.Size(1261, 140)
         Me.pxCloud1.TabIndex = 37
         Me.pxCloud1.TabStop = False
         '
@@ -465,48 +461,22 @@ Partial Class frmLvl1
         Me.pxGround.TabIndex = 1
         Me.pxGround.TabStop = False
         '
-        'pxCloud2
-        '
-        Me.pxCloud2.BackColor = System.Drawing.Color.Transparent
-        Me.pxCloud2.BackgroundImage = Global.Spill.My.Resources.Resources.cloud2
-        Me.pxCloud2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCloud2.Location = New System.Drawing.Point(907, 4)
-        Me.pxCloud2.Margin = New System.Windows.Forms.Padding(4)
-        Me.pxCloud2.Name = "pxCloud2"
-        Me.pxCloud2.Size = New System.Drawing.Size(195, 42)
-        Me.pxCloud2.TabIndex = 38
-        Me.pxCloud2.TabStop = False
-        '
-        'pxCloud3
-        '
-        Me.pxCloud3.BackColor = System.Drawing.Color.Transparent
-        Me.pxCloud3.BackgroundImage = Global.Spill.My.Resources.Resources.cloud1
-        Me.pxCloud3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCloud3.Location = New System.Drawing.Point(879, 39)
-        Me.pxCloud3.Margin = New System.Windows.Forms.Padding(4)
-        Me.pxCloud3.Name = "pxCloud3"
-        Me.pxCloud3.Size = New System.Drawing.Size(195, 42)
-        Me.pxCloud3.TabIndex = 39
-        Me.pxCloud3.TabStop = False
-        '
         'frmLvl1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1261, 673)
-        Me.Controls.Add(Me.pxCloud3)
-        Me.Controls.Add(Me.pxCloud2)
-        Me.Controls.Add(Me.pxCloud1)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.pxCoffeCollect1)
+        Me.Controls.Add(Me.pxCoffeCollect2)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.pxCoffeCollect3)
         Me.Controls.Add(Me.pxCoffeCollect4)
         Me.Controls.Add(Me.pxCoffeCollect5)
-        Me.Controls.Add(Me.pxCoffeCollect2)
-        Me.Controls.Add(Me.pxCoffeCollect1)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.pxCloud1)
         Me.Controls.Add(Me.bBound)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
@@ -558,8 +528,6 @@ Partial Class frmLvl1
         CType(Me.pxCoffee1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxKis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxGround, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxCloud2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pxCloud3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -598,6 +566,4 @@ Partial Class frmLvl1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents pxCloud1 As PictureBox
-    Friend WithEvents pxCloud2 As PictureBox
-    Friend WithEvents pxCloud3 As PictureBox
 End Class

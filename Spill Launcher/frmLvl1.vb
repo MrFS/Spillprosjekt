@@ -15,7 +15,7 @@ Public Class frmLvl1
     Dim deathFlag As Boolean = False
     Dim jumpAllowed As Boolean = True
     Dim Score As Integer = 0
-
+    Dim collision As Boolean = True
     Dim coffeCount As Integer = 1
 
     'Dim kis As kismove = New kismove()
@@ -40,7 +40,6 @@ Public Class frmLvl1
         outofBounds()
 
         Me.Refresh()
-
 
     End Sub
 
@@ -265,18 +264,35 @@ Public Class frmLvl1
     Private Sub plat()
 
         Dim plat As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
-        For x = 0 To 7
-            If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
+
+        For Each element In plat
+            If pxKis.Bounds.IntersectsWith(element.Bounds) Then
+                collision = True
 
                 pxKis.Location = New Point(pxKis.Location.X,
-                                           plat(x).Location.Y - pxKis.Height)
+                                           element.Location.Y - pxKis.Height)
 
                 direction = nextDirection
                 jumpAllowed = True
+
             Else
                 jumpAllowed = False
+                collision = False
             End If
-        Next x
+        Next
+
+        'For x = 0 To 7
+        '    If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
+
+        '        pxKis.Location = New Point(pxKis.Location.X,
+        '                                   plat(x).Location.Y - pxKis.Height)
+
+        '        direction = nextDirection
+        '        jumpAllowed = True
+        '    Else
+        '        jumpAllowed = False
+        '    End If
+        'Next x
     End Sub
 
     Private Sub gravitasjon()
@@ -285,17 +301,25 @@ Public Class frmLvl1
 
         pxKis.Top += 6
 
-        For x = 0 To 7
 
-            If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
-
+        For Each element In gravity2
+            If pxKis.Bounds.IntersectsWith(element.Bounds) Then
                 pxKis.Top -= 6
-
-                'direction = nextDirection
-
             End If
+        Next
 
-        Next x
+
+        'For x = 0 To 7
+
+        '    If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
+
+        '        pxKis.Top -= 6
+
+        '        'direction = nextDirection
+
+        '    End If
+
+        'Next x
     End Sub
 
     Private Sub chkBounds()
@@ -311,13 +335,21 @@ Public Class frmLvl1
         Dim coffe As PictureBox() = {pxCoffee1, pxCoffee2, pxCoffee3, pxCoffee4, pxCoffee5}
         Dim coffeCollect As PictureBox() = {pxCoffeCollect1, pxCoffeCollect2, pxCoffeCollect3, pxCoffeCollect4, pxCoffeCollect5}
 
+        'For Each element In coffe
+        '    If pxKis.Bounds.IntersectsWith(element.Bounds) Then
+        '        element.Visible = False
+        '        element.Location = New Point(0, 0)
+        '        Score += 5000
+        '        coffeCount += 1
+        '    End If
+        'Next
+
 
 
         For x = 0 To 4
             If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
 
                 coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
-                'coffeCount = coffeCount + 1
                 coffeCollect(x).Visible = True
                 coffe(x).Location = New Point(0, 0)
                 Score += 5000
@@ -335,7 +367,7 @@ Public Class frmLvl1
             pxVictory.Visible = True
             direction = "stand"
 
-            MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus¨.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         End If
 
@@ -472,9 +504,6 @@ Public Class frmLvl1
         pxCoffeCollect4.Visible = False
         pxCoffeCollect5.Visible = False
         pxVictory.Visible = False
-
-
-
     End Sub
 
 
