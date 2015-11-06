@@ -12,7 +12,8 @@ Public Class frmLvl1
     Dim pxPlat2DirectionX As String = "Høyre"
     Dim pxPlat3DirectionX As String = "Høyre"
     Dim pxPlat6DirectionX As String = "Høyre"
-
+    Dim deathFlag As Boolean = False
+    Dim jumpAllowed As Boolean = True
     Dim Score As Integer = 0
 
     Dim coffeCount As Integer = 1
@@ -199,34 +200,36 @@ Public Class frmLvl1
                 Case "up"
 
                     If (jumpcount = 0) Then
-                        startY = pxKis.Location.Y
-                    End If
+                            startY = pxKis.Location.Y
+                        End If
 
-                    'Animations
-                    If (speed > -4 And speed < 4) Then
-                        srcBounds.Y = 96
-                    Else
-                        srcBounds.Y = 48
-                    End If
-                    If (srcBounds.Y = 0 Or srcBounds.Y = 96) Then
-                        If (frameCount / delay >= 9) Then
-                            frameCount = 0
+                        'Animations
+                        If (speed > -4 And speed < 4) Then
+                            srcBounds.Y = 96
+                        Else
+                            srcBounds.Y = 48
                         End If
-                        If (jumpcount <= 10 And frameCount / delay > 3) Then
-                            frameCount = delay * 2
-                        ElseIf (jumpcount <= 18 And frameCount / delay > 5) Then
-                            frameCount = delay * 4
+                        If (srcBounds.Y = 0 Or srcBounds.Y = 96) Then
+                            If (frameCount / delay >= 9) Then
+                                frameCount = 0
+                            End If
+                            If (jumpcount <= 10 And frameCount / delay > 3) Then
+                                frameCount = delay * 2
+                            ElseIf (jumpcount <= 18 And frameCount / delay > 5) Then
+                                frameCount = delay * 4
+                            End If
+                            srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 96, 40, 48)
+                        ElseIf (srcBounds.Y = 48) Then
+                            If (frameCount / delay >= 8) Then
+                                frameCount = 0
+                            End If
+                            If (jumpcount <= 10 And jumpcount Mod 2 = 0 And frameCount / delay > 0) Then
+                                frameCount -= delay
+                            End If
+                            srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
                         End If
-                        srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 96, 40, 48)
-                    ElseIf (srcBounds.Y = 48) Then
-                        If (frameCount / delay >= 8) Then
-                            frameCount = 0
-                        End If
-                        If (jumpcount <= 10 And jumpcount Mod 2 = 0 And frameCount / delay > 0) Then
-                            frameCount -= delay
-                        End If
-                        srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
-                    End If
+
+
 
 
                     pxKis.Location = New Point(pxKis.Location.X + speed, (jumpcount - 10) * (jumpcount - 10) - 100 + startY)
@@ -261,26 +264,17 @@ Public Class frmLvl1
 
     Private Sub plat()
 
-        'eric kode
-        'Dim plat As PictureBox() = {pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
-        'For x = 0 To plat.Length - 1
-        '    If pxKis.Bounds.IntersectsWith(plat(x).Bounds) And pxKis.Top - pxKis.Height >= plat(x).Top Then
-        '        pxKis.Top = plat(x).Top - pxKis.Height
-        '    End If
-        'Next
-
-
-        Dim plat As PictureBox() = {pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
-        For x = 0 To 6
+        Dim plat As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
+        For x = 0 To 7
             If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
-                'pxKis.Location = New Point(pxKis.Location.X,
-                'pxKis.Location.Y)
                 pxKis.Location = New Point(pxKis.Location.X,
                                            plat(x).Location.Y - pxKis.Height)
 
                 direction = nextDirection
-
+                jumpAllowed = True
+            Else
+                jumpAllowed = False
             End If
         Next x
     End Sub
@@ -345,7 +339,7 @@ Public Class frmLvl1
 
         End If
 
-        If pxKis.Bounds.IntersectsWith(pxVictory.Bounds) Then
+        If pxKis.Bounds.IntersectsWith(pxVictory.Bounds) And pxVictory.Visible = True Then
             gameplay.Enabled = False
             Dim victory As Integer = MessageBox.Show("You beat level 1, go to level 2?" & vbNewLine & "Console command for level 2: 1337", "You beat the game!", MessageBoxButtons.YesNo)
             If victory = DialogResult.No Then
@@ -368,7 +362,11 @@ Public Class frmLvl1
     End Sub
 
     Private Sub outofBounds()
-        If pxKis.Bounds.IntersectsWith(bBound.Bounds) Then MsgBox("U ded mofo")
+        'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen
+        If pxKis.Bounds.IntersectsWith(bBound.Bounds) And deathFlag = False Then
+            MsgBox("U ded mofo")
+            deathFlag = True
+        End If
     End Sub
 
     Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
@@ -478,6 +476,7 @@ Public Class frmLvl1
 
 
     End Sub
+
 
 End Class
 

@@ -212,7 +212,7 @@
         For x = 0 To 6
             If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
 
-                pxKis.Location = New Point(plat(x).Location.X, plat(x).Location.Y - pxKis.Height)
+                pxKis.Location = New Point(pxKis.Location.X, plat(x).Location.Y - pxKis.Height)
 
                 direction = nextDirection
 

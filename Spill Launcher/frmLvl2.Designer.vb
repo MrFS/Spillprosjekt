@@ -84,10 +84,10 @@ Partial Class frmLvl2
         Me.pnlPause.Controls.Add(Me.Label3)
         Me.pnlPause.Controls.Add(Me.Label2)
         Me.pnlPause.Controls.Add(Me.Label1)
-        Me.pnlPause.Location = New System.Drawing.Point(419, 88)
-        Me.pnlPause.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlPause.Location = New System.Drawing.Point(559, 108)
+        Me.pnlPause.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPause.Name = "pnlPause"
-        Me.pnlPause.Size = New System.Drawing.Size(254, 219)
+        Me.pnlPause.Size = New System.Drawing.Size(339, 270)
         Me.pnlPause.TabIndex = 30
         Me.pnlPause.Visible = False
         '
@@ -95,10 +95,9 @@ Partial Class frmLvl2
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(49, 160)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(65, 197)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 25)
+        Me.Label3.Size = New System.Drawing.Size(218, 31)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Exit To Menu"
         '
@@ -106,10 +105,9 @@ Partial Class frmLvl2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 108)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(92, 133)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 25)
+        Me.Label2.Size = New System.Drawing.Size(150, 31)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Sett&ings"
         '
@@ -117,10 +115,9 @@ Partial Class frmLvl2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Courier New", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(49, 37)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(65, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(155, 25)
+        Me.Label1.Size = New System.Drawing.Size(201, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Resume Game"
         '
@@ -129,10 +126,10 @@ Partial Class frmLvl2
         Me.pxVictory.BackColor = System.Drawing.Color.Transparent
         Me.pxVictory.BackgroundImage = Global.Spill.My.Resources.Resources.vitory_snus
         Me.pxVictory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pxVictory.Location = New System.Drawing.Point(103, 132)
-        Me.pxVictory.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxVictory.Location = New System.Drawing.Point(137, 162)
+        Me.pxVictory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxVictory.Name = "pxVictory"
-        Me.pxVictory.Size = New System.Drawing.Size(44, 43)
+        Me.pxVictory.Size = New System.Drawing.Size(59, 53)
         Me.pxVictory.TabIndex = 51
         Me.pxVictory.TabStop = False
         '
@@ -141,10 +138,10 @@ Partial Class frmLvl2
         Me.pxCoffee2.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee2.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee2.Location = New System.Drawing.Point(389, 448)
-        Me.pxCoffee2.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffee2.Location = New System.Drawing.Point(519, 551)
+        Me.pxCoffee2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee2.Name = "pxCoffee2"
-        Me.pxCoffee2.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffee2.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee2.TabIndex = 50
         Me.pxCoffee2.TabStop = False
         '
@@ -153,10 +150,10 @@ Partial Class frmLvl2
         Me.pxCoffee3.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee3.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee3.Location = New System.Drawing.Point(592, 417)
-        Me.pxCoffee3.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffee3.Location = New System.Drawing.Point(789, 513)
+        Me.pxCoffee3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee3.Name = "pxCoffee3"
-        Me.pxCoffee3.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffee3.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee3.TabIndex = 49
         Me.pxCoffee3.TabStop = False
         '
@@ -165,10 +162,10 @@ Partial Class frmLvl2
         Me.pxCoffee4.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee4.Location = New System.Drawing.Point(539, 249)
-        Me.pxCoffee4.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffee4.Location = New System.Drawing.Point(719, 306)
+        Me.pxCoffee4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee4.Name = "pxCoffee4"
-        Me.pxCoffee4.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffee4.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee4.TabIndex = 48
         Me.pxCoffee4.TabStop = False
         '
@@ -177,50 +174,50 @@ Partial Class frmLvl2
         Me.pxCoffee5.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee5.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee5.Location = New System.Drawing.Point(351, 193)
-        Me.pxCoffee5.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffee5.Location = New System.Drawing.Point(468, 238)
+        Me.pxCoffee5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee5.Name = "pxCoffee5"
-        Me.pxCoffee5.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffee5.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee5.TabIndex = 47
         Me.pxCoffee5.TabStop = False
         '
         'pxPlatBounds7
         '
         Me.pxPlatBounds7.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds7.Location = New System.Drawing.Point(22, 204)
-        Me.pxPlatBounds7.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds7.Location = New System.Drawing.Point(29, 251)
+        Me.pxPlatBounds7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds7.Name = "pxPlatBounds7"
-        Me.pxPlatBounds7.Size = New System.Drawing.Size(142, 15)
+        Me.pxPlatBounds7.Size = New System.Drawing.Size(189, 18)
         Me.pxPlatBounds7.TabIndex = 46
         Me.pxPlatBounds7.TabStop = False
         '
         'pxPlatBounds6
         '
         Me.pxPlatBounds6.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds6.Location = New System.Drawing.Point(283, 237)
-        Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds6.Location = New System.Drawing.Point(377, 292)
+        Me.pxPlatBounds6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds6.Name = "pxPlatBounds6"
-        Me.pxPlatBounds6.Size = New System.Drawing.Size(123, 26)
+        Me.pxPlatBounds6.Size = New System.Drawing.Size(164, 32)
         Me.pxPlatBounds6.TabIndex = 45
         Me.pxPlatBounds6.TabStop = False
         '
         'pxPlatBounds5
         '
         Me.pxPlatBounds5.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds5.Location = New System.Drawing.Point(587, 226)
-        Me.pxPlatBounds5.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds5.Location = New System.Drawing.Point(783, 278)
+        Me.pxPlatBounds5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds5.Name = "pxPlatBounds5"
-        Me.pxPlatBounds5.Size = New System.Drawing.Size(118, 12)
+        Me.pxPlatBounds5.Size = New System.Drawing.Size(157, 15)
         Me.pxPlatBounds5.TabIndex = 40
         Me.pxPlatBounds5.TabStop = False
         '
         'pxPlatBounds4
         '
         Me.pxPlatBounds4.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds4.Location = New System.Drawing.Point(718, 88)
-        Me.pxPlatBounds4.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds4.Location = New System.Drawing.Point(957, 108)
+        Me.pxPlatBounds4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds4.Name = "pxPlatBounds4"
-        Me.pxPlatBounds4.Size = New System.Drawing.Size(14, 317)
+        Me.pxPlatBounds4.Size = New System.Drawing.Size(19, 390)
         Me.pxPlatBounds4.TabIndex = 39
         Me.pxPlatBounds4.TabStop = False
         '
@@ -228,38 +225,38 @@ Partial Class frmLvl2
         '
         Me.lBound.BackColor = System.Drawing.Color.Transparent
         Me.lBound.Location = New System.Drawing.Point(1, 0)
-        Me.lBound.Margin = New System.Windows.Forms.Padding(2)
+        Me.lBound.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.lBound.Name = "lBound"
-        Me.lBound.Size = New System.Drawing.Size(4, 562)
+        Me.lBound.Size = New System.Drawing.Size(5, 692)
         Me.lBound.TabIndex = 38
         Me.lBound.TabStop = False
         '
         'rBound
         '
         Me.rBound.BackColor = System.Drawing.Color.Transparent
-        Me.rBound.Location = New System.Drawing.Point(797, 0)
-        Me.rBound.Margin = New System.Windows.Forms.Padding(2)
+        Me.rBound.Location = New System.Drawing.Point(1063, 0)
+        Me.rBound.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rBound.Name = "rBound"
-        Me.rBound.Size = New System.Drawing.Size(4, 562)
+        Me.rBound.Size = New System.Drawing.Size(5, 692)
         Me.rBound.TabIndex = 37
         Me.rBound.TabStop = False
         '
         'pxPlatBounds2
         '
         Me.pxPlatBounds2.BackColor = System.Drawing.Color.Transparent
-        Me.pxPlatBounds2.Location = New System.Drawing.Point(9, 357)
-        Me.pxPlatBounds2.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds2.Location = New System.Drawing.Point(12, 439)
+        Me.pxPlatBounds2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds2.Name = "pxPlatBounds2"
-        Me.pxPlatBounds2.Size = New System.Drawing.Size(696, 16)
+        Me.pxPlatBounds2.Size = New System.Drawing.Size(928, 20)
         Me.pxPlatBounds2.TabIndex = 35
         Me.pxPlatBounds2.TabStop = False
         '
         'pxPlatBounds1
         '
-        Me.pxPlatBounds1.Location = New System.Drawing.Point(208, 439)
-        Me.pxPlatBounds1.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds1.Location = New System.Drawing.Point(277, 540)
+        Me.pxPlatBounds1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds1.Name = "pxPlatBounds1"
-        Me.pxPlatBounds1.Size = New System.Drawing.Size(16, 35)
+        Me.pxPlatBounds1.Size = New System.Drawing.Size(21, 43)
         Me.pxPlatBounds1.TabIndex = 34
         Me.pxPlatBounds1.TabStop = False
         '
@@ -267,10 +264,10 @@ Partial Class frmLvl2
         '
         Me.pxPlat3.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat3.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat3.Location = New System.Drawing.Point(571, 448)
-        Me.pxPlat3.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlat3.Location = New System.Drawing.Point(761, 551)
+        Me.pxPlat3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat3.Name = "pxPlat3"
-        Me.pxPlat3.Size = New System.Drawing.Size(75, 15)
+        Me.pxPlat3.Size = New System.Drawing.Size(100, 18)
         Me.pxPlat3.TabIndex = 33
         Me.pxPlat3.TabStop = False
         '
@@ -278,10 +275,10 @@ Partial Class frmLvl2
         '
         Me.pxPlat2.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat2.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat2.Location = New System.Drawing.Point(362, 479)
-        Me.pxPlat2.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlat2.Location = New System.Drawing.Point(483, 590)
+        Me.pxPlat2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat2.Name = "pxPlat2"
-        Me.pxPlat2.Size = New System.Drawing.Size(75, 18)
+        Me.pxPlat2.Size = New System.Drawing.Size(100, 22)
         Me.pxPlat2.TabIndex = 32
         Me.pxPlat2.TabStop = False
         '
@@ -289,10 +286,10 @@ Partial Class frmLvl2
         '
         Me.pxPlat1.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat1.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat1.Location = New System.Drawing.Point(188, 479)
-        Me.pxPlat1.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlat1.Location = New System.Drawing.Point(251, 590)
+        Me.pxPlat1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat1.Name = "pxPlat1"
-        Me.pxPlat1.Size = New System.Drawing.Size(75, 14)
+        Me.pxPlat1.Size = New System.Drawing.Size(100, 17)
         Me.pxPlat1.TabIndex = 31
         Me.pxPlat1.TabStop = False
         '
@@ -301,10 +298,10 @@ Partial Class frmLvl2
         Me.pxCoffee1.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee1.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee1.Location = New System.Drawing.Point(228, 426)
-        Me.pxCoffee1.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxCoffee1.Location = New System.Drawing.Point(304, 524)
+        Me.pxCoffee1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee1.Name = "pxCoffee1"
-        Me.pxCoffee1.Size = New System.Drawing.Size(24, 26)
+        Me.pxCoffee1.Size = New System.Drawing.Size(32, 32)
         Me.pxCoffee1.TabIndex = 29
         Me.pxCoffee1.TabStop = False
         '
@@ -312,9 +309,10 @@ Partial Class frmLvl2
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
-        Me.pxKis.Location = New System.Drawing.Point(44, 133)
+        Me.pxKis.Location = New System.Drawing.Point(59, 164)
+        Me.pxKis.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pxKis.Name = "pxKis"
-        Me.pxKis.Size = New System.Drawing.Size(40, 48)
+        Me.pxKis.Size = New System.Drawing.Size(53, 59)
         Me.pxKis.TabIndex = 27
         Me.pxKis.TabStop = False
         Me.pxKis.Visible = False
@@ -323,29 +321,30 @@ Partial Class frmLvl2
         '
         Me.pxGround.BackColor = System.Drawing.Color.Transparent
         Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxGround.Location = New System.Drawing.Point(0, 572)
-        Me.pxGround.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxGround.Location = New System.Drawing.Point(0, 704)
+        Me.pxGround.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxGround.Name = "pxGround"
-        Me.pxGround.Size = New System.Drawing.Size(801, 28)
+        Me.pxGround.Size = New System.Drawing.Size(1068, 34)
         Me.pxGround.TabIndex = 28
         Me.pxGround.TabStop = False
         '
         'pxPlatBounds3
         '
-        Me.pxPlatBounds3.Location = New System.Drawing.Point(582, 448)
-        Me.pxPlatBounds3.Margin = New System.Windows.Forms.Padding(2)
+        Me.pxPlatBounds3.Location = New System.Drawing.Point(776, 551)
+        Me.pxPlatBounds3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlatBounds3.Name = "pxPlatBounds3"
-        Me.pxPlatBounds3.Size = New System.Drawing.Size(56, 4)
+        Me.pxPlatBounds3.Size = New System.Drawing.Size(75, 5)
         Me.pxPlatBounds3.TabIndex = 36
         Me.pxPlatBounds3.TabStop = False
         '
         'frmLvl2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Spill.My.Resources.Resources.lvl2_design
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 600)
+        Me.ClientSize = New System.Drawing.Size(1067, 738)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
         Me.Controls.Add(Me.pxCoffee2)
@@ -370,6 +369,7 @@ Partial Class frmLvl2
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLvl2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLvl2"
