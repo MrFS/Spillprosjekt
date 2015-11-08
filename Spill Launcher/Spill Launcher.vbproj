@@ -143,6 +143,12 @@
     <Compile Include="frmLoading.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReload.Designer.vb">
+      <DependentUpon>frmReload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReload.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmStart.Designer.vb">
       <DependentUpon>frmStart.vb</DependentUpon>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLvl2.resx">
       <DependentUpon>frmLvl2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReload.resx">
+      <DependentUpon>frmReload.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.vb</DependentUpon>

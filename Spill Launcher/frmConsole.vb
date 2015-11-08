@@ -205,5 +205,6 @@ Public Class frmConsole
     Private Sub tmr_tick_Tick(sender As Object, e As EventArgs)
         ListBox1.Items.Clear()
     End Sub
+
 End Class
 

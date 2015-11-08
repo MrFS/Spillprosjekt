@@ -12,7 +12,6 @@ Public Class frmLvl1
     Dim pxPlat2DirectionX As String = "Høyre"
     Dim pxPlat3DirectionX As String = "Høyre"
     Dim pxPlat6DirectionX As String = "Høyre"
-    Dim deathFlag As Boolean = False
     Dim jumpAllowed As Boolean = True
     Dim Score As Integer = 0
     Dim collision As Boolean = True
@@ -199,34 +198,34 @@ Public Class frmLvl1
                 Case "up"
 
                     If (jumpcount = 0) Then
-                            startY = pxKis.Location.Y
-                        End If
+                        startY = pxKis.Location.Y
+                    End If
 
-                        'Animations
-                        If (speed > -4 And speed < 4) Then
-                            srcBounds.Y = 96
-                        Else
-                            srcBounds.Y = 48
+                    'Animations
+                    If (speed > -4 And speed < 4) Then
+                        srcBounds.Y = 96
+                    Else
+                        srcBounds.Y = 48
+                    End If
+                    If (srcBounds.Y = 0 Or srcBounds.Y = 96) Then
+                        If (frameCount / delay >= 9) Then
+                            frameCount = 0
                         End If
-                        If (srcBounds.Y = 0 Or srcBounds.Y = 96) Then
-                            If (frameCount / delay >= 9) Then
-                                frameCount = 0
-                            End If
-                            If (jumpcount <= 10 And frameCount / delay > 3) Then
-                                frameCount = delay * 2
-                            ElseIf (jumpcount <= 18 And frameCount / delay > 5) Then
-                                frameCount = delay * 4
-                            End If
-                            srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 96, 40, 48)
-                        ElseIf (srcBounds.Y = 48) Then
-                            If (frameCount / delay >= 8) Then
-                                frameCount = 0
-                            End If
-                            If (jumpcount <= 10 And jumpcount Mod 2 = 0 And frameCount / delay > 0) Then
-                                frameCount -= delay
-                            End If
-                            srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
+                        If (jumpcount <= 10 And frameCount / delay > 3) Then
+                            frameCount = delay * 2
+                        ElseIf (jumpcount <= 18 And frameCount / delay > 5) Then
+                            frameCount = delay * 4
                         End If
+                        srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 96, 40, 48)
+                    ElseIf (srcBounds.Y = 48) Then
+                        If (frameCount / delay >= 8) Then
+                            frameCount = 0
+                        End If
+                        If (jumpcount <= 10 And jumpcount Mod 2 = 0 And frameCount / delay > 0) Then
+                            frameCount -= delay
+                        End If
+                        srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
+                    End If
 
 
 
@@ -394,10 +393,18 @@ Public Class frmLvl1
     End Sub
 
     Private Sub outofBounds()
-        'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen
-        If pxKis.Bounds.IntersectsWith(bBound.Bounds) And deathFlag = False Then
-            MsgBox("U ded mofo")
-            deathFlag = True
+        'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen og lar deg starte på nytt
+        If pxKis.Bounds.IntersectsWith(bBound.Bounds) Then
+            gameplay.Enabled = False
+            tmrPlatMove.Enabled = False
+            Select Case MsgBox("You died..." & vbCrLf & "Try again?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "Game over")
+                Case MsgBoxResult.Yes
+                    frmReload.Show()
+                Case MsgBoxResult.No
+                    frmStart.Show()
+                    Me.Close()
+            End Select
+
         End If
     End Sub
 
