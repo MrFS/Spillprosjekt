@@ -55,7 +55,7 @@ Public Class frmLvl1
                 facing = "left"
                 direction = "left"
 
-            ElseIf (e.KeyCode = Keys.W Or e.KeyCode = Keys.Space) Then
+            ElseIf (e.KeyCode = Keys.W Or e.KeyCode = Keys.Space) And jumpAllowed = True Then
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
@@ -258,11 +258,12 @@ Public Class frmLvl1
 
         'karaketern faller 12 pixler per timertick
         pxKis.Top += 12
-
+        jumpAllowed = False
         'hvis karakteren står på et platform beveger han seg opp 12 pixler per timertick som motvekt mot gravitasjonen
         For Each element In gravity
             If pxKis.Bounds.IntersectsWith(element.Bounds) Then
                 pxKis.Top -= 12
+                jumpAllowed = True
             End If
         Next
 
@@ -292,6 +293,7 @@ Public Class frmLvl1
                 'øker poengsummen
                 Score += 5000
                 coffeCount += 1
+                My.Settings.ant_kaffe += 1
             End If
         Next x
 

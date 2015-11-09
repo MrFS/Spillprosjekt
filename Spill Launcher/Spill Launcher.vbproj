@@ -87,6 +87,9 @@
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ttlogo_waf_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -391,6 +394,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\walk.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttlogo_waf_icon.ico" />
+    <Content Include="ttlogo_waf_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

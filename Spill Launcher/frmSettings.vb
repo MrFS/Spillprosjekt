@@ -20,4 +20,18 @@
             temp = Nothing
         End If
     End Sub
+
+    Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label1.Text = ("Username: " & My.Settings.username)
+        If My.Settings.screensize = False Then
+            Label2.Text = ("Screen resolution: 1280 x 720")
+        Else
+            Label2.Text = ("Screen resolution: ")
+        End If
+        Label2.Text = ("Screenresolution: " & My.Settings.screensize)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        My.Settings.Save()
+    End Sub
 End Class

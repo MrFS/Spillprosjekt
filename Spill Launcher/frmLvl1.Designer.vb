@@ -23,6 +23,7 @@ Partial Class frmLvl1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLvl1))
         Me.gameplay = New System.Windows.Forms.Timer(Me.components)
         Me.tmrPlatMove = New System.Windows.Forms.Timer(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
@@ -130,7 +131,7 @@ Partial Class frmLvl1
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Courier New", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(288, 6)
+        Me.Label7.Location = New System.Drawing.Point(9, 55)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(140, 23)
         Me.Label7.TabIndex = 36
@@ -141,7 +142,7 @@ Partial Class frmLvl1
         Me.pxCoffeCollect1.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffeCollect1.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffeCollect1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffeCollect1.Location = New System.Drawing.Point(144, 3)
+        Me.pxCoffeCollect1.Location = New System.Drawing.Point(143, 6)
         Me.pxCoffeCollect1.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffeCollect1.Name = "pxCoffeCollect1"
         Me.pxCoffeCollect1.Size = New System.Drawing.Size(24, 26)
@@ -153,7 +154,7 @@ Partial Class frmLvl1
         Me.pxCoffeCollect2.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffeCollect2.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffeCollect2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffeCollect2.Location = New System.Drawing.Point(172, 3)
+        Me.pxCoffeCollect2.Location = New System.Drawing.Point(171, 6)
         Me.pxCoffeCollect2.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffeCollect2.Name = "pxCoffeCollect2"
         Me.pxCoffeCollect2.Size = New System.Drawing.Size(24, 26)
@@ -165,7 +166,7 @@ Partial Class frmLvl1
         Me.pxCoffeCollect3.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffeCollect3.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffeCollect3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffeCollect3.Location = New System.Drawing.Point(200, 3)
+        Me.pxCoffeCollect3.Location = New System.Drawing.Point(199, 6)
         Me.pxCoffeCollect3.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffeCollect3.Name = "pxCoffeCollect3"
         Me.pxCoffeCollect3.Size = New System.Drawing.Size(24, 26)
@@ -177,7 +178,7 @@ Partial Class frmLvl1
         Me.pxCoffeCollect4.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffeCollect4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffeCollect4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffeCollect4.Location = New System.Drawing.Point(229, 3)
+        Me.pxCoffeCollect4.Location = New System.Drawing.Point(228, 6)
         Me.pxCoffeCollect4.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffeCollect4.Name = "pxCoffeCollect4"
         Me.pxCoffeCollect4.Size = New System.Drawing.Size(24, 26)
@@ -189,7 +190,7 @@ Partial Class frmLvl1
         Me.pxCoffeCollect5.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffeCollect5.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffeCollect5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffeCollect5.Location = New System.Drawing.Point(259, 3)
+        Me.pxCoffeCollect5.Location = New System.Drawing.Point(258, 6)
         Me.pxCoffeCollect5.Margin = New System.Windows.Forms.Padding(2)
         Me.pxCoffeCollect5.Name = "pxCoffeCollect5"
         Me.pxCoffeCollect5.Size = New System.Drawing.Size(24, 26)
@@ -440,10 +441,9 @@ Partial Class frmLvl1
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.sky2
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(143, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(946, 108)
+        Me.PictureBox1.Size = New System.Drawing.Size(803, 52)
         Me.PictureBox1.TabIndex = 37
         Me.PictureBox1.TabStop = False
         '
@@ -483,6 +483,7 @@ Partial Class frmLvl1
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "frmLvl1"
