@@ -397,6 +397,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ttlogo_waf_icon.ico" />
+    <None Include="Resources\lvl2 design2.bmp" />
     <Content Include="ttlogo_waf_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
