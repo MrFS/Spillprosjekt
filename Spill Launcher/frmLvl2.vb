@@ -119,7 +119,7 @@
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 0, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     Equalize(2)
                     pxKis.Left += speed
                 Case "right"
@@ -130,7 +130,7 @@
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     pxKis.Left += speed
                 Case "left"
                     If (speed > -maxSpeed) Then
@@ -140,7 +140,7 @@
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     pxKis.Left += speed
                 Case "up"
 
@@ -256,8 +256,6 @@
 
     End Sub
 
-    Private Sub frmLvl2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class
 

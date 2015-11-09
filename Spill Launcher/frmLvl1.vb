@@ -7,7 +7,7 @@ Public Class frmLvl1
     Dim frameCount As Integer = 0
     Const delay As Integer = 2
     Dim speed As Integer = 0
-    Const maxSpeed As Integer = 12
+    Const maxSpeed As Integer = 8
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
     Dim pxPlat2DirectionX As String = "Venstre"
@@ -144,7 +144,7 @@ Public Class frmLvl1
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), 0, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     Equalize(2)
                     pxKis.Left += speed
                 Case "right"
@@ -155,7 +155,7 @@ Public Class frmLvl1
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     pxKis.Left += speed
                 Case "left"
                     If (speed > -maxSpeed) Then
@@ -165,7 +165,7 @@ Public Class frmLvl1
                         frameCount = 0
                     End If
                     srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
-                    pxKis.Image = My.Resources.pxKis
+                    pxKis.Image = My.Resources.NYpxKis
                     pxKis.Left += speed
                 Case "up"
 
