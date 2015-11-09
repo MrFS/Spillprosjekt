@@ -45,18 +45,21 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
-
+        'setter den satte verdien i variabelen "Direction" & "nextDirection" slik at funksjonen kismove har noe å jobbe ut ifra.
         If (Not direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
                 facing = "right"
                 direction = "right"
+                My.Computer.Audio.Play(My.Resources.walk, AudioPlayMode.Background)
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 facing = "left"
                 direction = "left"
+                My.Computer.Audio.Play(My.Resources.walk, AudioPlayMode.Background)
             ElseIf (e.KeyCode = Keys.W Or e.KeyCode = Keys.Space) Then
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
+                My.Computer.Audio.Play(My.Resources.jump, AudioPlayMode.Background)
             End If
         Else
             If (e.KeyCode = Keys.D) Then 'Right
@@ -90,7 +93,7 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmMain_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
-
+        'Nullstiller variablen "direction" og "nextDirection" ved KeyUp slik at fyren ikke fortsetter
         If (e.KeyCode = Keys.D And direction = "right") Then 'Right
             direction = "stand"
             facing = "right"
@@ -136,7 +139,8 @@ Public Class frmLvl1
     End Sub
 
     Private Sub KisMove()
-
+        'Selve hovedfunksjonen for bevegelsen av karakteren. Handler ut ifra variablene "direction" og "nextDirection"
+        'Funksjonen blar også gjennom spritebildet av karakteren for å finne det riktige bildet.
         If (frameCount Mod delay = 0) Then
             Select Case (direction)
                 Case "stand"
@@ -173,7 +177,7 @@ Public Class frmLvl1
                         startY = pxKis.Location.Y
                     End If
 
-                    'Animations
+                    'Animasjon av hopping
                     If (speed > -4 And speed < 4) Then
                         srcBounds.Y = 96
                     Else
@@ -427,5 +431,8 @@ Public Class frmLvl1
         pxVictory.Visible = False
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        frmSettings.Show()
+    End Sub
 End Class
 

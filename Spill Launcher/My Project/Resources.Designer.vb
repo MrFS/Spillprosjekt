@@ -63,59 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property bg() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("bg", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property bg_lvl1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("bg_lvl1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property bgFIXED() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bgFIXED", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property cloud1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("cloud1", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property cloud2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("cloud2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property cloud3() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("cloud3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -190,6 +140,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property jump() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("jump", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property key_controls() As System.Drawing.Bitmap
@@ -205,16 +164,6 @@ Namespace My.Resources
         Friend ReadOnly Property lvl2_bg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("lvl2_bg", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property lvl2_design() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("lvl2 design", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -345,6 +294,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("vitory_snus", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property walk() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("walk", resourceCulture)
             End Get
         End Property
     End Module

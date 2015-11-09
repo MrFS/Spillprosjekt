@@ -145,9 +145,6 @@
   <data name="times" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\times.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cloud1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,20 +154,8 @@
   <data name="cloudmlgmuffin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloudmlgmuffin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lvl2 design" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lvl2 design.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg_lvl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg_lvl1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloud2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lvl2_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lvl2_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloud3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,9 +178,6 @@
   <data name="sb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bgFIXED" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgFIXED.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -204,5 +186,11 @@
   </data>
   <data name="sky2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sky2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jump_new.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="walk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\walk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

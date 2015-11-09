@@ -25,9 +25,9 @@ Partial Class frmStart
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblCoffeeCount = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -54,7 +54,6 @@ Partial Class frmStart
         Me.Button2 = New System.Windows.Forms.Button()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblCoffeeCount = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -96,7 +95,6 @@ Partial Class frmStart
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button8)
         Me.TabPage1.Controls.Add(Me.WebBrowser1)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.GroupBox5)
@@ -108,16 +106,6 @@ Partial Class frmStart
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Index"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(101, 241)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(107, 39)
-        Me.Button8.TabIndex = 5
-        Me.Button8.Text = "C&onsole"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'Button7
         '
@@ -139,6 +127,15 @@ Partial Class frmStart
         Me.GroupBox5.Size = New System.Drawing.Size(319, 232)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
+        '
+        'lblCoffeeCount
+        '
+        Me.lblCoffeeCount.AutoSize = True
+        Me.lblCoffeeCount.Location = New System.Drawing.Point(5, 27)
+        Me.lblCoffeeCount.Name = "lblCoffeeCount"
+        Me.lblCoffeeCount.Size = New System.Drawing.Size(107, 25)
+        Me.lblCoffeeCount.TabIndex = 0
+        Me.lblCoffeeCount.Text = "Coffecount:"
         '
         'TabPage2
         '
@@ -348,7 +345,7 @@ Partial Class frmStart
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(229, 93)
+        Me.Label4.Location = New System.Drawing.Point(229, 105)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(332, 25)
@@ -361,9 +358,9 @@ Partial Class frmStart
         Me.Label3.Location = New System.Drawing.Point(229, 5)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(363, 50)
+        Me.Label3.Size = New System.Drawing.Size(293, 100)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "WASD && piltastene beveger du karakteren. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bruk mellomromstasten for å hoppe."
+        Me.Label3.Text = "Med WAD beveger du karakteren. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "W - Hopp" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A - Venstre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "D - Høyre"
         '
         'Button3
         '
@@ -393,9 +390,9 @@ Partial Class frmStart
         Me.Label1.Location = New System.Drawing.Point(9, 7)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(566, 37)
+        Me.Label1.Size = New System.Drawing.Size(87, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Spillprosjekt 2D Platform - Team Trøtt (18) | v0.4.8"
+        Me.Label1.Text = "Steam" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Button1
         '
@@ -447,15 +444,6 @@ Partial Class frmStart
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'lblCoffeeCount
-        '
-        Me.lblCoffeeCount.AutoSize = True
-        Me.lblCoffeeCount.Location = New System.Drawing.Point(5, 27)
-        Me.lblCoffeeCount.Name = "lblCoffeeCount"
-        Me.lblCoffeeCount.Size = New System.Drawing.Size(107, 25)
-        Me.lblCoffeeCount.TabIndex = 0
-        Me.lblCoffeeCount.Text = "Coffecount:"
-        '
         'frmStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -466,6 +454,7 @@ Partial Class frmStart
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmStart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -499,7 +488,6 @@ Partial Class frmStart
     Friend WithEvents Button2 As Button
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Button8 As Button
     Friend WithEvents WebBrowser1 As WebBrowser
     Friend WithEvents Button7 As Button
     Friend WithEvents GroupBox5 As GroupBox
