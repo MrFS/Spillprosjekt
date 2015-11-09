@@ -50,16 +50,18 @@ Public Class frmLvl1
             If (e.KeyCode = Keys.D) Then 'Right
                 facing = "right"
                 direction = "right"
-                My.Computer.Audio.Play(My.Resources.walk, AudioPlayMode.Background)
+
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 facing = "left"
                 direction = "left"
-                My.Computer.Audio.Play(My.Resources.walk, AudioPlayMode.Background)
+
             ElseIf (e.KeyCode = Keys.W Or e.KeyCode = Keys.Space) Then
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
-                My.Computer.Audio.Play(My.Resources.jump, AudioPlayMode.Background)
+
+                My.Computer.Audio.Play(My.Resources.jump, AudioPlayMode.Background) 'jump sound
+
             End If
         Else
             If (e.KeyCode = Keys.D) Then 'Right
