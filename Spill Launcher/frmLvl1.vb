@@ -315,10 +315,20 @@ Public Class frmLvl1
                 Me.Close()
                 frmStart.Show()
                 frmAbout.Show()
+
+                If My.Settings.highest_score > Score Then
+                    My.Settings.highest_score = Score
+                    My.Settings.Save()
+                End If
             ElseIf victory = DialogResult.Yes Then
                 'åpner lvl2
                 Me.Close()
                 frmLvl2.Show()
+
+                If My.Settings.highest_score > Score Then
+                    My.Settings.highest_score = Score
+                    My.Settings.Save()
+                End If
             End If
         End If
 
@@ -340,9 +350,11 @@ Public Class frmLvl1
             Select Case MsgBox("You died..." & vbCrLf & "Try again?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "Game over")
                 Case MsgBoxResult.Yes
                     frmReload.Show()
+                    My.Settings.ant_dod += 1
                 Case MsgBoxResult.No
                     frmStart.Show()
                     Me.Close()
+                    My.Settings.ant_dod += 1
             End Select
 
         End If

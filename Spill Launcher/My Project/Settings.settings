@@ -14,10 +14,10 @@
     <Setting Name="ant_kaffe" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="ant_fiender" Type="System.Int32" Scope="User">
+    <Setting Name="highest_score" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="ant_død" Type="System.Int32" Scope="User">
+    <Setting Name="ant_dod" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="musikk_on" Type="System.Boolean" Scope="User">

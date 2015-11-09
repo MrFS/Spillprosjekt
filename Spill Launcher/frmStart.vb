@@ -123,6 +123,12 @@ Public Class frmStart
         TextBox1.Text = My.Settings.username
 
         lblCoffeeCount.Text = ("Kaffe samlet:" & My.Settings.ant_kaffe)
+
+        lblHighScore.Text = ("HighScore: " & My.Settings.highest_score)
+
+        lblDeath.Text = ("Deaths: " & My.Settings.ant_dod)
+
+        My.Settings.Reload()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -194,5 +200,9 @@ Public Class frmStart
 
     Private Sub Button9_Click(sender As Object, e As EventArgs)
         frmSettings.Show()
+    End Sub
+
+    Private Sub frmStart_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        My.Settings.Reload()
     End Sub
 End Class

@@ -26,12 +26,18 @@
         If My.Settings.screensize = False Then
             Label2.Text = ("Screen resolution: 1280 x 720")
         Else
-            Label2.Text = ("Screen resolution: ")
+            Label2.Text = ("Screen resolution: 1440 x 1080")
         End If
-        Label2.Text = ("Screenresolution: " & My.Settings.screensize)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        My.Settings.Save()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Select Case MsgBox("Save settings?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "Save Settings?")
+            Case MsgBoxResult.Yes
+                My.Settings.Save()
+                Me.Close()
+            Case MsgBoxResult.No
+                Me.Close()
+                frmLvl1.BringToFront() 'Focus funke også
+        End Select
     End Sub
 End Class

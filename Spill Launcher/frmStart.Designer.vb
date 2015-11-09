@@ -26,8 +26,10 @@ Partial Class frmStart
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblHighScore = New System.Windows.Forms.Label()
         Me.lblCoffeeCount = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -49,12 +51,12 @@ Partial Class frmStart
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblDeath = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -108,6 +110,18 @@ Partial Class frmStart
         Me.TabPage1.Text = "Index"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.WebBrowser1.Location = New System.Drawing.Point(326, 2)
+        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScrollBarsEnabled = False
+        Me.WebBrowser1.Size = New System.Drawing.Size(400, 279)
+        Me.WebBrowser1.TabIndex = 4
+        Me.WebBrowser1.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/", System.UriKind.Absolute)
+        '
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(212, 242)
@@ -120,6 +134,8 @@ Partial Class frmStart
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.lblDeath)
+        Me.GroupBox5.Controls.Add(Me.lblHighScore)
         Me.GroupBox5.Controls.Add(Me.lblCoffeeCount)
         Me.GroupBox5.Location = New System.Drawing.Point(4, 5)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
@@ -128,6 +144,15 @@ Partial Class frmStart
         Me.GroupBox5.Size = New System.Drawing.Size(319, 232)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
+        '
+        'lblHighScore
+        '
+        Me.lblHighScore.AutoSize = True
+        Me.lblHighScore.Location = New System.Drawing.Point(5, 65)
+        Me.lblHighScore.Name = "lblHighScore"
+        Me.lblHighScore.Size = New System.Drawing.Size(129, 25)
+        Me.lblHighScore.TabIndex = 1
+        Me.lblHighScore.Text = "H&ighest Score:"
         '
         'lblCoffeeCount
         '
@@ -373,6 +398,18 @@ Partial Class frmStart
         Me.Button3.Text = "Om"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.key_controls
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 5)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(218, 85)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'TabPage5
         '
         Me.TabPage5.Location = New System.Drawing.Point(4, 34)
@@ -391,9 +428,9 @@ Partial Class frmStart
         Me.Label1.Location = New System.Drawing.Point(9, 7)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(507, 37)
+        Me.Label1.Size = New System.Drawing.Size(506, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "2D Platformer - Team Trøtt | BADR 18 v.0.6.8"
+        Me.Label1.Text = "2D Platformer - Team Trøtt | BADR 18 v.0.7.2"
         '
         'Button1
         '
@@ -421,29 +458,14 @@ Partial Class frmStart
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'WebBrowser1
+        'lblDeath
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WebBrowser1.Location = New System.Drawing.Point(326, 2)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScrollBarsEnabled = False
-        Me.WebBrowser1.Size = New System.Drawing.Size(400, 279)
-        Me.WebBrowser1.TabIndex = 4
-        Me.WebBrowser1.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/", System.UriKind.Absolute)
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.key_controls
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(218, 85)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.lblDeath.AutoSize = True
+        Me.lblDeath.Location = New System.Drawing.Point(5, 102)
+        Me.lblDeath.Name = "lblDeath"
+        Me.lblDeath.Size = New System.Drawing.Size(156, 25)
+        Me.lblDeath.TabIndex = 2
+        Me.lblDeath.Text = "Bitches Collected:"
         '
         'frmStart
         '
@@ -516,4 +538,6 @@ Partial Class frmStart
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents lblCoffeeCount As Label
+    Friend WithEvents lblHighScore As Label
+    Friend WithEvents lblDeath As Label
 End Class

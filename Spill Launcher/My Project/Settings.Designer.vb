@@ -105,24 +105,24 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property ant_fiender() As Integer
+        Public Property highest_score() As Integer
             Get
-                Return CType(Me("ant_fiender"),Integer)
+                Return CType(Me("highest_score"),Integer)
             End Get
             Set
-                Me("ant_fiender") = value
+                Me("highest_score") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property ant_død() As Integer
+        Public Property ant_dod() As Integer
             Get
-                Return CType(Me("ant_død"),Integer)
+                Return CType(Me("ant_dod"),Integer)
             End Get
             Set
-                Me("ant_død") = value
+                Me("ant_dod") = value
             End Set
         End Property
         
