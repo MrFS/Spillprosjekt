@@ -265,7 +265,8 @@ Public Class frmLvl1
         Dim plat As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
         For Each element In plat
-            If pxKis.Bounds.IntersectsWith(element.Bounds) Then
+            If pxKis.Bounds.IntersectsWith(element.Bounds) And Not pxKis.Location.Y > element.Location.Y Then
+
                 collision = True
 
                 pxKis.Location = New Point(pxKis.Location.X,
@@ -275,50 +276,25 @@ Public Class frmLvl1
                 jumpAllowed = True
 
             Else
+
                 jumpAllowed = False
                 collision = False
             End If
         Next
 
-        'For x = 0 To 7
-        '    If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
-
-        '        pxKis.Location = New Point(pxKis.Location.X,
-        '                                   plat(x).Location.Y - pxKis.Height)
-
-        '        direction = nextDirection
-        '        jumpAllowed = True
-        '    Else
-        '        jumpAllowed = False
-        '    End If
-        'Next x
     End Sub
 
     Private Sub gravitasjon()
         Dim gravity2 As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
-
-        pxKis.Top += 6
-
+        pxKis.Top += 12
 
         For Each element In gravity2
             If pxKis.Bounds.IntersectsWith(element.Bounds) Then
-                pxKis.Top -= 6
+                pxKis.Top -= 12
             End If
         Next
 
-
-        'For x = 0 To 7
-
-        '    If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
-
-        '        pxKis.Top -= 6
-
-        '        'direction = nextDirection
-
-        '    End If
-
-        'Next x
     End Sub
 
     Private Sub chkBounds()
@@ -394,7 +370,7 @@ Public Class frmLvl1
 
     Private Sub outofBounds()
         'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen og lar deg starte på nytt
-        If pxKis.Bounds.IntersectsWith(bBound.Bounds) Then
+        If pxKis.Location.Y > Me.Height Then
             gameplay.Enabled = False
             tmrPlatMove.Enabled = False
             Select Case MsgBox("You died..." & vbCrLf & "Try again?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "Game over")
@@ -462,7 +438,7 @@ Public Class frmLvl1
 
                 'pxCloud1.Left += 2
 
-                If pxPlat2.Location.X <= 380 Then pxPlat2DirectionX = "Høyre"
+                If pxPlat2.Location.X <= 420 Then pxPlat2DirectionX = "Høyre"
         End Select
 
         Select Case pxPlat3DirectionX
@@ -512,7 +488,6 @@ Public Class frmLvl1
         pxCoffeCollect5.Visible = False
         pxVictory.Visible = False
     End Sub
-
 
 End Class
 

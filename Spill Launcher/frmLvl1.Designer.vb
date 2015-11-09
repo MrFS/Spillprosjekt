@@ -35,7 +35,6 @@ Partial Class frmLvl1
         Me.pxCoffeCollect5 = New System.Windows.Forms.PictureBox()
         Me.pxCoffeCollect2 = New System.Windows.Forms.PictureBox()
         Me.pxCoffeCollect1 = New System.Windows.Forms.PictureBox()
-        Me.bBound = New System.Windows.Forms.PictureBox()
         Me.pnlPause = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -63,7 +62,6 @@ Partial Class frmLvl1
         CType(Me.pxCoffeCollect5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffeCollect2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffeCollect1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bBound, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlPause.SuspendLayout()
         CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pxCoffee2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,16 +212,6 @@ Partial Class frmLvl1
         Me.pxCoffeCollect1.TabIndex = 29
         Me.pxCoffeCollect1.TabStop = False
         '
-        'bBound
-        '
-        Me.bBound.BackColor = System.Drawing.Color.Transparent
-        Me.bBound.Location = New System.Drawing.Point(200, 668)
-        Me.bBound.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bBound.Name = "bBound"
-        Me.bBound.Size = New System.Drawing.Size(1040, 6)
-        Me.bBound.TabIndex = 27
-        Me.bBound.TabStop = False
-        '
         'pnlPause
         '
         Me.pnlPause.BackColor = System.Drawing.Color.Transparent
@@ -232,7 +220,7 @@ Partial Class frmLvl1
         Me.pnlPause.Controls.Add(Me.Label3)
         Me.pnlPause.Controls.Add(Me.Label2)
         Me.pnlPause.Controls.Add(Me.Label1)
-        Me.pnlPause.Location = New System.Drawing.Point(996, 146)
+        Me.pnlPause.Location = New System.Drawing.Point(108, 454)
         Me.pnlPause.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPause.Name = "pnlPause"
         Me.pnlPause.Size = New System.Drawing.Size(339, 270)
@@ -286,7 +274,7 @@ Partial Class frmLvl1
         Me.pxCoffee2.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee2.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee2.Location = New System.Drawing.Point(707, 551)
+        Me.pxCoffee2.Location = New System.Drawing.Point(910, 561)
         Me.pxCoffee2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee2.Name = "pxCoffee2"
         Me.pxCoffee2.Size = New System.Drawing.Size(32, 32)
@@ -310,7 +298,7 @@ Partial Class frmLvl1
         Me.pxCoffee4.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee4.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee4.Location = New System.Drawing.Point(305, 233)
+        Me.pxCoffee4.Location = New System.Drawing.Point(364, 235)
         Me.pxCoffee4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee4.Name = "pxCoffee4"
         Me.pxCoffee4.Size = New System.Drawing.Size(32, 32)
@@ -355,7 +343,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat5.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat5.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat5.Location = New System.Drawing.Point(221, 282)
+        Me.pxPlat5.Location = New System.Drawing.Point(267, 283)
         Me.pxPlat5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat5.Name = "pxPlat5"
         Me.pxPlat5.Size = New System.Drawing.Size(208, 19)
@@ -408,7 +396,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat2.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat2.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat2.Location = New System.Drawing.Point(643, 590)
+        Me.pxPlat2.Location = New System.Drawing.Point(831, 602)
         Me.pxPlat2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat2.Name = "pxPlat2"
         Me.pxPlat2.Size = New System.Drawing.Size(181, 18)
@@ -419,7 +407,7 @@ Partial Class frmLvl1
         '
         Me.pxPlat1.BackColor = System.Drawing.Color.DarkRed
         Me.pxPlat1.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxPlat1.Location = New System.Drawing.Point(249, 590)
+        Me.pxPlat1.Location = New System.Drawing.Point(267, 575)
         Me.pxPlat1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxPlat1.Name = "pxPlat1"
         Me.pxPlat1.Size = New System.Drawing.Size(249, 18)
@@ -431,7 +419,7 @@ Partial Class frmLvl1
         Me.pxCoffee1.BackColor = System.Drawing.Color.Transparent
         Me.pxCoffee1.BackgroundImage = Global.Spill.My.Resources.Resources.coffee
         Me.pxCoffee1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pxCoffee1.Location = New System.Drawing.Point(357, 551)
+        Me.pxCoffee1.Location = New System.Drawing.Point(364, 524)
         Me.pxCoffee1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxCoffee1.Name = "pxCoffee1"
         Me.pxCoffee1.Size = New System.Drawing.Size(32, 32)
@@ -442,7 +430,7 @@ Partial Class frmLvl1
         '
         Me.pxKis.BackColor = System.Drawing.Color.Transparent
         Me.pxKis.Image = Global.Spill.My.Resources.Resources.pxKis
-        Me.pxKis.Location = New System.Drawing.Point(53, 575)
+        Me.pxKis.Location = New System.Drawing.Point(75, 575)
         Me.pxKis.Margin = New System.Windows.Forms.Padding(4)
         Me.pxKis.Name = "pxKis"
         Me.pxKis.Size = New System.Drawing.Size(64, 59)
@@ -454,7 +442,7 @@ Partial Class frmLvl1
         '
         Me.pxGround.BackColor = System.Drawing.Color.Transparent
         Me.pxGround.BackgroundImage = Global.Spill.My.Resources.Resources.pxGroundPlatBG
-        Me.pxGround.Location = New System.Drawing.Point(0, 639)
+        Me.pxGround.Location = New System.Drawing.Point(0, 640)
         Me.pxGround.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pxGround.Name = "pxGround"
         Me.pxGround.Size = New System.Drawing.Size(194, 39)
@@ -477,7 +465,6 @@ Partial Class frmLvl1
         Me.Controls.Add(Me.pxCoffeCollect5)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.pxCloud1)
-        Me.Controls.Add(Me.bBound)
         Me.Controls.Add(Me.pnlPause)
         Me.Controls.Add(Me.pxVictory)
         Me.Controls.Add(Me.pxCoffee2)
@@ -508,7 +495,6 @@ Partial Class frmLvl1
         CType(Me.pxCoffeCollect5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffeCollect2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pxCoffeCollect1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bBound, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPause.ResumeLayout(False)
         Me.pnlPause.PerformLayout()
         CType(Me.pxVictory, System.ComponentModel.ISupportInitialize).EndInit()
@@ -555,7 +541,6 @@ Partial Class frmLvl1
     Friend WithEvents pxCoffee2 As PictureBox
     Friend WithEvents pxVictory As PictureBox
     Friend WithEvents tmrPlatMove As Timer
-    Friend WithEvents bBound As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents pxCoffeCollect1 As PictureBox
     Friend WithEvents pxCoffeCollect2 As PictureBox

@@ -9,8 +9,7 @@
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim Platform() As PictureBox = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
-    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3}
+
 
 
     Private Sub gameplaylvl2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplaylvl2.Tick
@@ -208,33 +207,38 @@
     End Sub
 
     Private Sub plat()
-        Dim plat As PictureBox() = {pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
-        For x = 0 To 6
-            If pxKis.Bounds.IntersectsWith(plat(x).Bounds) Then
+        Dim plat As PictureBox() = {pxPlat1, pxPlat2, pxWall2, pxPlat3, pxWall1, pxPlat6, pxPlat5, pxPlat4, pxGround}
 
-                pxKis.Location = New Point(pxKis.Location.X, plat(x).Location.Y - pxKis.Height)
+
+        For Each element In plat
+            If pxKis.Bounds.IntersectsWith(element.Bounds) And Not pxKis.Location.Y > element.Location.Y Then
+
+
+
+                pxKis.Location = New Point(pxKis.Location.X,
+                                           element.Location.Y - pxKis.Height)
 
                 direction = nextDirection
 
+
+            Else
+
+
             End If
-        Next x
+        Next
     End Sub
 
     Private Sub gravitasjon()
-        Dim gravity2 As PictureBox() = {pxGround, pxPlatBounds1, pxPlatBounds2, pxPlatBounds3, pxPlatBounds4, pxPlatBounds5, pxPlatBounds6, pxPlatBounds7}
+        Dim gravity2 As PictureBox() = {pxPlat1, pxPlat2, pxWall2, pxPlat3, pxWall1, pxPlat6, pxPlat5, pxPlat4, pxGround}
 
 
-        pxKis.Top += 6
+        pxKis.Top += 12
 
-        For x = 0 To 7
-            If Not (direction = "up" And direction = nextDirection) Then
-                If pxKis.Bounds.IntersectsWith(gravity2(x).Bounds) Then
-
-                    pxKis.Top -= 6
-
-                End If
+        For Each element In gravity2
+            If pxKis.Bounds.IntersectsWith(element.Bounds) Then
+                pxKis.Top -= 12
             End If
-        Next x
+        Next
     End Sub
 
     Private Sub chkBounds()
@@ -243,7 +247,13 @@
             pxKis.Left += lBound.Width + 5
         ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
             pxKis.Left -= rBound.Width + 5
+        ElseIf pxKis.Bounds.IntersectsWith(wallBoundL.Bounds) Then
+            pxKis.Left -= 5
+        ElseIf pxKis.Bounds.IntersectsWith(wallBoundR.Bounds) Then
+            pxKis.Left += 5
         End If
+
+
     End Sub
 
     Private Sub frmLvl2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
