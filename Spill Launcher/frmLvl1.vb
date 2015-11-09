@@ -431,8 +431,6 @@ Public Class frmLvl1
         pxCoffeCollect4.Visible = False
         pxCoffeCollect5.Visible = False
         pxVictory.Visible = False
-
-        My.Computer.Audio.Play(My.Resources.main_2dplatform, AudioPlayMode.Background)
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click

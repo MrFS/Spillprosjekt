@@ -484,6 +484,7 @@ Partial Class frmLvl1
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
+        Me.MaximizeBox = False
         Me.Name = "frmLvl1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "x"

@@ -390,9 +390,9 @@ Partial Class frmStart
         Me.Label1.Location = New System.Drawing.Point(9, 7)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 37)
+        Me.Label1.Size = New System.Drawing.Size(507, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Steam" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label1.Text = "2D Platformer - Team Trøtt | BADR 18 v.0.6.8"
         '
         'Button1
         '

@@ -31,6 +31,8 @@ Public Class frmStart
 
     Private Sub frmStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        My.Computer.Audio.Play(My.Resources.main_2dplatform, AudioPlayMode.Background)
+
         CheckBox2.Enabled = False
 
         'Se om alt er OK før brukeren starter selve spillet.
