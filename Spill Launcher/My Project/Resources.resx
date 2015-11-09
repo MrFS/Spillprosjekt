@@ -139,11 +139,11 @@
   <data name="coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cloud1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="key_controls" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_controls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pxGroundPlatBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pxGroundPlatBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +151,8 @@
   <data name="iloveyou_console" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iloveyou_console.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bgFIXED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bgFIXED.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +169,20 @@
   <data name="lvl2_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lvl2_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bgFIXED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgFIXED.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloud3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bg_lvl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_lvl1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vitory_snus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloud2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,13 +190,10 @@
   <data name="drunk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drunk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cloud1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cloudmlgmuffin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloudmlgmuffin.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cloud2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloud3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cloudish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloudish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

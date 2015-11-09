@@ -486,6 +486,9 @@ Public Class frmLvl1
         pxCoffeCollect3.Visible = False
         pxCoffeCollect4.Visible = False
         pxCoffeCollect5.Visible = False
+
+
+
         pxVictory.Visible = False
     End Sub
 

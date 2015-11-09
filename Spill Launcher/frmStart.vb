@@ -120,7 +120,7 @@ Public Class frmStart
 
         TextBox1.Text = My.Settings.username
 
-
+        lblCoffeeCount.Text = ("Kaffe samlet:" & My.Settings.ant_kaffe)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -189,5 +189,9 @@ Public Class frmStart
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         frmConsole.Show()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs)
+        frmSettings.Show()
     End Sub
 End Class

@@ -30,6 +30,7 @@ Partial Class frmAbout
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -116,12 +117,23 @@ Partial Class frmAbout
         Me.Label6.TabIndex = 10
         Me.Label6.Text = " - Eric Veliyulin"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(57, 199)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(160, 30)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = " - Muffinpuffin2K"
+        '
         'frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(524, 224)
+        Me.ClientSize = New System.Drawing.Size(524, 280)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -149,4 +161,5 @@ Partial Class frmAbout
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class
