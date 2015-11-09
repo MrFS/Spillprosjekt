@@ -1,4 +1,5 @@
 Public Class frmLvl1
+    'deklarerer globale variabler som blir brukt i ulike funksjoner gjennom koden
     Dim direction As String = "stand"
     Dim nextDirection As String = "stand"
     Dim facing As String = "right"
@@ -9,48 +10,41 @@ Public Class frmLvl1
     Const maxSpeed As Integer = 12
     Dim jumpcount As Integer = 0
     Dim startY As Integer = 0
-    Dim pxPlat2DirectionX As String = "Høyre"
+    Dim pxPlat2DirectionX As String = "Venstre"
     Dim pxPlat3DirectionX As String = "Høyre"
-    Dim pxPlat6DirectionX As String = "Høyre"
+    Dim pxPlat6DirectionX As String = "Venstre"
     Dim jumpAllowed As Boolean = True
     Dim Score As Integer = 0
-    Dim collision As Boolean = True
     Dim coffeCount As Integer = 1
-
-    'Dim kis As kismove = New kismove()
-
-    Dim grav As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
 
     Private Sub gameplay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gameplay.Tick
-        'kis.Move(pxKis)
+        'kjører en rekke funksjoner hver gang timeren ticker
+
+        'funskjon for bevegelse av karakter
         KisMove()
 
+        'funskjon for kollisjonsdeteksjon med platform
         plat()
 
+        'funksjon for gravitasjon
         If Not (direction = "up" Or nextDirection = "up") Then
             gravitasjon()
         End If
 
+        'funskjon for kollisjonsdeteksjon med vegger
         chkBounds()
 
+        'funskjon for beregning av score
         chkScore()
 
+        'funskjon for deteksjon død
         outofBounds()
 
         Me.Refresh()
-
     End Sub
 
     Private Sub frmMain_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
-
-        'Dim left As Integer = Keys.A
-        'Dim right As Integer = Keys.D
-        'Dim up As Integer = Keys.W
-
-        'kis.KeyDown(sender, e, left, right, up)
-
-
 
         If (Not direction = "up") Then
             If (e.KeyCode = Keys.D) Then 'Right
@@ -63,24 +57,16 @@ Public Class frmLvl1
                 nextDirection = direction
                 direction = "up"
                 jumpcount = 0
-                'Score -= 100
-
             End If
         Else
             If (e.KeyCode = Keys.D) Then 'Right
                 If (speed < maxSpeed) Then speed += 1
                 facing = "right"
                 nextDirection = "right"
-
-                'Label6.Text -= 1
-
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 If (speed > -maxSpeed) Then speed -= 1
                 facing = "left"
                 nextDirection = "left"
-
-                'Label6.Text -= 1
-
             End If
         End If
 
@@ -92,24 +78,18 @@ Public Class frmLvl1
         End If
     End Sub
     Private Sub pause()
+        'pauser spillet
         gameplay.Enabled = False
         tmrPlatMove.Enabled = False
         pnlPause.Visible = True
     End Sub
     Private Sub Console()
+        'åpner console der du kan skrive inn ulike commands
         frmConsole.Show()
         frmConsole.BringToFront()
     End Sub
 
     Private Sub frmMain_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
-
-        'Dim left As Integer = Keys.A
-        'Dim right As Integer = Keys.D
-        'Dim up As Integer = Keys.W
-
-        'kis.KeyUp(sender, e, left, right, up)
-
-
 
         If (e.KeyCode = Keys.D And direction = "right") Then 'Right
             direction = "stand"
@@ -125,11 +105,9 @@ Public Class frmLvl1
             If (e.KeyCode = Keys.D) Then 'Right
                 nextDirection = "stand"
                 facing = "right"
-                'tGrav.Enabled = True
             ElseIf (e.KeyCode = Keys.A) Then 'Left
                 nextDirection = "stand"
                 facing = "left"
-                'tGrav.Enabled = True
             End If
         End If
     End Sub
@@ -138,23 +116,17 @@ Public Class frmLvl1
         Dim g As Graphics
         g = e.Graphics()
 
-
         'lag rektangel, dekke hele frmLvl1
-        '
         Dim rec As Rectangle = New Rectangle(0, 0, Me.Width, Me.Height)
-        '
-        'Lag gradient brush
-        '
+
+        'lag gradient brush      
         Dim myBrush As Brush = New Drawing.Drawing2D.LinearGradientBrush(rec, Color.AliceBlue,
   Color.Aqua, Drawing.Drawing2D.LinearGradientMode.Vertical)
-        '
+
         'tegn BG brush
         e.Graphics.FillRectangle(myBrush, rec)
 
-        'kis.Paint(g, pxKis)
-
-        'Tegne kisn i frmLvl1 (Y)
-
+        'endre grafikken etter hvilken retning karakteren står i
         If (facing = "left") Then
             Dim srcBoundsLeft As Rectangle = New Rectangle(srcBounds.X + 39, srcBounds.Y, -40, 48)
             g.DrawImage(pxKis.Image, pxKis.Bounds, srcBoundsLeft, GraphicsUnit.Pixel)
@@ -227,26 +199,21 @@ Public Class frmLvl1
                         srcBounds = New Rectangle(srcBounds.Width * (frameCount / delay), pxKis.Height, 40, 48)
                     End If
 
-
-
-
                     pxKis.Location = New Point(pxKis.Location.X + speed, (jumpcount - 10) * (jumpcount - 10) - 100 + startY)
                     If (pxKis.Location.Y > startY) Then
                         pxKis.Location = New Point(pxKis.Location.X, startY)
                         direction = nextDirection
                     End If
                     jumpcount += 1
-
             End Select
-
         End If
-
 
         frameCount += 1
 
     End Sub
 
     Private Sub Equalize(ByVal i As Integer)
+        'sakter gradvis ned farten til karakteren og stopper så helt
         For k As Integer = 0 To i Step 1
             If (speed < 0) Then
                 speed += 1
@@ -257,39 +224,37 @@ Public Class frmLvl1
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        'åpner startvinudet når spillet lukkes
         frmStart.Show()
     End Sub
 
     Private Sub plat()
-
+        'lager en array som inneholder alle platformene i lvl1
         Dim plat As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
+        'sjekker om karakteren er i kontakt med noen av platformene
         For Each element In plat
             If pxKis.Bounds.IntersectsWith(element.Bounds) And Not pxKis.Location.Y > element.Location.Y Then
-
-                collision = True
-
+                'setter karakterens plassering lik platformhøyden
                 pxKis.Location = New Point(pxKis.Location.X,
                                            element.Location.Y - pxKis.Height)
-
                 direction = nextDirection
                 jumpAllowed = True
-
             Else
-
                 jumpAllowed = False
-                collision = False
             End If
         Next
-
     End Sub
 
     Private Sub gravitasjon()
-        Dim gravity2 As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
+        'lager en array som inneholder alle platformene i lvl1
+        Dim gravity As PictureBox() = {pxGround, pxPlat1, pxPlat2, pxPlat3, pxPlat4, pxPlat5, pxPlat6, pxPlat7}
 
+        'karaketern faller 12 pixler per timertick
         pxKis.Top += 12
 
-        For Each element In gravity2
+        'hvis karakteren står på et platform beveger han seg opp 12 pixler per timertick som motvekt mot gravitasjonen
+        For Each element In gravity
             If pxKis.Bounds.IntersectsWith(element.Bounds) Then
                 pxKis.Top -= 12
             End If
@@ -298,7 +263,7 @@ Public Class frmLvl1
     End Sub
 
     Private Sub chkBounds()
-
+        'sjekker om karakteren er i kontakt med kantene på skjermen og stopper han fra å gå videre
         If pxKis.Bounds.IntersectsWith(lBound.Bounds) Then
             pxKis.Left += lBound.Width + 5
         ElseIf pxKis.Bounds.IntersectsWith(rBound.Bounds) Then
@@ -307,69 +272,60 @@ Public Class frmLvl1
     End Sub
 
     Private Sub chkScore()
+        'lager arrays som inneholder kaffekoppene og kaffekoppikonene
         Dim coffe As PictureBox() = {pxCoffee1, pxCoffee2, pxCoffee3, pxCoffee4, pxCoffee5}
         Dim coffeCollect As PictureBox() = {pxCoffeCollect1, pxCoffeCollect2, pxCoffeCollect3, pxCoffeCollect4, pxCoffeCollect5}
 
-        'For Each element In coffe
-        '    If pxKis.Bounds.IntersectsWith(element.Bounds) Then
-        '        element.Visible = False
-        '        element.Location = New Point(0, 0)
-        '        Score += 5000
-        '        coffeCount += 1
-        '    End If
-        'Next
-
-
-
+        'sjekker om karakteren er i kontakt med noen av kaffekoppene
         For x = 0 To 4
             If pxKis.Bounds.IntersectsWith(coffe(x).Bounds) Then
-
-                coffe(x).Visible = False ' Gjør kaffen usynlig etter at fyren har samla dem (Y)
+                'gjør kaffekoppen usynlig etter at karakteren har samla den
+                coffe(x).Visible = False
                 coffeCollect(x).Visible = True
                 coffe(x).Location = New Point(0, 0)
+                'øker poengsummen
                 Score += 5000
-
                 coffeCount += 1
-
-
             End If
         Next x
 
+        'hvis alle kaffekoppene har blitt samlet, vis snusboks og melding
         If coffeCount = 6 Then
-
             coffeCount += 1
             tmrPlatMove.Enabled = False
             pxVictory.Visible = True
             direction = "stand"
-
             MessageBox.Show("Congratz, you collected all the coffee! Here, have a Snus.", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End If
 
+        'viser seiersmelding når karakteren berører snusboksen
         If pxKis.Bounds.IntersectsWith(pxVictory.Bounds) And pxVictory.Visible = True Then
             gameplay.Enabled = False
             Dim victory As Integer = MessageBox.Show("You beat level 1, go to level 2?" & vbNewLine & "Console command for level 2: 1337", "You beat the game!", MessageBoxButtons.YesNo)
             If victory = DialogResult.No Then
+                'lukker lvl1 og åpner hovedmenyen
                 Me.Close()
                 frmStart.Show()
                 frmAbout.Show()
             ElseIf victory = DialogResult.Yes Then
+                'åpner lvl2
                 Me.Close()
                 frmLvl2.Show()
             End If
         End If
 
+        'oppdaterer samlede kaffekopper og score
         Label7.Text = coffeCount
-
         Label6.Text = Score
 
+        'reduserer score med 1 for hvert tick
         If Score > 0 Then
             Score -= 1
         End If
     End Sub
 
     Private Sub outofBounds()
-        'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen og lar deg starte på nytt
+        'skriver ut "du tapte"-melding hvis karakter detter utenfor skjermen og gir deg mulighet til å starte på nytt
         If pxKis.Location.Y > Me.Height Then
             gameplay.Enabled = False
             tmrPlatMove.Enabled = False
@@ -397,12 +353,14 @@ Public Class frmLvl1
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        'gjenopptar spillet
         gameplay.Enabled = True
         tmrPlatMove.Enabled = True
         pnlPause.Visible = False
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        'lukker spillet og åpner hovedmenyen
         Me.Close()
         frmStart.Show()
     End Sub
@@ -420,6 +378,7 @@ Public Class frmLvl1
     End Sub
 
     Private Sub tmrPlatMove_Tick(sender As Object, e As EventArgs) Handles tmrPlatMove.Tick
+        'timerfunskjon som får platformene til å bevege seg
 
         If gameplay.Enabled = False Then
             gameplay.Enabled = True
@@ -428,16 +387,10 @@ Public Class frmLvl1
             Case "Høyre"
                 pxPlat2.Left += 2
                 pxCoffee2.Left += 2
-
-                'pxCloud1.Left -= 2
-
                 If pxPlat2.Location.X >= 760 Then pxPlat2DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat2.Left -= 2
                 pxCoffee2.Left -= 2
-
-                'pxCloud1.Left += 2
-
                 If pxPlat2.Location.X <= 420 Then pxPlat2DirectionX = "Høyre"
         End Select
 
@@ -445,50 +398,32 @@ Public Class frmLvl1
             Case "Høyre"
                 pxPlat3.Left += 2
                 pxCoffee3.Left += 2
-
-                'pxCloud2.Left -= 2
-
                 If pxPlat3.Location.X >= 760 Then pxPlat3DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat3.Left -= 2
                 pxCoffee3.Left -= 2
-
-                'pxCloud2.Left += 2
-
                 If pxPlat3.Location.X <= 380 Then pxPlat3DirectionX = "Høyre"
-
         End Select
 
         Select Case pxPlat6DirectionX
             Case "Høyre"
                 pxPlat6.Left += 2
                 pxCoffee5.Left += 2
-
-                'pxCloud3.Left -= 2
-
                 If pxPlat6.Location.X >= 760 Then pxPlat6DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat6.Left -= 2
                 pxCoffee5.Left -= 2
-
-                'pxCloud3.Left += 2
-
                 If pxPlat6.Location.X <= 380 Then pxPlat6DirectionX = "Høyre"
-
         End Select
     End Sub
 
     Private Sub frmLvl1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
+        'gjør kaffekoppikonene usynlige ved formload
         pxCoffeCollect1.Visible = False
         pxCoffeCollect2.Visible = False
         pxCoffeCollect3.Visible = False
         pxCoffeCollect4.Visible = False
         pxCoffeCollect5.Visible = False
-
-
-
         pxVictory.Visible = False
     End Sub
 
