@@ -29,6 +29,7 @@ Partial Class frmStart
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblDeath = New System.Windows.Forms.Label()
         Me.lblHighScore = New System.Windows.Forms.Label()
         Me.lblCoffeeCount = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -56,7 +57,6 @@ Partial Class frmStart
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.lblDeath = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -75,10 +75,10 @@ Partial Class frmStart
         '
         Me.Panel1.Controls.Add(Me.TabControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 47)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 58)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(736, 321)
+        Me.Panel1.Size = New System.Drawing.Size(981, 395)
         Me.Panel1.TabIndex = 0
         '
         'TabControl1
@@ -90,10 +90,10 @@ Partial Class frmStart
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(736, 321)
+        Me.TabControl1.Size = New System.Drawing.Size(981, 395)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -101,11 +101,11 @@ Partial Class frmStart
         Me.TabPage1.Controls.Add(Me.WebBrowser1)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.GroupBox5)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage1.Size = New System.Drawing.Size(728, 283)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(973, 351)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Index"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -113,21 +113,21 @@ Partial Class frmStart
         'WebBrowser1
         '
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WebBrowser1.Location = New System.Drawing.Point(326, 2)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
+        Me.WebBrowser1.Location = New System.Drawing.Point(437, 2)
+        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScrollBarsEnabled = False
-        Me.WebBrowser1.Size = New System.Drawing.Size(400, 279)
+        Me.WebBrowser1.Size = New System.Drawing.Size(533, 347)
         Me.WebBrowser1.TabIndex = 4
         Me.WebBrowser1.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/", System.UriKind.Absolute)
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(212, 242)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button7.Location = New System.Drawing.Point(283, 298)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(111, 37)
+        Me.Button7.Size = New System.Drawing.Size(148, 46)
         Me.Button7.TabIndex = 3
         Me.Button7.Text = "Start Spill"
         Me.Button7.UseVisualStyleBackColor = True
@@ -137,29 +137,41 @@ Partial Class frmStart
         Me.GroupBox5.Controls.Add(Me.lblDeath)
         Me.GroupBox5.Controls.Add(Me.lblHighScore)
         Me.GroupBox5.Controls.Add(Me.lblCoffeeCount)
-        Me.GroupBox5.Location = New System.Drawing.Point(4, 5)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox5.Location = New System.Drawing.Point(5, 6)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Size = New System.Drawing.Size(319, 232)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox5.Size = New System.Drawing.Size(425, 286)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
+        '
+        'lblDeath
+        '
+        Me.lblDeath.AutoSize = True
+        Me.lblDeath.Location = New System.Drawing.Point(7, 126)
+        Me.lblDeath.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDeath.Name = "lblDeath"
+        Me.lblDeath.Size = New System.Drawing.Size(195, 32)
+        Me.lblDeath.TabIndex = 2
+        Me.lblDeath.Text = "Bitches Collected:"
         '
         'lblHighScore
         '
         Me.lblHighScore.AutoSize = True
-        Me.lblHighScore.Location = New System.Drawing.Point(5, 65)
+        Me.lblHighScore.Location = New System.Drawing.Point(7, 80)
+        Me.lblHighScore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHighScore.Name = "lblHighScore"
-        Me.lblHighScore.Size = New System.Drawing.Size(129, 25)
+        Me.lblHighScore.Size = New System.Drawing.Size(163, 32)
         Me.lblHighScore.TabIndex = 1
         Me.lblHighScore.Text = "H&ighest Score:"
         '
         'lblCoffeeCount
         '
         Me.lblCoffeeCount.AutoSize = True
-        Me.lblCoffeeCount.Location = New System.Drawing.Point(5, 27)
+        Me.lblCoffeeCount.Location = New System.Drawing.Point(7, 33)
+        Me.lblCoffeeCount.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCoffeeCount.Name = "lblCoffeeCount"
-        Me.lblCoffeeCount.Size = New System.Drawing.Size(107, 25)
+        Me.lblCoffeeCount.Size = New System.Drawing.Size(134, 32)
         Me.lblCoffeeCount.TabIndex = 0
         Me.lblCoffeeCount.Text = "Coffecount:"
         '
@@ -167,11 +179,11 @@ Partial Class frmStart
         '
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage2.Size = New System.Drawing.Size(728, 283)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage2.Size = New System.Drawing.Size(973, 351)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Innstillinger"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -181,11 +193,11 @@ Partial Class frmStart
         Me.GroupBox3.Controls.Add(Me.CheckBox3)
         Me.GroupBox3.Controls.Add(Me.Button6)
         Me.GroupBox3.Controls.Add(Me.Button5)
-        Me.GroupBox3.Location = New System.Drawing.Point(290, 5)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox3.Location = New System.Drawing.Point(387, 6)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox3.Size = New System.Drawing.Size(435, 274)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(580, 337)
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Generelle instillinger"
@@ -193,30 +205,30 @@ Partial Class frmStart
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(17, 235)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox3.Location = New System.Drawing.Point(23, 289)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(241, 29)
+        Me.CheckBox3.Size = New System.Drawing.Size(300, 36)
         Me.CheckBox3.TabIndex = 6
         Me.CheckBox3.Text = "Enable developer console"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(262, 228)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button6.Location = New System.Drawing.Point(349, 281)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(82, 41)
+        Me.Button6.Size = New System.Drawing.Size(109, 50)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Nullstill"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(349, 228)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Location = New System.Drawing.Point(465, 281)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(82, 41)
+        Me.Button5.Size = New System.Drawing.Size(109, 50)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Lagre"
         Me.Button5.UseVisualStyleBackColor = True
@@ -227,21 +239,21 @@ Partial Class frmStart
         Me.GroupBox1.Controls.Add(Me.GroupBox8)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 5)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 6)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(279, 274)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(372, 337)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Spillinnstillinger"
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(4, 228)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Location = New System.Drawing.Point(5, 281)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(140, 41)
+        Me.Button4.Size = New System.Drawing.Size(187, 50)
         Me.Button4.TabIndex = 2
         Me.Button4.Text = "Slett spilldata"
         Me.Button4.UseVisualStyleBackColor = True
@@ -250,30 +262,29 @@ Partial Class frmStart
         '
         Me.GroupBox8.Controls.Add(Me.TextBox1)
         Me.GroupBox8.Controls.Add(Me.Label7)
-        Me.GroupBox8.Location = New System.Drawing.Point(0, 153)
-        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox8.Location = New System.Drawing.Point(0, 188)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox8.Size = New System.Drawing.Size(279, 72)
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox8.Size = New System.Drawing.Size(372, 89)
         Me.GroupBox8.TabIndex = 3
         Me.GroupBox8.TabStop = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 25)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Location = New System.Drawing.Point(85, 31)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(212, 32)
+        Me.TextBox1.Size = New System.Drawing.Size(281, 38)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = "Unamed"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(4, 28)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(5, 34)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 25)
+        Me.Label7.Size = New System.Drawing.Size(73, 32)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Navn:"
         '
@@ -281,11 +292,11 @@ Partial Class frmStart
         '
         Me.GroupBox4.Controls.Add(Me.CheckBox7)
         Me.GroupBox4.Controls.Add(Me.CheckBox6)
-        Me.GroupBox4.Location = New System.Drawing.Point(0, 94)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox4.Location = New System.Drawing.Point(0, 116)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox4.Size = New System.Drawing.Size(279, 72)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox4.Size = New System.Drawing.Size(372, 89)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lyd"
@@ -295,10 +306,10 @@ Partial Class frmStart
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.Checked = True
         Me.CheckBox7.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox7.Location = New System.Drawing.Point(134, 30)
-        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox7.Location = New System.Drawing.Point(179, 37)
+        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(122, 29)
+        Me.CheckBox7.Size = New System.Drawing.Size(149, 36)
         Me.CheckBox7.TabIndex = 4
         Me.CheckBox7.Text = "Lydeffekter"
         Me.CheckBox7.UseVisualStyleBackColor = True
@@ -308,10 +319,10 @@ Partial Class frmStart
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Checked = True
         Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox6.Location = New System.Drawing.Point(18, 30)
-        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox6.Location = New System.Drawing.Point(24, 37)
+        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(111, 29)
+        Me.CheckBox6.Size = New System.Drawing.Size(138, 36)
         Me.CheckBox6.TabIndex = 4
         Me.CheckBox6.Text = "Musikklyd"
         Me.CheckBox6.UseVisualStyleBackColor = True
@@ -320,11 +331,11 @@ Partial Class frmStart
         '
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 30)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 37)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(279, 81)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(372, 100)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Skjermstørrelse"
@@ -332,10 +343,10 @@ Partial Class frmStart
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(134, 30)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox2.Location = New System.Drawing.Point(179, 37)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(123, 29)
+        Me.CheckBox2.Size = New System.Drawing.Size(158, 36)
         Me.CheckBox2.TabIndex = 1
         Me.CheckBox2.Text = "1440 x 1080"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -345,10 +356,10 @@ Partial Class frmStart
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(18, 30)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 37)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(116, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(148, 36)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "1280 x 720"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -359,11 +370,11 @@ Partial Class frmStart
         Me.TabPage3.Controls.Add(Me.Label3)
         Me.TabPage3.Controls.Add(Me.Button3)
         Me.TabPage3.Controls.Add(Me.PictureBox1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Size = New System.Drawing.Size(728, 283)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage3.Size = New System.Drawing.Size(973, 351)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Hjelp"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -371,29 +382,27 @@ Partial Class frmStart
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(229, 105)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(305, 129)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(332, 25)
+        Me.Label4.Size = New System.Drawing.Size(423, 32)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Med ESC && P setter du spillet på pause."
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(229, 5)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(305, 6)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(293, 100)
+        Me.Label3.Size = New System.Drawing.Size(372, 128)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Med WAD beveger du karakteren. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "W - Hopp" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A - Venstre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "D - Høyre"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(609, 245)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Location = New System.Drawing.Point(812, 302)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 33)
+        Me.Button3.Size = New System.Drawing.Size(155, 41)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Om"
         Me.Button3.UseVisualStyleBackColor = True
@@ -403,20 +412,20 @@ Partial Class frmStart
         Me.PictureBox1.BackgroundImage = Global.Spill.My.Resources.Resources.key_controls
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(218, 85)
+        Me.PictureBox1.Size = New System.Drawing.Size(289, 104)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
         'TabPage5
         '
-        Me.TabPage5.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage5.Size = New System.Drawing.Size(728, 283)
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage5.Size = New System.Drawing.Size(973, 351)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Profile"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -425,12 +434,11 @@ Partial Class frmStart
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 7)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(506, 37)
+        Me.Label1.Size = New System.Drawing.Size(623, 45)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "2D Platformer - Team Trøtt | BADR 18 v.0.7.2"
+        Me.Label1.Text = "2D Platformer - Team Trøtt | BADR 18 v.0.8.6"
         '
         'Button1
         '
@@ -438,10 +446,10 @@ Partial Class frmStart
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(625, -1)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(833, -1)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(56, 43)
+        Me.Button1.Size = New System.Drawing.Size(75, 53)
         Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -451,27 +459,18 @@ Partial Class frmStart
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(680, -1)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(907, -1)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(56, 43)
+        Me.Button2.Size = New System.Drawing.Size(75, 53)
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'lblDeath
-        '
-        Me.lblDeath.AutoSize = True
-        Me.lblDeath.Location = New System.Drawing.Point(5, 102)
-        Me.lblDeath.Name = "lblDeath"
-        Me.lblDeath.Size = New System.Drawing.Size(156, 25)
-        Me.lblDeath.TabIndex = 2
-        Me.lblDeath.Text = "Bitches Collected:"
-        '
         'frmStart
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(736, 368)
+        Me.ClientSize = New System.Drawing.Size(981, 453)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
@@ -479,7 +478,7 @@ Partial Class frmStart
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmStart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStart"
