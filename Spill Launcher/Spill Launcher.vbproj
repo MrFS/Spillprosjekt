@@ -208,9 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -257,53 +257,7 @@
     <None Include="Resources\EntityFramework.resources.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg_large.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\main_dalek.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\main_dalek.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\walk_1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\walk_2.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\walk_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\walk_1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\mah hart.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lucas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stage.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\platform.bmp" />
@@ -318,9 +272,6 @@
     <None Include="Resources\coffee.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg_lvl1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\drunk.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -333,16 +284,10 @@
     <None Include="Resources\07.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lvl2_bg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\platbg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bgFIXED.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pxGroundPlatBG.png" />
@@ -363,25 +308,7 @@
     <None Include="Resources\lvl2 design.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cloud1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloud2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloud3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloudmlgmuffin.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloudish.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\NYpxKis.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sky.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sky2.png" />
@@ -393,11 +320,7 @@
     <None Include="Resources\jump_new.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\walk.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ttlogo_waf_icon.ico" />
-    <None Include="Resources\lvl2 design2.bmp" />
     <Content Include="ttlogo_waf_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
