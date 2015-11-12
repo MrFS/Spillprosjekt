@@ -344,7 +344,7 @@ Partial Class frmLvl2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.Spill.My.Resources.Resources.lvl2_bg
+        Me.BackgroundImage = Global.Spill.My.Resources.Resources.lvl2_design
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1067, 738)
         Me.Controls.Add(Me.wallBoundR)

@@ -418,7 +418,7 @@ Public Class frmLvl1
             Case "Høyre"
                 pxPlat3.Left += 2
                 pxCoffee3.Left += 2
-                If pxPlat3.Location.X >= 760 Then pxPlat3DirectionX = "Venstre"
+                If pxPlat3.Location.X >= 700 Then pxPlat3DirectionX = "Venstre"
             Case "Venstre"
                 pxPlat3.Left -= 2
                 pxCoffee3.Left -= 2
