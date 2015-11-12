@@ -57,6 +57,7 @@ Partial Class frmStart
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lblDeath = New System.Windows.Forms.Label()
+        Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -69,6 +70,7 @@ Partial Class frmStart
         Me.GroupBox2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -412,6 +414,7 @@ Partial Class frmStart
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.WebBrowser2)
         Me.TabPage5.Location = New System.Drawing.Point(4, 34)
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Name = "TabPage5"
@@ -467,6 +470,16 @@ Partial Class frmStart
         Me.lblDeath.TabIndex = 2
         Me.lblDeath.Text = "Bitches Collected:"
         '
+        'WebBrowser2
+        '
+        Me.WebBrowser2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser2.Location = New System.Drawing.Point(2, 2)
+        Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser2.Name = "WebBrowser2"
+        Me.WebBrowser2.Size = New System.Drawing.Size(724, 279)
+        Me.WebBrowser2.TabIndex = 0
+        Me.WebBrowser2.Url = New System.Uri("https://mrfs.me/teamtrott/2dspill/main_startup_frm/profile/", System.UriKind.Absolute)
+        '
         'frmStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -501,6 +514,7 @@ Partial Class frmStart
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -540,4 +554,5 @@ Partial Class frmStart
     Friend WithEvents lblCoffeeCount As Label
     Friend WithEvents lblHighScore As Label
     Friend WithEvents lblDeath As Label
+    Friend WithEvents WebBrowser2 As WebBrowser
 End Class

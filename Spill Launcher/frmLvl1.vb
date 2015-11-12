@@ -316,7 +316,7 @@ Public Class frmLvl1
                 frmStart.Show()
                 frmAbout.Show()
 
-                If My.Settings.highest_score > Score Then
+                If My.Settings.highest_score < Score Then
                     My.Settings.highest_score = Score
                     My.Settings.Save()
                 End If
@@ -325,7 +325,7 @@ Public Class frmLvl1
                 Me.Close()
                 frmLvl2.Show()
 
-                If My.Settings.highest_score > Score Then
+                If My.Settings.highest_score < Score Then
                     My.Settings.highest_score = Score
                     My.Settings.Save()
                 End If
