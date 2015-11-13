@@ -76,7 +76,7 @@ Partial Class frmStart
         Me.Panel1.Controls.Add(Me.TabControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 47)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(736, 321)
         Me.Panel1.TabIndex = 0
@@ -90,7 +90,7 @@ Partial Class frmStart
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI Semilight", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(736, 321)
@@ -102,9 +102,9 @@ Partial Class frmStart
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.GroupBox5)
         Me.TabPage1.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Size = New System.Drawing.Size(728, 283)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Index"
@@ -114,7 +114,7 @@ Partial Class frmStart
         '
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Right
         Me.WebBrowser1.Location = New System.Drawing.Point(326, 2)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScrollBarsEnabled = False
@@ -125,7 +125,7 @@ Partial Class frmStart
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(212, 242)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(111, 37)
         Me.Button7.TabIndex = 3
@@ -138,9 +138,9 @@ Partial Class frmStart
         Me.GroupBox5.Controls.Add(Me.lblHighScore)
         Me.GroupBox5.Controls.Add(Me.lblCoffeeCount)
         Me.GroupBox5.Location = New System.Drawing.Point(4, 5)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox5.Size = New System.Drawing.Size(319, 232)
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
@@ -150,9 +150,9 @@ Partial Class frmStart
         Me.lblDeath.AutoSize = True
         Me.lblDeath.Location = New System.Drawing.Point(5, 102)
         Me.lblDeath.Name = "lblDeath"
-        Me.lblDeath.Size = New System.Drawing.Size(156, 25)
+        Me.lblDeath.Size = New System.Drawing.Size(71, 25)
         Me.lblDeath.TabIndex = 2
-        Me.lblDeath.Text = "Bitches Collected:"
+        Me.lblDeath.Text = "deaths:"
         '
         'lblHighScore
         '
@@ -177,9 +177,9 @@ Partial Class frmStart
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Size = New System.Drawing.Size(728, 283)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Innstillinger"
@@ -191,9 +191,9 @@ Partial Class frmStart
         Me.GroupBox3.Controls.Add(Me.Button6)
         Me.GroupBox3.Controls.Add(Me.Button5)
         Me.GroupBox3.Location = New System.Drawing.Point(290, 5)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Size = New System.Drawing.Size(435, 274)
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
@@ -203,7 +203,7 @@ Partial Class frmStart
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Location = New System.Drawing.Point(17, 235)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(241, 29)
         Me.CheckBox3.TabIndex = 6
@@ -213,7 +213,7 @@ Partial Class frmStart
         'Button6
         '
         Me.Button6.Location = New System.Drawing.Point(262, 228)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(82, 41)
         Me.Button6.TabIndex = 5
@@ -223,7 +223,7 @@ Partial Class frmStart
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(349, 228)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(82, 41)
         Me.Button5.TabIndex = 4
@@ -237,9 +237,9 @@ Partial Class frmStart
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 5)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(279, 274)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -248,7 +248,7 @@ Partial Class frmStart
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(4, 228)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(140, 41)
         Me.Button4.TabIndex = 2
@@ -260,9 +260,9 @@ Partial Class frmStart
         Me.GroupBox8.Controls.Add(Me.TextBox1)
         Me.GroupBox8.Controls.Add(Me.Label7)
         Me.GroupBox8.Location = New System.Drawing.Point(0, 153)
-        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox8.Size = New System.Drawing.Size(279, 72)
         Me.GroupBox8.TabIndex = 3
         Me.GroupBox8.TabStop = False
@@ -270,7 +270,7 @@ Partial Class frmStart
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(64, 25)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(212, 32)
         Me.TextBox1.TabIndex = 1
@@ -291,9 +291,9 @@ Partial Class frmStart
         Me.GroupBox4.Controls.Add(Me.CheckBox7)
         Me.GroupBox4.Controls.Add(Me.CheckBox6)
         Me.GroupBox4.Location = New System.Drawing.Point(0, 94)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox4.Size = New System.Drawing.Size(279, 72)
         Me.GroupBox4.TabIndex = 1
         Me.GroupBox4.TabStop = False
@@ -305,7 +305,7 @@ Partial Class frmStart
         Me.CheckBox7.Checked = True
         Me.CheckBox7.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox7.Location = New System.Drawing.Point(134, 30)
-        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(122, 29)
         Me.CheckBox7.TabIndex = 4
@@ -318,7 +318,7 @@ Partial Class frmStart
         Me.CheckBox6.Checked = True
         Me.CheckBox6.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox6.Location = New System.Drawing.Point(18, 30)
-        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(111, 29)
         Me.CheckBox6.TabIndex = 4
@@ -330,9 +330,9 @@ Partial Class frmStart
         Me.GroupBox2.Controls.Add(Me.CheckBox2)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Location = New System.Drawing.Point(0, 30)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(279, 81)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
@@ -342,7 +342,7 @@ Partial Class frmStart
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(134, 30)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(123, 29)
         Me.CheckBox2.TabIndex = 1
@@ -355,7 +355,7 @@ Partial Class frmStart
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox1.Location = New System.Drawing.Point(18, 30)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(116, 29)
         Me.CheckBox1.TabIndex = 0
@@ -369,9 +369,9 @@ Partial Class frmStart
         Me.TabPage3.Controls.Add(Me.Button3)
         Me.TabPage3.Controls.Add(Me.PictureBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Size = New System.Drawing.Size(728, 283)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Hjelp"
@@ -400,7 +400,7 @@ Partial Class frmStart
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(609, 245)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(116, 33)
         Me.Button3.TabIndex = 0
@@ -413,7 +413,7 @@ Partial Class frmStart
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(6, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(218, 85)
         Me.PictureBox1.TabIndex = 2
@@ -422,9 +422,9 @@ Partial Class frmStart
         'TabPage5
         '
         Me.TabPage5.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Size = New System.Drawing.Size(728, 283)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Profile"
@@ -448,7 +448,7 @@ Partial Class frmStart
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(625, -1)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 43)
         Me.Button1.TabIndex = 2
@@ -461,7 +461,7 @@ Partial Class frmStart
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(680, -1)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(56, 43)
         Me.Button2.TabIndex = 3
@@ -479,7 +479,7 @@ Partial Class frmStart
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmStart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStart"
